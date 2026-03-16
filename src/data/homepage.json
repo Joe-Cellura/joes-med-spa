@@ -129,9 +129,7 @@
       "primaryCta": { "label": "Book a consultation", "href": "#book" },
       "secondaryCta": { "label": "Call now", "href": "tel" }
     },
-    "footer": {
-      "note": "This is a demo template. Replace JSON data to generate a new local business site."
-    },
+    "footer": {},
     "stickyMobileCta": {
       "enabled": true,
       "items": [
