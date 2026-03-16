@@ -10,7 +10,7 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-30 border-b border-slate-200/80 bg-white/95 backdrop-blur-sm">
       <Container className="flex h-16 items-center justify-between gap-6">
-        <Link href="#" className="flex items-center gap-2.5">
+        <Link href="/" className="flex items-center gap-2.5">
           <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-xs font-semibold tracking-wide text-teal-700">
             LA
           </span>
@@ -28,7 +28,13 @@ export function Navbar() {
           {navigation.main.map((link) => (
             <Link
               key={link.href}
-              href={link.href === "#book" ? "/book" : link.href}
+              href={
+                link.href === "#book"
+                  ? "/book"
+                  : link.href.startsWith("#")
+                  ? `/${link.href}`
+                  : link.href
+              }
               className="transition-colors hover:text-teal-600"
             >
               {link.label}

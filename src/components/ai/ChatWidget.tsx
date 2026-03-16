@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import Link from "next/link";
 import { chatConfig } from "../../lib/content";
 import Button from "../ui/Button";
 import { cn } from "../../lib/utils";
@@ -9,6 +10,7 @@ type ChatMessage = {
   id: string;
   role: "user" | "assistant";
   text: string;
+  showBookingCta?: boolean;
 };
 
 export function ChatWidget() {
@@ -89,12 +91,15 @@ export function ChatWidget() {
           typeof data?.reply === "string" && data.reply.trim()
             ? data.reply.trim()
             : "I couldn't generate a response. Please try again or book a consultation.";
+        const showBookingCta =
+          typeof data?.showBookingCta === "boolean" ? data.showBookingCta : false;
         setMessages((prev) => [
           ...prev,
           {
             id: `assistant-${Date.now()}`,
             role: "assistant",
             text: reply,
+            showBookingCta,
           },
         ]);
       } catch {
@@ -145,16 +150,42 @@ export function ChatWidget() {
 
           <div className="max-h-64 space-y-3 overflow-y-auto px-4 py-4">
             {messages.map((message) => (
-              <div
-                key={message.id}
-                className={cn(
-                  "max-w-[90%] rounded-2xl px-3.5 py-2.5 text-[13px] leading-relaxed whitespace-pre-wrap",
-                  message.role === "assistant"
-                    ? "bg-slate-100/90 text-slate-800"
-                    : "ml-auto bg-teal-600 text-white",
+              <div key={message.id}>
+                <div
+                  className={cn(
+                    "max-w-[90%] rounded-2xl px-3.5 py-2.5 text-[13px] leading-relaxed whitespace-pre-wrap",
+                    message.role === "assistant"
+                      ? "bg-slate-100/90 text-slate-800"
+                      : "ml-auto bg-teal-600 text-white",
+                  )}
+                >
+                  {message.text}
+                </div>
+                {message.role === "assistant" && message.showBookingCta && (
+                  <div className="mt-2">
+                    <Link
+                      href="/book"
+                      className="inline-flex items-center gap-1.5 rounded-xl bg-teal-600 px-4 py-2 text-[13px] font-medium text-white transition-colors hover:bg-teal-700"
+                    >
+                      Book a Consultation
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                        aria-hidden
+                      >
+                        <path
+                          d="M2 7h10M7 2l5 5-5 5"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </Link>
+                  </div>
                 )}
-              >
-                {message.text}
               </div>
             ))}
             {loading ? (

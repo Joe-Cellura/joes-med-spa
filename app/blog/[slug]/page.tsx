@@ -1,4 +1,6 @@
 import { notFound } from "next/navigation";
+import Navbar from "../../../src/components/layout/Navbar";
+import Footer from "../../../src/components/layout/Footer";
 import Container from "../../../src/components/ui/Container";
 import Card from "../../../src/components/ui/Card";
 import { getBlogPostBySlug, getAllBlogPosts } from "../../../src/data/blogPosts";
@@ -106,6 +108,7 @@ export default async function BlogPostPage({
 
   return (
     <div className="bg-slate-50 text-slate-900">
+      <Navbar />
       <main className="px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16">
         <Container>
           <div className="mx-auto max-w-[720px]">
@@ -174,6 +177,7 @@ export default async function BlogPostPage({
           </div>
         </Container>
       </main>
+      <Footer />
     </div>
   );
 }

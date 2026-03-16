@@ -125,8 +125,38 @@ SAFETY
       choice?.message?.content?.trim() ??
       "I’m sorry, I couldn’t generate a response. Please try again or book a consultation so we can help you in person.";
 
+    const lowerUser = message.toLowerCase();
+    const lowerReply = reply.toLowerCase();
+
+    const bookingUserKeywords = [
+      "book",
+      "booking",
+      "schedule",
+      "appointment",
+      "consultation",
+      "come in",
+      "visit",
+      "reserve",
+    ];
+
+    const bookingReplyPhrases = [
+      "schedule a consultation",
+      "book a consultation",
+      "book an appointment",
+      "come in for a visit",
+    ];
+
+    const userIntent = bookingUserKeywords.some((word) =>
+      lowerUser.includes(word),
+    );
+    const replyIntent = bookingReplyPhrases.some((phrase) =>
+      lowerReply.includes(phrase),
+    );
+
+    const showBookingCta = userIntent || replyIntent;
+
     console.log("[lumina-ai] Success, reply length:", reply.length);
-    return NextResponse.json({ reply });
+    return NextResponse.json({ reply, showBookingCta });
   } catch (err) {
     console.error("[lumina-ai] OpenAI request failed:", err);
     const message =

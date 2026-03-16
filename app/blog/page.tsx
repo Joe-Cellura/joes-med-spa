@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Navbar from "../../src/components/layout/Navbar";
+import Footer from "../../src/components/layout/Footer";
 import Container from "../../src/components/ui/Container";
 import SectionHeader from "../../src/components/ui/SectionHeader";
 import Card from "../../src/components/ui/Card";
@@ -9,6 +11,7 @@ export default function BlogIndexPage() {
 
   return (
     <div className="bg-slate-50 text-slate-900">
+      <Navbar />
       <main className="pb-16 pt-12 sm:pb-20 sm:pt-16">
         <Container className="space-y-8">
           <SectionHeader
@@ -46,6 +49,7 @@ export default function BlogIndexPage() {
           </div>
         </Container>
       </main>
+      <Footer />
     </div>
   );
 }
