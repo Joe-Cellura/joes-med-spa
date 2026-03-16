@@ -154,6 +154,20 @@ SAFETY
       "ready to schedule",
       "book an appointment",
       "make an appointment",
+      "yes lets do it",
+      "yes let's do it",
+      "yes i do",
+      "yes please",
+      "lets do it",
+      "let's do it",
+      "yes book",
+      "go ahead and book",
+      "yes i'd like to",
+      "yes id like to",
+      "sounds good",
+      "let's go ahead",
+      "lets go ahead",
+      "yes go ahead",
     ];
 
     const bookingReplyPhrases = [
