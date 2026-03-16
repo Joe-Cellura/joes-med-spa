@@ -165,7 +165,7 @@ export function ChatWidget() {
                   <div className="mt-2">
                     <Link
                       href="/book"
-                      className="inline-flex items-center gap-1.5 rounded-xl bg-teal-600 px-4 py-2 text-[13px] font-medium text-white transition-colors hover:bg-teal-700"
+                      className="inline-flex items-center gap-1.5 rounded-xl border border-teal-600 px-4 py-2 text-[13px] font-medium text-teal-700 bg-white transition-colors hover:bg-teal-50"
                     >
                       Book a Consultation
                       <svg

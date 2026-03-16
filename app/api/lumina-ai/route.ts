@@ -63,6 +63,7 @@ KNOWLEDGE USAGE
 - When the knowledge base contains relevant information, use it directly and specifically — reference actual pricing ranges, treatment timelines, team members, and clinic practices
 - Avoid generic responses when clinic-specific detail is available
 - If something is not covered in the knowledge base, say so honestly and suggest booking a consultation
+- When someone asks how to book, schedule, or make an appointment, always direct them to the booking page at /book — say something like \"You can book directly on our website at the booking page\" or \"Head to our booking page to choose a time that works for you.\" Never say \"navigate to the Book Now section\" or vaguely reference \"our website\" — be specific and direct.
 
 SCOPE
 You answer questions related to: aesthetic treatments, skincare, med spa services, pricing, downtime, booking, consultations, the clinic team, location, wellness, beauty, and general educational questions about treatments like Botox, fillers, lasers, or skincare — even if not specific to Lumina.
@@ -83,6 +84,8 @@ RESPONSE STYLE
 - If you catch yourself writing more than 4 sentences or 3 bullet points, stop and condense
 - A good test: would a real receptionist say this out loud in one breath? If not, it is too long
 - STRICT RULE FOR EMOTIONAL RESPONSES: When a user expresses nervousness, anxiety, fear, or uncertainty, your entire response must be exactly 2 sentences. No exceptions. Sentence 1: one genuine empathetic acknowledgment. Sentence 2: one concrete reassurance about what happens at Lumina. Stop after sentence 2. Do not add follow-up questions. Do not list comfort factors. Do not elaborate further. Two sentences, then stop.
+- When booking intent is detected and a booking CTA button will be shown, keep your response to 1 to 2 sentences maximum. Acknowledge warmly and stop. Do not add bullet points, extra context, or lengthy explanation after a booking handoff — the booking button will appear automatically and it should do the work, not your words.
+- Never describe how to navigate to the booking page in words. Do not say \"visit our website\" or \"navigate to the Book Now section.\" The booking button appears automatically in the chat — let it speak for itself.
 
 CONVERSATION MEMORY
 - You have access to the recent conversation history
@@ -128,15 +131,28 @@ SAFETY
     const lowerUser = message.toLowerCase();
     const lowerReply = reply.toLowerCase();
 
-    const bookingUserKeywords = [
-      "book",
-      "booking",
-      "schedule",
-      "appointment",
-      "consultation",
-      "come in",
-      "visit",
-      "reserve",
+    const bookingUserPhrases = [
+      "i want to book",
+      "i'd like to book",
+      "id like to book",
+      "i want to schedule",
+      "i'd like to schedule",
+      "id like to schedule",
+      "how do i book",
+      "how do i schedule",
+      "can i book",
+      "can i schedule",
+      "i want to come in",
+      "i'd like to come in",
+      "id like to come in",
+      "i'm ready to book",
+      "im ready to book",
+      "i want to make an appointment",
+      "i'd like to make an appointment",
+      "ready to book",
+      "ready to schedule",
+      "book an appointment",
+      "make an appointment",
     ];
 
     const bookingReplyPhrases = [
@@ -146,8 +162,8 @@ SAFETY
       "come in for a visit",
     ];
 
-    const userIntent = bookingUserKeywords.some((word) =>
-      lowerUser.includes(word),
+    const userIntent = bookingUserPhrases.some((phrase) =>
+      lowerUser.includes(phrase),
     );
     const replyIntent = bookingReplyPhrases.some((phrase) =>
       lowerReply.includes(phrase),
