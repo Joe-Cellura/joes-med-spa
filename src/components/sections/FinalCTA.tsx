@@ -26,7 +26,7 @@ export function FinalCTA() {
             </p>
           </div>
           <div className="mt-6 flex flex-col gap-3 sm:mt-0 sm:flex-row sm:items-center">
-            <Link href={section.primaryCta.href}>
+            <Link href="/book">
               <Button className="w-full min-w-[180px] px-6 py-3 sm:w-auto">
                 {section.primaryCta.label}
               </Button>

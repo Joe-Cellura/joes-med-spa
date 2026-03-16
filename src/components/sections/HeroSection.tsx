@@ -41,7 +41,7 @@ export function HeroSection() {
             </ul>
           ) : null}
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
-            <Link href={hero.primaryCta.href}>
+            <Link href="/book">
               <Button className="min-w-[180px] px-6 py-3 text-sm">
                 {hero.primaryCta.label}
               </Button>

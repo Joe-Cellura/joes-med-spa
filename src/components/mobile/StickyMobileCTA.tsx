@@ -36,7 +36,7 @@ export function StickyMobileCTA() {
             return (
               <a
                 key={item.type}
-                href={item.href}
+                href="/book"
                 className="flex-1 rounded-full bg-teal-600 px-3 py-2 text-center text-xs font-medium text-white"
               >
                 {item.label}

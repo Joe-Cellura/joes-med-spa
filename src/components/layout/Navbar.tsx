@@ -28,7 +28,7 @@ export function Navbar() {
           {navigation.main.map((link) => (
             <Link
               key={link.href}
-              href={link.href}
+              href={link.href === "#book" ? "/book" : link.href}
               className="transition-colors hover:text-teal-600"
             >
               {link.label}
@@ -43,7 +43,7 @@ export function Navbar() {
           >
             {brand.contact.phone}
           </a>
-          <Link href={brand.ctas.book.href}>
+          <Link href="/book">
             <Button className="px-5 py-2 text-sm">
               {brand.ctas.book.label}
             </Button>
