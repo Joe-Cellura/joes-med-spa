@@ -46,6 +46,14 @@ export function ChatWidget() {
         role: "user",
         text: trimmed,
       };
+
+      const history = messages
+        .filter((m) => m.id !== "welcome")
+        .map((m) => ({
+          role: m.role,
+          content: m.text,
+        }));
+
       setMessages((prev) => [...prev, userMessage]);
       setInput("");
       setLoading(true);
@@ -54,7 +62,10 @@ export function ChatWidget() {
         const res = await fetch("/api/lumina-ai", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ message: trimmed }),
+          body: JSON.stringify({
+            message: trimmed,
+            history,
+          }),
         });
         const data = await res.json();
 

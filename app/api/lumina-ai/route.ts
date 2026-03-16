@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import OpenAI from "openai";
 import { getKnowledgeBase } from "../../../src/lib/knowledge";
 
+type MessageHistory = { role: "user" | "assistant"; content: string }[];
+
 export async function POST(request: Request) {
   console.log("[lumina-ai] POST /api/lumina-ai received");
 
@@ -14,7 +16,7 @@ export async function POST(request: Request) {
     );
   }
 
-  let body: { message?: string };
+  let body: { message?: string; history?: MessageHistory };
   try {
     body = await request.json();
   } catch {
@@ -33,6 +35,8 @@ export async function POST(request: Request) {
       { status: 400 },
     );
   }
+
+  const history: MessageHistory = Array.isArray(body.history) ? body.history : [];
 
   const openai = new OpenAI({ apiKey });
   const knowledge = getKnowledgeBase();
@@ -60,6 +64,7 @@ RULES:
       model: "gpt-4o-mini",
       messages: [
         { role: "system", content: systemPrompt },
+        ...history.slice(-10),
         { role: "user", content: message },
       ],
       max_tokens: 512,
