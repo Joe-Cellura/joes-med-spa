@@ -1,0 +1,49 @@
+{
+  "brand": {
+    "name": "Lumina Aesthetics",
+    "tagline": "Luxury medical aesthetics, refined.",
+    "location": {
+      "city": "Raleigh",
+      "region": "North Carolina",
+      "display": "Raleigh, North Carolina"
+    },
+    "contact": {
+      "phone": "(919) 555-0138",
+      "email": "hello@luminaaesthetics.com",
+      "addressLines": ["123 Glenwood Ave", "Raleigh, NC 27603"],
+      "hours": ["Mon–Fri: 9am–6pm", "Sat: 10am–3pm", "Sun: Closed"]
+    },
+    "ctas": {
+      "book": { "label": "Book Now", "href": "#book" }
+    },
+    "social": {
+      "instagram": "https://instagram.com/luminaaesthetics",
+      "tiktok": "https://tiktok.com/@luminaaesthetics"
+    }
+  },
+  "navigation": {
+    "main": [
+      { "label": "Treatments", "href": "#treatments" },
+      { "label": "Results", "href": "#results" },
+      { "label": "Reviews", "href": "#testimonials" },
+      { "label": "About", "href": "#about" },
+      { "label": "FAQ", "href": "#faq" },
+      { "label": "Blog", "href": "/blog" }
+    ],
+    "footer": [
+      { "label": "Accessibility", "href": "#" },
+      { "label": "Privacy", "href": "#" },
+      { "label": "Terms", "href": "#" }
+    ]
+  },
+  "theme": {
+    "background": "white",
+    "accent": "#0f766e",
+    "text": "#0b1220",
+    "mutedText": "#475569"
+  },
+  "legal": {
+    "disclaimerShort": "All treatments are performed or supervised by licensed medical professionals. Individual results may vary."
+  }
+}
+

@@ -1,0 +1,27 @@
+{
+  "disclaimer": "Testimonials reflect individual experiences. Results may vary.",
+  "items": [
+    {
+      "id": "t-01",
+      "name": "Danielle R.",
+      "quote": "Everything felt thoughtful and high-end. My results look like me—just more refreshed.",
+      "treatment": "Neuromodulators",
+      "rating": 5
+    },
+    {
+      "id": "t-02",
+      "name": "Morgan T.",
+      "quote": "The consult was detailed and never pushy. I left with a plan I actually understood.",
+      "treatment": "Skin rejuvenation",
+      "rating": 5
+    },
+    {
+      "id": "t-03",
+      "name": "Priya S.",
+      "quote": "Beautiful space, impeccable technique, and great aftercare instructions. I’ll be back.",
+      "treatment": "Hydrafacial",
+      "rating": 5
+    }
+  ]
+}
+
