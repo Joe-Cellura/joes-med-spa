@@ -8,19 +8,19 @@
       "enabled": true,
       "badge": "New Clients",
       "message": "Complimentary consultation for first-time guests.",
-      "link": { "label": "Book now", "href": "#book" }
+      "link": { "label": "Request yours", "href": "#book" }
     },
     "navbar": {},
     "hero": {
-      "eyebrow": "Lumina Aesthetics — Raleigh",
-      "heading": "Subtle, elevated results—done with precision.",
-      "subheading": "A luxury medical aesthetics experience designed around safety, artistry, and your most natural look.",
+      "eyebrow": "Lumina Aesthetics — Raleigh, North Carolina",
+      "heading": "Subtle, elevated results. Done with precision.",
+      "subheading": "Physician-led care. Natural-looking results. A calm, unhurried experience built around you.",
       "highlights": [
         "Physician-led care",
         "Minimal downtime options",
         "Premium, natural-looking outcomes"
       ],
-      "primaryCta": { "label": "Book a Consultation", "href": "#book" },
+      "primaryCta": { "label": "Request a Consultation", "href": "#book" },
       "secondaryCta": { "label": "Explore Treatments", "href": "#treatments" },
       "image": {
         "src": "/images/hero-placeholder.jpg",
@@ -33,6 +33,11 @@
           "label": "5.0",
           "value": "Rating",
           "sublabel": "from local reviews"
+        },
+        {
+          "label": "1,000+",
+          "value": "Clients",
+          "sublabel": "served in Raleigh"
         },
         {
           "label": "Medical",
@@ -69,14 +74,14 @@
         },
         {
           "title": "Refined artistry",
-          "description": "Enhance what’s already beautiful—never overdone, never obvious."
+          "description": "Enhance what’s already beautiful. Never overdone, never obvious."
         },
         {
           "title": "High-touch experience",
           "description": "A luxury environment with attentive guidance before and after treatment."
         }
       ],
-      "cta": { "label": "Book a consultation", "href": "#book" }
+      "cta": { "label": "Request a consultation", "href": "#book" }
     },
     "beforeAfterGallery": {
       "title": "Results gallery",
@@ -84,14 +89,14 @@
       "items": [
         {
           "id": "ba-01",
-          "treatment": "Toxin",
+          "treatment": "Neuromodulator: Forehead & Brows",
           "beforeSrc": "/images/before-1.jpg",
           "afterSrc": "/images/after-1.jpg",
           "alt": "Before and after toxin results"
         },
         {
           "id": "ba-02",
-          "treatment": "Skin",
+          "treatment": "Skin Rejuvenation: Texture & Tone",
           "beforeSrc": "/images/before-2.jpg",
           "afterSrc": "/images/after-2.jpg",
           "alt": "Before and after skin texture improvement"
@@ -103,15 +108,15 @@
       "title": "What clients say",
       "subtitle": "A few words from guests who trust Lumina.",
       "featuredIds": ["t-01", "t-02", "t-03"],
-      "cta": { "label": "Book now", "href": "#book" }
+      "cta": { "label": "Request a consultation", "href": "#book" }
     },
     "about": {
-      "title": "About Lumina",
-      "body": "Lumina Aesthetics is a premium medical aesthetics studio in Raleigh, North Carolina. Our approach blends clinical safety with modern technique—focused on refined, natural-looking results.",
+      "title": "A different kind of aesthetics practice",
+      "body": "Lumina Aesthetics was built on a simple idea: that aesthetic medicine should feel as good as it looks. We combine clinical precision with a calm, unhurried environment. No pressure, no overselling, no results that don't look like you.",
       "bullets": [
-        "Licensed medical professionals",
-        "Personalized treatment planning",
-        "Clear aftercare guidance"
+        "Physician-led care and medical oversight",
+        "Personalized plans, never one-size-fits-all",
+        "Honest guidance before, during, and after treatment"
       ],
       "image": {
         "src": "/images/about-placeholder.jpg",
@@ -126,7 +131,7 @@
     "finalCta": {
       "title": "Ready for a refined refresh?",
       "body": "Schedule a complimentary consultation and build a plan you’ll feel confident about.",
-      "primaryCta": { "label": "Book a consultation", "href": "#book" },
+      "primaryCta": { "label": "Request your consultation", "href": "#book" },
       "secondaryCta": { "label": "Call now", "href": "tel" }
     },
     "footer": {},

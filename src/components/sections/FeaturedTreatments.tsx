@@ -32,7 +32,7 @@ export function FeaturedTreatments() {
             >
               <div className="space-y-2">
                 <div className="flex flex-wrap items-center gap-2">
-                  <h3 className="text-lg font-semibold tracking-tight text-slate-900">
+                  <h3 className="text-lg font-semibold tracking-tight text-teal-700">
                     {treatment.name}
                   </h3>
                   {treatment.badges?.map((badge) => (

@@ -14,7 +14,7 @@
       "hours": ["Mon–Fri: 9am–6pm", "Sat: 10am–3pm", "Sun: Closed"]
     },
     "ctas": {
-      "book": { "label": "Book Now", "href": "#book" }
+      "book": { "label": "Book Now", "href": "/book" }
     },
     "social": {
       "instagram": "https://instagram.com/luminaaesthetics",
@@ -25,6 +25,7 @@
     "main": [
       { "label": "Treatments", "href": "#treatments" },
       { "label": "Results", "href": "#results" },
+      { "label": "Team", "href": "#team" },
       { "label": "Reviews", "href": "#testimonials" },
       { "label": "About", "href": "#about" },
       { "label": "FAQ", "href": "#faq" },

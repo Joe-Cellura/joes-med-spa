@@ -31,7 +31,7 @@ const providers = [
 
 export default function TeamSection() {
   return (
-    <section className="bg-white py-16 sm:py-20">
+    <section id="team" className="bg-white py-16 sm:py-20">
       <Container>
         <SectionHeader
           eyebrow="OUR TEAM"
