@@ -19,6 +19,7 @@ export function ChatWidget() {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     if (!config.enabled) return;
@@ -123,6 +124,23 @@ export function ChatWidget() {
     sendMessage(input);
   };
 
+  const handleCopy = () => {
+    const transcript = messages
+      .map((m) => {
+        const speaker = m.role === "assistant" ? "Lumina AI" : "You";
+        const text = `${speaker}: ${m.text}`;
+        if (m.role === "assistant" && m.showBookingCta) {
+          return `${text}\n[Book a Consultation → /book]`;
+        }
+        return text;
+      })
+      .join("\n");
+    navigator.clipboard.writeText(transcript).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  };
+
   if (!config.enabled) return null;
 
   return (
@@ -136,16 +154,26 @@ export function ChatWidget() {
             <p className="text-sm font-semibold text-slate-900">
               {config.panelTitle}
             </p>
-            <button
-              type="button"
-              onClick={() => setOpen(false)}
-              className="rounded-full p-1.5 text-slate-400 hover:bg-slate-100 hover:text-slate-600"
-              aria-label="Close"
-            >
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={handleCopy}
+                className="text-[11px] text-slate-400 hover:text-slate-600 transition-colors"
+                aria-label="Copy conversation"
+              >
+                {copied ? "Copied!" : "Copy chat"}
+              </button>
+              <button
+                type="button"
+                onClick={() => setOpen(false)}
+                className="rounded-full p-1.5 text-slate-400 hover:bg-slate-100 hover:text-slate-600"
+                aria-label="Close"
+              >
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden>
                 <path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
               </svg>
-            </button>
+              </button>
+            </div>
           </div>
 
           <div className="max-h-64 space-y-3 overflow-y-auto px-4 py-4">
