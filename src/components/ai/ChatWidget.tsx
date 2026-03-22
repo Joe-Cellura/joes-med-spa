@@ -69,6 +69,8 @@ export function ChatWidget() {
       setInput("");
       setLoading(true);
 
+      const assistantId = `assistant-${Date.now()}`;
+
       try {
         const res = await fetch("/api/lumina-ai", {
           method: "POST",
@@ -79,39 +81,74 @@ export function ChatWidget() {
             sessionId: sessionId.current,
           }),
         });
-        const data = await res.json();
 
         if (!res.ok) {
+          const data = await res.json();
           const errorText =
             typeof data?.error === "string"
               ? data.error
               : "Something went wrong. Please try again.";
           setMessages((prev) => [
             ...prev,
-            {
-              id: `err-${Date.now()}`,
-              role: "assistant",
-              text: errorText,
-            },
+            { id: `err-${Date.now()}`, role: "assistant", text: errorText },
           ]);
           return;
         }
 
-        const reply =
-          typeof data?.reply === "string" && data.reply.trim()
-            ? data.reply.trim()
-            : "I couldn't generate a response. Please try again or book a consultation.";
-        const showBookingCta =
-          typeof data?.showBookingCta === "boolean" ? data.showBookingCta : false;
+        // Add empty assistant message; hide "Thinking…" as streaming begins
         setMessages((prev) => [
           ...prev,
-          {
-            id: `assistant-${Date.now()}`,
-            role: "assistant",
-            text: reply,
-            showBookingCta,
-          },
+          { id: assistantId, role: "assistant", text: "", showBookingCta: false },
         ]);
+        setLoading(false);
+
+        const reader = res.body!.getReader();
+        const decoder = new TextDecoder();
+        let accumulated = "";
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+
+          accumulated += decoder.decode(value, { stream: true });
+
+          const metaIndex = accumulated.indexOf("__META__");
+
+          if (metaIndex >= 0) {
+            // Split: everything before __META__ is text, everything after is JSON
+            const textPart = accumulated.slice(0, metaIndex);
+            const metaPart = accumulated.slice(metaIndex + "__META__".length);
+
+            setMessages((prev) =>
+              prev.map((m) =>
+                m.id === assistantId ? { ...m, text: textPart } : m,
+              ),
+            );
+
+            try {
+              const meta = JSON.parse(metaPart);
+              const showBookingCta =
+                typeof meta.showBookingCta === "boolean"
+                  ? meta.showBookingCta
+                  : false;
+              setMessages((prev) =>
+                prev.map((m) =>
+                  m.id === assistantId ? { ...m, showBookingCta } : m,
+                ),
+              );
+            } catch {
+              // Ignore metadata parse errors — showBookingCta stays false
+            }
+          } else {
+            // Pure text chunk — update the message in place
+            const currentText = accumulated;
+            setMessages((prev) =>
+              prev.map((m) =>
+                m.id === assistantId ? { ...m, text: currentText } : m,
+              ),
+            );
+          }
+        }
       } catch {
         setMessages((prev) => [
           ...prev,
@@ -125,7 +162,7 @@ export function ChatWidget() {
         setLoading(false);
       }
     },
-    [loading],
+    [loading, messages],
   );
 
   const handleSubmit = (e: React.FormEvent) => {

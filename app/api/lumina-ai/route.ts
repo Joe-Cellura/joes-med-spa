@@ -179,8 +179,68 @@ SAFETY
 - Never guarantee results
 - Use language like \"typically,\" \"in most cases,\" or \"results vary\" when discussing outcomes`;
 
+  const bookingUserPhrases = [
+    "i want to book",
+    "i'd like to book",
+    "id like to book",
+    "i want to schedule",
+    "i'd like to schedule",
+    "id like to schedule",
+    "how do i book",
+    "how do i schedule",
+    "can i book",
+    "can i schedule",
+    "i want to come in",
+    "i'd like to come in",
+    "id like to come in",
+    "i'm ready to book",
+    "im ready to book",
+    "i want to make an appointment",
+    "i'd like to make an appointment",
+    "ready to book",
+    "ready to schedule",
+    "book an appointment",
+    "make an appointment",
+    "yes lets do it",
+    "yes let's do it",
+    "yes i do",
+    "yes please",
+    "lets do it",
+    "let's do it",
+    "yes book",
+    "go ahead and book",
+    "yes i'd like to",
+    "yes id like to",
+    "sounds good",
+    "let's go ahead",
+    "lets go ahead",
+    "yes go ahead",
+    "lets book",
+    "let's book",
+    "lets book a consultation",
+    "let's book a consultation",
+    "book a consultation",
+    "book now",
+    "schedule now",
+    "can we book",
+    "can we schedule",
+  ];
+
+  const bookingReplyPhrases = [
+    "schedule a consultation",
+    "book a consultation",
+    "book an appointment",
+    "come in for a visit",
+    "grab a time",
+    "choose a time",
+    "works for you right here",
+    "booking page",
+    "book your",
+    "schedule your",
+  ];
+
   try {
-    const completion = await openai.chat.completions.create({
+    const stream = await openai.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [
         { role: "system", content: systemPrompt },
@@ -188,121 +248,86 @@ SAFETY
         { role: "user", content: message },
       ],
       max_tokens: 512,
+      stream: true,
     });
 
-    const choice = completion.choices[0];
-    const reply =
-      choice?.message?.content?.trim() ??
-      "I’m sorry, I couldn’t generate a response. Please try again or book a consultation so we can help you in person.";
+    const encoder = new TextEncoder();
+    let fullReply = "";
 
-    const lowerUser = message.toLowerCase();
-    const lowerReply = reply.toLowerCase();
+    const readable = new ReadableStream({
+      async start(controller) {
+        try {
+          for await (const chunk of stream) {
+            const delta = chunk.choices[0]?.delta?.content ?? "";
+            if (delta) {
+              fullReply += delta;
+              controller.enqueue(encoder.encode(delta));
+            }
+          }
 
-    const bookingUserPhrases = [
-      "i want to book",
-      "i'd like to book",
-      "id like to book",
-      "i want to schedule",
-      "i'd like to schedule",
-      "id like to schedule",
-      "how do i book",
-      "how do i schedule",
-      "can i book",
-      "can i schedule",
-      "i want to come in",
-      "i'd like to come in",
-      "id like to come in",
-      "i'm ready to book",
-      "im ready to book",
-      "i want to make an appointment",
-      "i'd like to make an appointment",
-      "ready to book",
-      "ready to schedule",
-      "book an appointment",
-      "make an appointment",
-      "yes lets do it",
-      "yes let's do it",
-      "yes i do",
-      "yes please",
-      "lets do it",
-      "let's do it",
-      "yes book",
-      "go ahead and book",
-      "yes i'd like to",
-      "yes id like to",
-      "sounds good",
-      "let's go ahead",
-      "lets go ahead",
-      "yes go ahead",
-      "lets book",
-      "let's book",
-      "lets book a consultation",
-      "let's book a consultation",
-      "book a consultation",
-      "id like to book",
-      "i'd like to book",
-      "book now",
-      "schedule now",
-      "how do i book",
-      "i want to schedule",
-      "can we book",
-      "can we schedule",
-    ];
+          // Post-processing after stream completes
+          const lowerUser = message.toLowerCase();
+          const lowerReply = fullReply.toLowerCase();
 
-    const bookingReplyPhrases = [
-      "schedule a consultation",
-      "book a consultation",
-      "book an appointment",
-      "come in for a visit",
-      "grab a time",
-      "choose a time",
-      "works for you right here",
-      "booking page",
-      "book your",
-      "schedule your",
-    ];
+          const userIntent = bookingUserPhrases.some((phrase) =>
+            lowerUser.includes(phrase),
+          );
+          const replyIntent = bookingReplyPhrases.some((phrase) =>
+            lowerReply.includes(phrase),
+          );
+          const showBookingCta = userIntent || replyIntent;
 
-    const userIntent = bookingUserPhrases.some((phrase) =>
-      lowerUser.includes(phrase),
-    );
-    const replyIntent = bookingReplyPhrases.some((phrase) =>
-      lowerReply.includes(phrase),
-    );
+          // Supabase logging
+          try {
+            const sessionId =
+              typeof body.sessionId === "string" ? body.sessionId : null;
+            await supabase.from("conversations").insert([
+              {
+                session_id: sessionId,
+                role: "user",
+                message: message,
+                page_url: request.headers.get("referer") || null,
+                referrer: request.headers.get("referer") || null,
+                user_agent: request.headers.get("user-agent") || null,
+              },
+              {
+                session_id: sessionId,
+                role: "assistant",
+                message: fullReply,
+                page_url: request.headers.get("referer") || null,
+                referrer: request.headers.get("referer") || null,
+                user_agent: request.headers.get("user-agent") || null,
+              },
+            ]);
+          } catch (err) {
+            console.error("[lumina-ai] Supabase logging failed:", err);
+          }
 
-    const showBookingCta = userIntent || replyIntent;
+          console.log("[lumina-ai] Success, reply length:", fullReply.length);
 
-    try {
-      const sessionId = typeof body.sessionId === "string" ? body.sessionId : null;
-      await supabase.from("conversations").insert([
-        {
-          session_id: sessionId,
-          role: "user",
-          message: message,
-          page_url: request.headers.get("referer") || null,
-          referrer: request.headers.get("referer") || null,
-          user_agent: request.headers.get("user-agent") || null,
-        },
-        {
-          session_id: sessionId,
-          role: "assistant",
-          message: reply,
-          page_url: request.headers.get("referer") || null,
-          referrer: request.headers.get("referer") || null,
-          user_agent: request.headers.get("user-agent") || null,
-        },
-      ]);
-    } catch (err) {
-      console.error("[lumina-ai] Supabase logging failed:", err);
-    }
+          // Send metadata as a final chunk so the client knows showBookingCta
+          controller.enqueue(
+            encoder.encode(`__META__${JSON.stringify({ showBookingCta })}`),
+          );
+          controller.close();
+        } catch (err) {
+          controller.error(err);
+        }
+      },
+    });
 
-    console.log("[lumina-ai] Success, reply length:", reply.length);
-    return NextResponse.json({ reply, showBookingCta });
+    return new Response(readable, {
+      headers: {
+        "Content-Type": "text/plain; charset=utf-8",
+        "X-Content-Type-Options": "nosniff",
+      },
+    });
   } catch (err) {
     console.error("[lumina-ai] OpenAI request failed:", err);
-    const message =
+    const errMsg =
       err instanceof Error ? err.message : "Unknown error calling OpenAI.";
     return NextResponse.json(
-      { error: `Assistant unavailable: ${message}` },
+      { error: `Assistant unavailable: ${errMsg}` },
       { status: 502 },
     );
   }
