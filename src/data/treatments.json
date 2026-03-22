@@ -9,7 +9,7 @@
       "startingAt": "from $14/unit",
       "category": "Injectables",
       "badges": ["Most requested"],
-      "cta": { "label": "Learn more", "href": "#book" }
+      "cta": { "label": "Learn more", "href": "/book" }
     },
     {
       "id": "filler",
@@ -19,7 +19,7 @@
       "duration": "30–60 min",
       "startingAt": "from $750",
       "category": "Injectables",
-      "cta": { "label": "Learn more", "href": "#book" }
+      "cta": { "label": "Learn more", "href": "/book" }
     },
     {
       "id": "hydrafacial",
@@ -29,7 +29,7 @@
       "duration": "30–45 min",
       "startingAt": "from $199",
       "category": "Skin",
-      "cta": { "label": "Learn more", "href": "#book" }
+      "cta": { "label": "Learn more", "href": "/book" }
     },
     {
       "id": "microneedling",
@@ -39,7 +39,7 @@
       "duration": "45–60 min",
       "startingAt": "from $399",
       "category": "Skin",
-      "cta": { "label": "Learn more", "href": "#book" }
+      "cta": { "label": "Learn more", "href": "/book" }
     },
     {
       "id": "laser-hair",
@@ -49,7 +49,7 @@
       "duration": "15–45 min",
       "startingAt": "from $129",
       "category": "Body",
-      "cta": { "label": "Learn more", "href": "#book" }
+      "cta": { "label": "Learn more", "href": "/book" }
     },
     {
       "id": "body-contouring",
@@ -59,7 +59,7 @@
       "duration": "30–60 min",
       "startingAt": "from $499",
       "category": "Body",
-      "cta": { "label": "Learn more", "href": "#book" }
+      "cta": { "label": "Learn more", "href": "/book" }
     }
   ]
 }
