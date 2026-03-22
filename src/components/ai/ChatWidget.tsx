@@ -136,6 +136,9 @@ export function ChatWidget() {
                   m.id === assistantId ? { ...m, showBookingCta } : m,
                 ),
               );
+              if (showBookingCta) {
+                logBookingShown();
+              }
             } catch {
               // Ignore metadata parse errors — showBookingCta stays false
             }
@@ -164,6 +167,40 @@ export function ChatWidget() {
     },
     [loading, messages],
   );
+
+  const logBookingShown = async () => {
+    try {
+      await fetch("/api/log-event", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          sessionId: sessionId.current,
+          type: "book_cta_shown",
+          metadata: { trigger: "chat_widget" },
+          pageUrl: window.location.href,
+        }),
+      });
+    } catch {
+      // silent fail
+    }
+  };
+
+  const logBookingClick = async () => {
+    try {
+      await fetch("/api/log-event", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          sessionId: sessionId.current,
+          type: "book_cta_clicked",
+          metadata: { trigger: "chat_widget" },
+          pageUrl: window.location.href,
+        }),
+      });
+    } catch {
+      // silent fail
+    }
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -239,6 +276,7 @@ export function ChatWidget() {
                   <div className="mt-2">
                     <Link
                       href="/book"
+                      onClick={logBookingClick}
                       className="inline-flex items-center gap-1.5 rounded-xl border border-teal-600 px-4 py-2 text-[13px] font-medium text-teal-700 bg-white transition-colors hover:bg-teal-50"
                     >
                       Book a Consultation

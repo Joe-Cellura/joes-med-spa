@@ -237,6 +237,15 @@ SAFETY
     "booking page",
     "book your",
     "schedule your",
+    "booking a consultation is",
+    "schedule a visit",
+    "book your consultation",
+    "booking a visit",
+    "set up a consultation",
+    "arrange a consultation",
+    "come in for a consultation",
+    "we can schedule",
+    "we can book",
   ];
 
   try {
