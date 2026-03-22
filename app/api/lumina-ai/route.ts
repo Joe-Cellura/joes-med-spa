@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import OpenAI from "openai";
 import { getKnowledgeBase } from "../../../src/lib/knowledge";
+import { supabase } from "../../../src/lib/supabase";
 
 type MessageHistory = { role: "user" | "assistant"; content: string }[];
 
@@ -16,7 +17,7 @@ export async function POST(request: Request) {
     );
   }
 
-  let body: { message?: string; history?: MessageHistory };
+  let body: { message?: string; history?: MessageHistory; sessionId?: string };
   try {
     body = await request.json();
   } catch {
@@ -269,6 +270,30 @@ SAFETY
     );
 
     const showBookingCta = userIntent || replyIntent;
+
+    try {
+      const sessionId = typeof body.sessionId === "string" ? body.sessionId : null;
+      await supabase.from("conversations").insert([
+        {
+          session_id: sessionId,
+          role: "user",
+          message: message,
+          page_url: request.headers.get("referer") || null,
+          referrer: request.headers.get("referer") || null,
+          user_agent: request.headers.get("user-agent") || null,
+        },
+        {
+          session_id: sessionId,
+          role: "assistant",
+          message: reply,
+          page_url: request.headers.get("referer") || null,
+          referrer: request.headers.get("referer") || null,
+          user_agent: request.headers.get("user-agent") || null,
+        },
+      ]);
+    } catch (err) {
+      console.error("[lumina-ai] Supabase logging failed:", err);
+    }
 
     console.log("[lumina-ai] Success, reply length:", reply.length);
     return NextResponse.json({ reply, showBookingCta });

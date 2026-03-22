@@ -3,7 +3,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { chatConfig } from "../../lib/content";
-import { supabase } from "../../lib/supabase";
 import Button from "../ui/Button";
 import { cn } from "../../lib/utils";
 
@@ -48,21 +47,6 @@ export function ChatWidget() {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, loading]);
 
-  const logMessage = async (role: "user" | "assistant", message: string) => {
-    try {
-      await supabase.from("conversations").insert({
-        session_id: sessionId.current,
-        role,
-        message,
-        page_url: window.location.href,
-        referrer: document.referrer || null,
-        user_agent: navigator.userAgent,
-      });
-    } catch {
-      // Logging failures are silent — never surface to the user
-    }
-  };
-
   const sendMessage = useCallback(
     async (userText: string) => {
       const trimmed = userText.trim();
@@ -84,7 +68,6 @@ export function ChatWidget() {
       setMessages((prev) => [...prev, userMessage]);
       setInput("");
       setLoading(true);
-      try { await logMessage("user", trimmed); } catch { /* silent */ }
 
       try {
         const res = await fetch("/api/lumina-ai", {
@@ -93,6 +76,7 @@ export function ChatWidget() {
           body: JSON.stringify({
             message: trimmed,
             history,
+            sessionId: sessionId.current,
           }),
         });
         const data = await res.json();
@@ -128,7 +112,6 @@ export function ChatWidget() {
             showBookingCta,
           },
         ]);
-        try { await logMessage("assistant", reply); } catch { /* silent */ }
       } catch {
         setMessages((prev) => [
           ...prev,
