@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { chatConfig } from "../../lib/content";
 import Button from "../ui/Button";
@@ -20,6 +20,7 @@ export function ChatWidget() {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [copied, setCopied] = useState(false);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!config.enabled) return;
@@ -38,6 +39,10 @@ export function ChatWidget() {
       },
     ]);
   }, [open, messages.length, config.welcomeMessage]);
+
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages, loading]);
 
   const sendMessage = useCallback(
     async (userText: string) => {
@@ -221,6 +226,7 @@ export function ChatWidget() {
                 Thinking…
               </div>
             ) : null}
+            <div ref={messagesEndRef} />
           </div>
 
           <form
