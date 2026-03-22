@@ -5,6 +5,7 @@ type Props = {
   title: string;
   subtitle?: string;
   align?: "left" | "center";
+  centered?: boolean;
 };
 
 export function SectionHeader({
@@ -12,12 +13,15 @@ export function SectionHeader({
   title,
   subtitle,
   align = "left",
+  centered,
 }: Props) {
   const alignClass =
-    align === "center" ? "items-center text-center" : "items-start text-left";
+    align === "center" || centered
+      ? "items-center text-center"
+      : "items-start text-left";
 
   return (
-    <div className={cn("flex flex-col gap-2.5", alignClass)}>
+    <div className={cn("flex flex-col gap-2.5", alignClass, centered && "mx-auto text-center")}>
       {eyebrow ? (
         <p className="text-xs font-medium uppercase tracking-[0.2em] text-slate-500">
           {eyebrow}
