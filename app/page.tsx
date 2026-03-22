@@ -4,6 +4,7 @@ import HeroSection from "../src/components/sections/HeroSection";
 import TrustBar from "../src/components/sections/TrustBar";
 import FeaturedTreatments from "../src/components/sections/FeaturedTreatments";
 import WhyChooseUsSection from "../src/components/sections/WhyChooseUsSection";
+import TeamSection from "../src/components/sections/TeamSection";
 import BeforeAfterGallery from "../src/components/sections/BeforeAfterGallery";
 import TestimonialsSection from "../src/components/sections/TestimonialsSection";
 import AboutSection from "../src/components/sections/AboutSection";
@@ -23,6 +24,7 @@ export default function Home() {
       <TrustBar />
       <FeaturedTreatments />
       <WhyChooseUsSection />
+      <TeamSection />
       <BeforeAfterGallery />
       <TestimonialsSection />
       <AboutSection />
