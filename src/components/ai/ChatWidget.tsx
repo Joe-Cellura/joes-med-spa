@@ -21,6 +21,7 @@ export function ChatWidget() {
   const [loading, setLoading] = useState(false);
   const [copied, setCopied] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
   const sessionId = useRef<string>(
     `session_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
   );
@@ -163,6 +164,7 @@ export function ChatWidget() {
         ]);
       } finally {
         setLoading(false);
+        inputRef.current?.focus();
       }
     },
     [loading, messages],
@@ -314,10 +316,11 @@ export function ChatWidget() {
           >
             <div className="flex gap-2">
               <input
+                ref={inputRef}
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder="Ask about treatments, pricing, downtime, or consultations..."
+                placeholder=""
                 className="min-w-0 flex-1 rounded-xl border border-slate-200 bg-slate-50/80 px-3.5 py-2.5 text-[13px] text-slate-800 placeholder:text-slate-400 focus:border-teal-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-teal-500"
                 disabled={loading}
               />

@@ -167,8 +167,8 @@ FOLLOW-UP GUIDANCE
   "Would you like to explore one of these options in more detail?"
   "Is there anything else I can help you with?"
   "Would you like to know more?"
-- When a user expresses both interest in a treatment AND an emotional signal like nervousness, uncertainty, or hesitation in the same message, always end your response with a gentle consultation suggestion — this is the most natural moment to offer one. The suggestion should feel like genuine guidance, not a sales push.
-  Example: User: "I'm interested in Hydrafacial but I'm nervous" → "It's completely normal to feel that way about something new. A consultation is a great way to walk through the process with one of our providers so you feel fully comfortable before committing to anything."
+- When a user expresses both nervousness or anxiety AND interest in a specific treatment in the same message, respond with exactly 2 sentences. Sentence 1: a warm empathetic acknowledgment. Sentence 2: suggest a consultation AND end with a direct question that invites the user to confirm — like "Would you like me to get that set up for you?" or "Can I go ahead and get that booked?" — this invites the user to confirm so the booking button can appear.
+  Example: User: "I'm interested in Hydrafacial but I'm nervous" → "It's completely normal to feel that way about something new — a consultation is the best first step, and there's zero pressure to do anything that day. Would you like me to get that set up for you?"
 - Educational or historical questions about treatments — such as "tell me about the history of Botox" or "how long has filler been around" — should always end with a contextual follow-up that connects the history to the user's potential interest. Never just answer and stop — always invite the next step.
   Example: User: "tell me about the history of Botox" → Good follow-up: "Are you considering Botox for yourself, or just curious about the treatment?"
 
@@ -229,6 +229,13 @@ SAFETY
     "schedule now",
     "can we book",
     "can we schedule",
+    "alright",
+    "sure",
+    "that works",
+    "lets go",
+    "let's go",
+    "please do",
+    "go ahead",
   ];
 
   const bookingReplyPhrases = [
@@ -251,6 +258,14 @@ SAFETY
     "come in for a consultation",
     "we can schedule",
     "we can book",
+    "a consultation is a great way",
+    "a consultation would be",
+    "scheduling a consultation",
+    "get you set up",
+    "i'll get you set up",
+    "can i get that booked",
+    "get that booked for you",
+    "would you like to get that booked",
   ];
 
   try {

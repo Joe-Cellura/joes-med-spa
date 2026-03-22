@@ -1,8 +1,8 @@
 {
   "enabled": true,
-  "triggerLabel": "Ask Lumina AI",
-  "panelTitle": "Lumina AI",
-  "welcomeTitle": "Lumina AI",
-  "welcomeMessage": "Hi — I'm Lumina AI.\n\nI can help with treatment questions, downtime, pricing ranges, or choosing the right service.\n\nHow can I help today?",
+  "triggerLabel": "Get Personalized Guidance",
+  "panelTitle": "Lumina Virtual Assistant",
+  "welcomeTitle": "Lumina Virtual Assistant",
+  "welcomeMessage": "Hi, I'm your Lumina Virtual Assistant.\n\nI can answer questions about treatments, pricing, scheduling, and much more.\n\nHow can I help you today?",
   "disclaimer": "This assistant provides general information and does not replace medical advice. Consult a licensed provider for personalized guidance."
 }

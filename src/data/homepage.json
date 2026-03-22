@@ -14,7 +14,7 @@
     "hero": {
       "eyebrow": "Lumina Aesthetics — Raleigh, North Carolina",
       "heading": "Subtle, elevated results. Done with precision.",
-      "subheading": "Physician-led care. Natural-looking results. A calm, unhurried experience built around you.",
+      "subheading": "Natural results, not obvious ones. Physician-led care built around your goals.",
       "highlights": [
         "Physician-led care",
         "Minimal downtime options",
@@ -140,7 +140,7 @@
       "items": [
         { "type": "call", "label": "Call" },
         { "type": "book", "label": "Book", "href": "#book" },
-        { "type": "chat", "label": "Ask Lumina AI" }
+        { "type": "chat", "label": "Get Personalized Guidance" }
       ]
     }
   }
