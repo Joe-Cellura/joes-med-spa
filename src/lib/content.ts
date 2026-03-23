@@ -1,11 +1,11 @@
-import brandData from "../data/clients/lumina/brand.json";
-import homepageData from "../data/clients/lumina/homepage.json";
-import treatmentsData from "../data/clients/lumina/treatments.json";
-import faqData from "../data/clients/lumina/faq.json";
-import testimonialsData from "../data/clients/lumina/testimonials.json";
-import chatData from "../data/clients/lumina/chat.json";
-import teamData from "../data/clients/lumina/team.json";
-import { blogPosts as blogPostsData } from "../data/clients/lumina/blogPosts";
+import brandData from "../data/clients/aura-skin-laser/brand.json";
+import homepageData from "../data/clients/aura-skin-laser/homepage.json";
+import treatmentsData from "../data/clients/aura-skin-laser/treatments.json";
+import faqData from "../data/clients/aura-skin-laser/faq.json";
+import testimonialsData from "../data/clients/aura-skin-laser/testimonials.json";
+import chatData from "../data/clients/aura-skin-laser/chat.json";
+import teamData from "../data/clients/aura-skin-laser/team.json";
+import { blogPosts as blogPostsData } from "../data/clients/aura-skin-laser/blogPosts";
 import type {
   BrandConfig,
   HomepageConfig,
