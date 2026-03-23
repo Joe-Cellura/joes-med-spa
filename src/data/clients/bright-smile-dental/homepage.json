@@ -1,0 +1,147 @@
+{
+  "meta": {
+    "title": "Bright Smile Dental | Charlotte, North Carolina",
+    "description": "Modern dental care in Charlotte. Natural-looking results with a patient-first, comfortable approach."
+  },
+  "sections": {
+    "promoStrip": {
+      "enabled": true,
+      "badge": "New Patients",
+      "message": "Complimentary consultation for first-time patients.",
+      "link": { "label": "Request yours", "href": "#book" }
+    },
+    "navbar": {},
+    "hero": {
+      "eyebrow": "Bright Smile Dental — Charlotte, North Carolina",
+      "heading": "Modern dentistry. Done with care.",
+      "subheading": "Natural results, not obvious ones. Patient-led care built around your comfort and goals.",
+      "highlights": [
+        "Patient-centered care",
+        "Minimal discomfort options",
+        "Natural-looking outcomes"
+      ],
+      "primaryCta": { "label": "Request a Consultation", "href": "#book" },
+      "secondaryCta": { "label": "Explore Services", "href": "#treatments" },
+      "image": {
+        "src": "/images/hero-placeholder.jpg",
+        "alt": "Bright Smile Dental office"
+      }
+    },
+    "trustBar": {
+      "items": [
+        {
+          "label": "5.0",
+          "value": "Rating",
+          "sublabel": "from local reviews"
+        },
+        {
+          "label": "2,000+",
+          "value": "Patients",
+          "sublabel": "served in Charlotte"
+        },
+        {
+          "label": "Licensed",
+          "value": "Providers",
+          "sublabel": "dental professionals"
+        },
+        {
+          "label": "Natural",
+          "value": "Results",
+          "sublabel": "your best smile"
+        }
+      ]
+    },
+    "featuredTreatments": {
+      "title": "Featured services",
+      "subtitle": "A range of dental services tailored to your oral health and smile goals.",
+      "featuredIds": [
+        "cleaning",
+        "whitening",
+        "veneers",
+        "invisalign",
+        "implants",
+        "emergency"
+      ],
+      "sectionCta": { "label": "View all services", "href": "#treatments" }
+    },
+    "whyChooseUs": {
+      "title": "Why choose us",
+      "subtitle": "Modern technique, genuine care, and a calm comfortable experience.",
+      "items": [
+        {
+          "title": "Patient-first",
+          "description": "Every plan begins with a thorough exam and honest recommendations."
+        },
+        {
+          "title": "Modern technique",
+          "description": "We use the latest technology for precise, comfortable treatment."
+        },
+        {
+          "title": "Comfortable experience",
+          "description": "A welcoming environment with attentive guidance at every step."
+        }
+      ],
+      "cta": { "label": "Request a consultation", "href": "#book" }
+    },
+    "beforeAfterGallery": {
+      "title": "Results gallery",
+      "subtitle": "Believable outcomes that still look like you.",
+      "items": [
+        {
+          "id": "ba-01",
+          "treatment": "Veneers: Smile Transformation",
+          "beforeSrc": "/images/before-1.jpg",
+          "afterSrc": "/images/after-1.jpg",
+          "alt": "Before and after veneer results"
+        },
+        {
+          "id": "ba-02",
+          "treatment": "Whitening: Natural Brightness",
+          "beforeSrc": "/images/before-2.jpg",
+          "afterSrc": "/images/after-2.jpg",
+          "alt": "Before and after whitening results"
+        }
+      ],
+      "disclaimer": "Photos are representative. Individual results vary."
+    },
+    "testimonials": {
+      "title": "What patients say",
+      "subtitle": "A few words from patients who trust Bright Smile Dental.",
+      "featuredIds": ["t-01", "t-02", "t-03"],
+      "cta": { "label": "Request a consultation", "href": "#book" }
+    },
+    "about": {
+      "title": "A different kind of dental practice",
+      "body": "Bright Smile Dental was built on a simple idea: that going to the dentist should feel as good as your results look. We combine clinical precision with a calm, pressure-free environment. Honest recommendations, no upselling, no work that isn't right for you.",
+      "bullets": [
+        "Licensed dental professionals",
+        "Personalized treatment plans",
+        "Clear pricing before treatment begins"
+      ],
+      "image": {
+        "src": "/images/about-placeholder.jpg",
+        "alt": "Bright Smile Dental office"
+      }
+    },
+    "faq": {
+      "title": "FAQ",
+      "subtitle": "Quick answers to common questions.",
+      "featuredIds": ["faq-01", "faq-02", "faq-03", "faq-04", "faq-05", "faq-06", "faq-07"]
+    },
+    "finalCta": {
+      "title": "Ready for a brighter smile?",
+      "body": "Schedule a complimentary consultation and build a plan you'll feel confident about.",
+      "primaryCta": { "label": "Request your consultation", "href": "#book" },
+      "secondaryCta": { "label": "Call now", "href": "tel" }
+    },
+    "footer": {},
+    "stickyMobileCta": {
+      "enabled": true,
+      "items": [
+        { "type": "call", "label": "Call" },
+        { "type": "book", "label": "Book", "href": "#book" },
+        { "type": "chat", "label": "Get Personalized Guidance" }
+      ]
+    }
+  }
+}

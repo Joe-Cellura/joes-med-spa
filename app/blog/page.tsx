@@ -4,10 +4,10 @@ import Footer from "../../src/components/layout/Footer";
 import Container from "../../src/components/ui/Container";
 import SectionHeader from "../../src/components/ui/SectionHeader";
 import Card from "../../src/components/ui/Card";
-import { getAllBlogPosts } from "../../src/data/blogPosts";
+import { blogPosts, brandConfig } from "../../src/lib/content";
 
 export default function BlogIndexPage() {
-  const posts = getAllBlogPosts();
+  const posts = blogPosts;
 
   return (
     <div className="bg-slate-50 text-slate-900">
@@ -15,8 +15,8 @@ export default function BlogIndexPage() {
       <main className="pb-16 pt-12 sm:pb-20 sm:pt-16">
         <Container className="space-y-8">
           <SectionHeader
-            title="Lumina Journal"
-            subtitle="Educational notes from Lumina Aesthetics in Raleigh, North Carolina. Designed to help you feel informed, not overwhelmed."
+            title={`${brandConfig.brand.name} Journal`}
+            subtitle={`Educational notes from ${brandConfig.brand.name} in ${brandConfig.brand.location.display}. Designed to help you feel informed, not overwhelmed.`}
             align="left"
           />
 

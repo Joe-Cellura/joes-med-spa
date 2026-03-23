@@ -73,7 +73,7 @@ export function ChatWidget() {
       const assistantId = `assistant-${Date.now()}`;
 
       try {
-        const res = await fetch("/api/lumina-ai", {
+        const res = await fetch("/api/assistant", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -230,7 +230,7 @@ export function ChatWidget() {
 
   return (
     <div
-      id="lumina-ai"
+      id="assistant"
       className="pointer-events-none fixed bottom-20 right-4 z-40 flex flex-col items-end gap-2 sm:bottom-6 sm:right-6"
     >
       {open ? (

@@ -6,11 +6,11 @@ import { supabase } from "../../../src/lib/supabase";
 type MessageHistory = { role: "user" | "assistant"; content: string }[];
 
 export async function POST(request: Request) {
-  console.log("[lumina-ai] POST /api/lumina-ai received");
+  console.log("[assistant] POST /api/lumina-ai received");
 
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey || apiKey.trim() === "") {
-    console.error("[lumina-ai] OPENAI_API_KEY is missing");
+    console.error("[assistant] OPENAI_API_KEY is missing");
     return NextResponse.json(
       { error: "Server configuration error: OPENAI_API_KEY is not set." },
       { status: 500 },
@@ -21,7 +21,7 @@ export async function POST(request: Request) {
   try {
     body = await request.json();
   } catch {
-    console.warn("[lumina-ai] Invalid JSON body");
+    console.warn("[assistant] Invalid JSON body");
     return NextResponse.json(
       { error: "Invalid request: body must be valid JSON." },
       { status: 400 },
@@ -30,7 +30,7 @@ export async function POST(request: Request) {
 
   const message = typeof body.message === "string" ? body.message.trim() : "";
   if (!message) {
-    console.warn("[lumina-ai] Missing or empty message");
+    console.warn("[assistant] Missing or empty message");
     return NextResponse.json(
       { error: "Missing required field: message (non-empty string)." },
       { status: 400 },
@@ -329,10 +329,10 @@ SAFETY
               },
             ]);
           } catch (err) {
-            console.error("[lumina-ai] Supabase logging failed:", err);
+            console.error("[assistant] Supabase logging failed:", err);
           }
 
-          console.log("[lumina-ai] Success, reply length:", fullReply.length);
+          console.log("[assistant] Success, reply length:", fullReply.length);
 
           // Send metadata as a final chunk so the client knows showBookingCta
           controller.enqueue(
@@ -352,7 +352,7 @@ SAFETY
       },
     });
   } catch (err) {
-    console.error("[lumina-ai] OpenAI request failed:", err);
+    console.error("[assistant] OpenAI request failed:", err);
     const errMsg =
       err instanceof Error ? err.message : "Unknown error calling OpenAI.";
     return NextResponse.json(

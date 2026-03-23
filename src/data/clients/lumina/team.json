@@ -1,0 +1,32 @@
+{
+  "providers": [
+    {
+      "id": "dr-sarah-chen",
+      "initials": "SC",
+      "name": "Dr. Sarah Chen",
+      "role": "Medical Director",
+      "bio": "Board-certified physician overseeing all medical aesthetics at Lumina. Dr. Chen sets clinical protocols and performs or supervises all injectable treatments, with a focus on facial balance and conservative dosing."
+    },
+    {
+      "id": "marcus-webb",
+      "initials": "MW",
+      "name": "Marcus Webb, PA-C",
+      "role": "Lead Injector",
+      "bio": "Marcus has performed injectables for over eight years, specializing in neuromodulators and dermal fillers. He prioritizes natural movement and proportion, building treatment plans over time rather than doing too much at once."
+    },
+    {
+      "id": "elena-rivera",
+      "initials": "ER",
+      "name": "Elena Rivera",
+      "role": "Licensed Aesthetician & Skin Specialist",
+      "bio": "Elena manages facials, chemical peels, and Hydrafacial treatments. Licensed in North Carolina with additional training in medical-grade treatments and sensitive skin care."
+    },
+    {
+      "id": "jordan-kim",
+      "initials": "JK",
+      "name": "Jordan Kim",
+      "role": "Client Concierge & Consultation Coordinator",
+      "bio": "Jordan handles scheduling, intake, and the flow of your visit. He ensures every client feels informed and comfortable from the first call through follow-up care."
+    }
+  ]
+}

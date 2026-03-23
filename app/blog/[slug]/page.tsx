@@ -3,11 +3,10 @@ import Navbar from "../../../src/components/layout/Navbar";
 import Footer from "../../../src/components/layout/Footer";
 import Container from "../../../src/components/ui/Container";
 import Card from "../../../src/components/ui/Card";
-import { getBlogPostBySlug, getAllBlogPosts } from "../../../src/data/blogPosts";
+import { blogPosts, brandConfig } from "../../../src/lib/content";
 
 export function generateStaticParams() {
-  const posts = getAllBlogPosts();
-  return posts.map((post) => ({ slug: post.slug }));
+  return blogPosts.map((post) => ({ slug: post.slug }));
 }
 
 type Block =
@@ -24,12 +23,13 @@ function parseBody(body: string, title: string): Block[] {
   const lines = body.split(/\r?\n/);
   const blocks: Block[] = [];
 
+  const brandByline = `${brandConfig.brand.name} — ${brandConfig.brand.location.display}`.toLowerCase();
   const isMetaLine = (line: string) => {
     const trimmed = line.trim();
     if (!trimmed) return true;
     const lower = trimmed.toLowerCase();
     if (trimmed === title.trim()) return true;
-    if (lower === "lumina aesthetics — raleigh, north carolina") return true;
+    if (lower === brandByline) return true;
     if (lower === "introduction") return true;
     return false;
   };
@@ -98,7 +98,7 @@ export default async function BlogPostPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = getBlogPostBySlug(slug);
+  const post = blogPosts.find((p) => p.slug === slug);
 
   if (!post) {
     notFound();
@@ -122,7 +122,7 @@ export default async function BlogPostPage({
               </a>
               <div className="space-y-3">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-slate-500">
-                  Lumina Aesthetics — Raleigh, North Carolina
+                  {brandConfig.brand.name} — {brandConfig.brand.location.display}
                 </p>
                 <div className="h-px w-10 bg-slate-300" />
                 <h1 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">

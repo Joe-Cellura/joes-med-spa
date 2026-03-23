@@ -1,0 +1,49 @@
+{
+  "brand": {
+    "name": "Bright Smile Dental",
+    "tagline": "Modern dentistry, comfortable care.",
+    "location": {
+      "city": "Charlotte",
+      "region": "North Carolina",
+      "display": "Charlotte, North Carolina"
+    },
+    "contact": {
+      "phone": "(704) 555-0192",
+      "email": "hello@brightsmiledentalcharlotte.com",
+      "addressLines": ["214 South Tryon St", "Charlotte, NC 28202"],
+      "hours": ["Mon–Fri: 8am–5pm", "Sat: 9am–2pm", "Sun: Closed"]
+    },
+    "ctas": {
+      "book": { "label": "Book Now", "href": "/book" }
+    },
+    "social": {
+      "instagram": "https://instagram.com/brightsmiledentalcharlotte",
+      "tiktok": ""
+    }
+  },
+  "navigation": {
+    "main": [
+      { "label": "Services", "href": "#treatments" },
+      { "label": "Results", "href": "#results" },
+      { "label": "Team", "href": "#team" },
+      { "label": "Reviews", "href": "#testimonials" },
+      { "label": "About", "href": "#about" },
+      { "label": "FAQ", "href": "#faq" },
+      { "label": "Blog", "href": "/blog" }
+    ],
+    "footer": [
+      { "label": "Accessibility", "href": "#" },
+      { "label": "Privacy", "href": "#" },
+      { "label": "Terms", "href": "#" }
+    ]
+  },
+  "theme": {
+    "background": "white",
+    "accent": "#0f766e",
+    "text": "#0b1220",
+    "mutedText": "#475569"
+  },
+  "legal": {
+    "disclaimerShort": "All dental services are performed by licensed dental professionals. Individual results may vary."
+  }
+}

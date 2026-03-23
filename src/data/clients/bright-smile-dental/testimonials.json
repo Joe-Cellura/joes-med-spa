@@ -1,0 +1,26 @@
+{
+  "disclaimer": "Testimonials reflect individual experiences. Results may vary.",
+  "items": [
+    {
+      "id": "t-01",
+      "name": "Ashley M.",
+      "quote": "I had serious dental anxiety before coming here. Dr. Park took his time explaining everything and I never once felt rushed or judged. My smile looks completely different and I actually look forward to my appointments now.",
+      "treatment": "Veneers",
+      "rating": 5
+    },
+    {
+      "id": "t-02",
+      "name": "Derek T.",
+      "quote": "I came in for a cleaning and left with a full treatment plan I actually understood. No pressure, no upselling — just honest recommendations and clear pricing. Exactly what I was looking for.",
+      "treatment": "General Dentistry",
+      "rating": 5
+    },
+    {
+      "id": "t-03",
+      "name": "Priya N.",
+      "quote": "Did Invisalign here and the results exceeded my expectations. Sarah checked in with me constantly and the whole team made the process feel easy. My confidence has genuinely changed.",
+      "treatment": "Invisalign",
+      "rating": 5
+    }
+  ]
+}

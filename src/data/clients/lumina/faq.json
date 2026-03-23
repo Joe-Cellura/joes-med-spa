@@ -1,0 +1,47 @@
+{
+  "items": [
+    {
+      "id": "faq-01",
+      "question": "Who performs treatments at Lumina?",
+      "answer": "All services are performed or supervised by licensed medical professionals. Your plan begins with a consultation to align goals, safety, and expectations.",
+      "category": "General"
+    },
+    {
+      "id": "faq-02",
+      "question": "Is there downtime?",
+      "answer": "Many treatments have minimal downtime. Some services may involve temporary redness, swelling, or sensitivity. We’ll provide clear pre- and post-care guidance.",
+      "category": "Aftercare"
+    },
+    {
+      "id": "faq-03",
+      "question": "How do I choose the right treatment?",
+      "answer": "We’ll recommend options based on your goals, anatomy, skin condition, timeline, and comfort level—prioritizing natural-looking outcomes.",
+      "category": "Consultation"
+    },
+    {
+      "id": "faq-04",
+      "question": "Do you offer pricing before treatment?",
+      "answer": "Yes. You’ll receive a transparent plan and estimate before we begin. We can also stage treatments over time based on your preferences.",
+      "category": "Pricing"
+    },
+    {
+      "id": "faq-05",
+      "question": "Can I be treated the same day as my consultation?",
+      "answer": "Sometimes. For neuromodulator, same-day treatment may be an option if you’re a good candidate. For filler or more involved treatments, we often recommend a separate visit. The provider will tell you what’s appropriate.",
+      "category": "Consultation"
+    },
+    {
+      "id": "faq-06",
+      "question": "I have an event in a few weeks. When should I come in?",
+      "answer": "For injectables we recommend at least two weeks before a major event so any bruising or swelling can resolve. For facials or Hydrafacial, a few days to a week before is often ideal. We can help you choose a treatment and date.",
+      "category": "Booking"
+    },
+    {
+      "id": "faq-07",
+      "question": "Do you focus on natural-looking results?",
+      "answer": "Yes. We aim for results that look like you—refreshed or refined, not overdone. We use conservative dosing and technique and will tell you when we think less is more for your goals.",
+      "category": "General"
+    }
+  ]
+}
+

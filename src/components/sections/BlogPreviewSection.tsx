@@ -2,10 +2,10 @@ import Link from "next/link";
 import Container from "../ui/Container";
 import SectionHeader from "../ui/SectionHeader";
 import Card from "../ui/Card";
-import { getAllBlogPosts } from "../../data/blogPosts";
+import { blogPosts, brandConfig } from "../../lib/content";
 
 export function BlogPreviewSection() {
-  const posts = getAllBlogPosts().slice(0, 3);
+  const posts = blogPosts.slice(0, 3);
 
   if (!posts.length) return null;
 
@@ -14,8 +14,8 @@ export function BlogPreviewSection() {
       <Container className="space-y-10">
         <div className="flex items-end justify-between gap-4">
           <SectionHeader
-            title="From the Lumina Journal"
-            subtitle="Short, educational notes to help you plan treatments, understand downtime, and feel more prepared for your visit."
+            title={`From the ${brandConfig.brand.name} Journal`}
+            subtitle="Short, educational notes to help you plan treatments and feel more prepared for your visit."
             align="left"
           />
           <Link

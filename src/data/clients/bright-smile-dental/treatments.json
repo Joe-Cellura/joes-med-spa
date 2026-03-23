@@ -1,0 +1,70 @@
+{
+  "items": [
+    {
+      "id": "cleaning",
+      "name": "Teeth Cleaning",
+      "tagline": "Professional cleaning and oral health check.",
+      "description": "A thorough cleaning removes plaque and tartar buildup, polishes enamel, and includes a full oral health assessment. Recommended every six months for most patients.",
+      "duration": "45–60 min",
+      "startingAt": "from $150",
+      "category": "Preventive",
+      "badges": ["Most requested"],
+      "cta": { "label": "Learn more", "href": "/book" }
+    },
+    {
+      "id": "whitening",
+      "name": "Teeth Whitening",
+      "tagline": "Professional whitening for a brighter smile.",
+      "description": "In-office whitening delivers dramatic results in a single visit using professional-grade gel and light activation. Take-home options also available for gradual whitening.",
+      "duration": "60–90 min",
+      "startingAt": "from $299",
+      "category": "Cosmetic",
+      "badges": [],
+      "cta": { "label": "Learn more", "href": "/book" }
+    },
+    {
+      "id": "veneers",
+      "name": "Porcelain Veneers",
+      "tagline": "Thin porcelain shells for a transformed smile.",
+      "description": "Custom-crafted veneers cover the front surface of teeth to correct discoloration, chips, gaps, or shape. Results are natural-looking and long-lasting.",
+      "duration": "2–3 visits",
+      "startingAt": "from $1,200 per tooth",
+      "category": "Cosmetic",
+      "badges": [],
+      "cta": { "label": "Learn more", "href": "/book" }
+    },
+    {
+      "id": "invisalign",
+      "name": "Invisalign",
+      "tagline": "Clear aligners for straighter teeth.",
+      "description": "Invisalign uses a series of clear, removable aligners to gradually straighten teeth without metal braces. Most patients complete treatment in 12 to 18 months.",
+      "duration": "12–18 months",
+      "startingAt": "from $3,500",
+      "category": "Orthodontics",
+      "badges": [],
+      "cta": { "label": "Learn more", "href": "/book" }
+    },
+    {
+      "id": "implants",
+      "name": "Dental Implants",
+      "tagline": "Permanent tooth replacement that looks and feels natural.",
+      "description": "Implants are titanium posts surgically placed in the jawbone to support a crown, bridge, or denture. They look, feel, and function like natural teeth.",
+      "duration": "Multiple visits",
+      "startingAt": "from $3,000 per implant",
+      "category": "Restorative",
+      "badges": [],
+      "cta": { "label": "Learn more", "href": "/book" }
+    },
+    {
+      "id": "emergency",
+      "name": "Emergency Dental Care",
+      "tagline": "Same-day care for dental emergencies.",
+      "description": "We reserve time each day for patients experiencing pain, broken teeth, lost fillings, or other urgent dental needs. Call us and we will do our best to see you same day.",
+      "duration": "Varies",
+      "startingAt": "Call for pricing",
+      "category": "Emergency",
+      "badges": [],
+      "cta": { "label": "Learn more", "href": "/book" }
+    }
+  ]
+}

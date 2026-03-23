@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "title": "Lumina Aesthetics | Raleigh, North Carolina",
+    "description": "Premium injectables, skin, and body treatments in Raleigh. Natural-looking results with a refined, medical-first approach."
+  },
+  "sections": {
+    "promoStrip": {
+      "enabled": true,
+      "badge": "New Clients",
+      "message": "Complimentary consultation for first-time guests.",
+      "link": { "label": "Request yours", "href": "#book" }
+    },
+    "navbar": {},
+    "hero": {
+      "eyebrow": "Lumina Aesthetics — Raleigh, North Carolina",
+      "heading": "Subtle, elevated results. Done with precision.",
+      "subheading": "Natural results, not obvious ones. Physician-led care built around your goals.",
+      "highlights": [
+        "Physician-led care",
+        "Minimal downtime options",
+        "Premium, natural-looking outcomes"
+      ],
+      "primaryCta": { "label": "Request a Consultation", "href": "#book" },
+      "secondaryCta": { "label": "Explore Treatments", "href": "#treatments" },
+      "image": {
+        "src": "/images/hero-placeholder.jpg",
+        "alt": "Lumina Aesthetics treatment room"
+      }
+    },
+    "trustBar": {
+      "items": [
+        {
+          "label": "5.0",
+          "value": "Rating",
+          "sublabel": "from local reviews"
+        },
+        {
+          "label": "1,000+",
+          "value": "Clients",
+          "sublabel": "served in Raleigh"
+        },
+        {
+          "label": "Medical",
+          "value": "Supervision",
+          "sublabel": "licensed providers"
+        },
+        {
+          "label": "Natural",
+          "value": "Results",
+          "sublabel": "refined aesthetics"
+        }
+      ]
+    },
+    "featuredTreatments": {
+      "title": "Featured treatments",
+      "subtitle": "A curated set of high-impact services tailored to your goals.",
+      "featuredIds": [
+        "tox",
+        "filler",
+        "hydrafacial",
+        "microneedling",
+        "laser-hair",
+        "body-contouring"
+      ],
+      "sectionCta": { "label": "View all options", "href": "#treatments" }
+    },
+    "whyChooseUs": {
+      "title": "Why choose us",
+      "subtitle": "Premium care, modern technique, and a calm, elevated experience.",
+      "items": [
+        {
+          "title": "Medical-first",
+          "description": "Every plan begins with a thoughtful consult and safety-focused recommendations."
+        },
+        {
+          "title": "Refined artistry",
+          "description": "Enhance what’s already beautiful. Never overdone, never obvious."
+        },
+        {
+          "title": "High-touch experience",
+          "description": "A luxury environment with attentive guidance before and after treatment."
+        }
+      ],
+      "cta": { "label": "Request a consultation", "href": "#book" }
+    },
+    "beforeAfterGallery": {
+      "title": "Results gallery",
+      "subtitle": "Believable outcomes that still look like you.",
+      "items": [
+        {
+          "id": "ba-01",
+          "treatment": "Neuromodulator: Forehead & Brows",
+          "beforeSrc": "/images/before-1.jpg",
+          "afterSrc": "/images/after-1.jpg",
+          "alt": "Before and after toxin results"
+        },
+        {
+          "id": "ba-02",
+          "treatment": "Skin Rejuvenation: Texture & Tone",
+          "beforeSrc": "/images/before-2.jpg",
+          "afterSrc": "/images/after-2.jpg",
+          "alt": "Before and after skin texture improvement"
+        }
+      ],
+      "disclaimer": "Photos are representative. Individual results vary."
+    },
+    "testimonials": {
+      "title": "What clients say",
+      "subtitle": "A few words from guests who trust Lumina.",
+      "featuredIds": ["t-01", "t-02", "t-03"],
+      "cta": { "label": "Request a consultation", "href": "#book" }
+    },
+    "about": {
+      "title": "A different kind of aesthetics practice",
+      "body": "Lumina Aesthetics was built on a simple idea: that aesthetic medicine should feel as good as it looks. We combine clinical precision with a calm, unhurried environment. No pressure, no overselling, no results that don't look like you.",
+      "bullets": [
+        "Physician-led care and medical oversight",
+        "Personalized plans, never one-size-fits-all",
+        "Honest guidance before, during, and after treatment"
+      ],
+      "image": {
+        "src": "/images/about-placeholder.jpg",
+        "alt": "Lumina Aesthetics lobby"
+      }
+    },
+    "faq": {
+      "title": "FAQ",
+      "subtitle": "Quick answers to common questions.",
+      "featuredIds": ["faq-01", "faq-02", "faq-03", "faq-04", "faq-05", "faq-06", "faq-07"]
+    },
+    "finalCta": {
+      "title": "Ready for a refined refresh?",
+      "body": "Schedule a complimentary consultation and build a plan you’ll feel confident about.",
+      "primaryCta": { "label": "Request your consultation", "href": "#book" },
+      "secondaryCta": { "label": "Call now", "href": "tel" }
+    },
+    "footer": {},
+    "stickyMobileCta": {
+      "enabled": true,
+      "items": [
+        { "type": "call", "label": "Call" },
+        { "type": "book", "label": "Book", "href": "#book" },
+        { "type": "chat", "label": "Get Personalized Guidance" }
+      ]
+    }
+  }
+}
+

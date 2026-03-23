@@ -1,0 +1,39 @@
+{
+  "items": [
+    {
+      "id": "faq-01",
+      "question": "Who performs treatments at Bright Smile Dental?",
+      "answer": "All dental services are performed by licensed dental professionals. Your care begins with a thorough consultation to understand your goals and oral health history."
+    },
+    {
+      "id": "faq-02",
+      "question": "Is there any pain involved?",
+      "answer": "We prioritize your comfort at every step. Most procedures involve little to no discomfort, and we offer local anesthesia and other comfort options when needed."
+    },
+    {
+      "id": "faq-03",
+      "question": "How do I choose the right treatment?",
+      "answer": "We recommend starting with a consultation. We will assess your oral health, listen to your goals, and explain all options clearly before recommending anything."
+    },
+    {
+      "id": "faq-04",
+      "question": "Do you provide pricing upfront?",
+      "answer": "Yes. You will receive a clear treatment plan with pricing before any work begins. We also help with insurance questions and offer payment options."
+    },
+    {
+      "id": "faq-05",
+      "question": "Can I be seen the same day as my consultation?",
+      "answer": "For cleanings and simple procedures, same-day treatment is often possible. For more complex work like implants or veneers, we typically schedule a separate visit."
+    },
+    {
+      "id": "faq-06",
+      "question": "Do you see patients with dental anxiety?",
+      "answer": "Absolutely. Many of our patients come to us after difficult experiences elsewhere. We work at your pace and will never pressure you into treatment you are not ready for."
+    },
+    {
+      "id": "faq-07",
+      "question": "Do you focus on natural-looking results?",
+      "answer": "Yes. Whether you are getting veneers, whitening, or implants, our goal is results that look like your best natural smile — not obvious dental work."
+    }
+  ]
+}

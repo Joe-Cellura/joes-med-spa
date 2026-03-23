@@ -1,0 +1,32 @@
+{
+  "providers": [
+    {
+      "id": "dr-james-park",
+      "initials": "JP",
+      "name": "Dr. James Park, DDS",
+      "role": "Lead Dentist & Practice Owner",
+      "bio": "Dr. Park has over 12 years of experience in general and cosmetic dentistry. He founded Bright Smile Dental with a focus on patient comfort, honest care, and beautiful natural results."
+    },
+    {
+      "id": "dr-maya-patel",
+      "initials": "MP",
+      "name": "Dr. Maya Patel, DDS",
+      "role": "Cosmetic Dentist",
+      "bio": "Dr. Patel specializes in veneers, whitening, and smile design. She brings a meticulous eye for aesthetics and a gentle chairside manner to every patient visit."
+    },
+    {
+      "id": "sarah-kim",
+      "initials": "SK",
+      "name": "Sarah Kim, RDH",
+      "role": "Lead Dental Hygienist",
+      "bio": "Sarah has been with the practice since day one. She performs cleanings, periodontal care, and patient education with a focus on making every visit comfortable."
+    },
+    {
+      "id": "marcus-johnson",
+      "initials": "MJ",
+      "name": "Marcus Johnson",
+      "role": "Patient Coordinator",
+      "bio": "Marcus handles scheduling, insurance questions, and the flow of every visit. He is the first face you see and makes sure every patient feels welcome from arrival."
+    }
+  ]
+}

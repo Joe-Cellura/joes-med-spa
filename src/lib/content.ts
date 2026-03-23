@@ -1,9 +1,11 @@
-import brandData from "../data/brand.json";
-import homepageData from "../data/homepage.json";
-import treatmentsData from "../data/treatments.json";
-import faqData from "../data/faq.json";
-import testimonialsData from "../data/testimonials.json";
-import chatData from "../data/chat.json";
+import brandData from "../data/clients/lumina/brand.json";
+import homepageData from "../data/clients/lumina/homepage.json";
+import treatmentsData from "../data/clients/lumina/treatments.json";
+import faqData from "../data/clients/lumina/faq.json";
+import testimonialsData from "../data/clients/lumina/testimonials.json";
+import chatData from "../data/clients/lumina/chat.json";
+import teamData from "../data/clients/lumina/team.json";
+import { blogPosts as blogPostsData } from "../data/clients/lumina/blogPosts";
 import type {
   BrandConfig,
   HomepageConfig,
@@ -22,6 +24,8 @@ export const treatmentsConfig = treatmentsData as TreatmentsConfig;
 export const faqConfig = faqData as FaqData;
 export const testimonialsConfig = testimonialsData as TestimonialsData;
 export const chatConfig = chatData as ChatConfig;
+export const teamConfig = teamData;
+export const blogPosts = blogPostsData;
 
 export function getFeaturedTreatments(): Treatment[] {
   const ids = homepageConfig.sections.featuredTreatments.featuredIds;
@@ -48,4 +52,3 @@ export function getFeaturedTestimonials(): Testimonial[] {
     .map((id) => byId.get(id))
     .filter((t): t is Testimonial => Boolean(t));
 }
-
