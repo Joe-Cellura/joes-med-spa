@@ -1,0 +1,39 @@
+{
+  "items": [
+    {
+      "id": "faq-01",
+      "question": "Who performs treatments at Aura?",
+      "answer": "All treatments are personally performed by Dipna Patel, RN — the founder and sole practitioner. You will always work with the same expert who knows your skin and history."
+    },
+    {
+      "id": "faq-02",
+      "question": "Is laser hair reduction painful?",
+      "answer": "Aura uses the Motus AZ+ laser, which is designed to minimize discomfort. Most clients describe the sensation as mild warmth. The technology prioritizes comfort without sacrificing effectiveness."
+    },
+    {
+      "id": "faq-03",
+      "question": "How many sessions will I need for laser hair reduction?",
+      "answer": "Most clients need 6 to 12 sessions for optimal results, depending on hair color, skin tone, hormone levels, and the area being treated. Many clients notice smoother, slower-growing hair after just 1 to 3 sessions."
+    },
+    {
+      "id": "faq-04",
+      "question": "Do you treat all skin tones?",
+      "answer": "Yes. The Motus AZ+ laser platform is safe and effective for all skin tones, including darker complexions that were previously difficult to treat with older laser technology."
+    },
+    {
+      "id": "faq-05",
+      "question": "How do I prepare for laser hair reduction?",
+      "answer": "Shave the area 24 hours before your appointment. Do not wax, tweeze, or thread for 4 weeks prior. Avoid sun exposure and tanning before treatment."
+    },
+    {
+      "id": "faq-06",
+      "question": "What is the Moveo GLO treatment?",
+      "answer": "Moveo GLO combines three laser treatments in one session: pigmentation reduction, skin revitalization, and vascular treatment. It is ideal for clients looking for comprehensive improvement with fewer visits."
+    },
+    {
+      "id": "faq-07",
+      "question": "Is the Skinwave Aqua Facial right for my skin type?",
+      "answer": "Yes. The Skinwave is suitable for all skin types including oily, dry, acne-prone, and sensitive skin. It cleanses, exfoliates, and hydrates in a single comfortable session."
+    }
+  ]
+}

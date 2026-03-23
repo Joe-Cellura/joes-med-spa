@@ -302,6 +302,19 @@ export function ChatWidget() {
                 )}
               </div>
             ))}
+            {messages.length === 1 && !loading && (
+              <div className="flex flex-wrap gap-2 pt-1">
+                {["What are your prices?", "Help me choose a treatment", "Book an appointment"].map((chip) => (
+                  <button
+                    key={chip}
+                    onClick={() => sendMessage(chip)}
+                    className="rounded-full border border-teal-600 px-3 py-1.5 text-[12px] text-teal-700 hover:bg-teal-50 transition-colors cursor-pointer"
+                  >
+                    {chip}
+                  </button>
+                ))}
+              </div>
+            )}
             {loading ? (
               <div className="rounded-2xl bg-slate-100/90 px-3.5 py-2.5 text-[13px] text-slate-500">
                 Thinking…

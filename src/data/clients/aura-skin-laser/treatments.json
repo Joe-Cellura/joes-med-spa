@@ -1,0 +1,70 @@
+{
+  "items": [
+    {
+      "id": "hair-reduction",
+      "name": "Laser Hair Reduction",
+      "tagline": "Long-lasting hair reduction for all skin tones.",
+      "description": "Using the Motus AZ+ laser, Aura provides comfortable and effective hair reduction for all skin tones. Sessions are fast and most clients need 6 to 12 treatments for optimal results. Individual sessions or packages available.",
+      "duration": "15–60 min",
+      "startingAt": "from $125",
+      "category": "Laser",
+      "badges": ["Most requested"],
+      "cta": { "label": "Learn more", "href": "/book" }
+    },
+    {
+      "id": "skin-revitalization",
+      "name": "Skin Revitalization",
+      "tagline": "Laser facial for improved texture, tone, and radiance.",
+      "description": "The Moveo SR treatment uses non-ablative laser technology to improve skin texture, reduce signs of aging, and increase radiance. Results include improved elasticity and overall skin rejuvenation.",
+      "duration": "30–45 min",
+      "startingAt": "from $350",
+      "category": "Laser",
+      "badges": [],
+      "cta": { "label": "Learn more", "href": "/book" }
+    },
+    {
+      "id": "dark-spot-reduction",
+      "name": "Dark Spot Reduction",
+      "tagline": "Target sun damage, age spots, and pigmentation.",
+      "description": "The Moveo PL treatment targets melanin to reduce the appearance of sunspots, age spots, and post-inflammatory pigmentation. Results can often be seen after the first session.",
+      "duration": "30–45 min",
+      "startingAt": "from $215",
+      "category": "Laser",
+      "badges": [],
+      "cta": { "label": "Learn more", "href": "/book" }
+    },
+    {
+      "id": "redness-vein-reduction",
+      "name": "Redness & Vein Reduction",
+      "tagline": "Reduce facial redness, spider veins, and broken capillaries.",
+      "description": "The Moveo VL treatment targets vascular concerns including diffuse redness, spider veins, and superficial facial veins. Most clients see improvement over 2 to 3 sessions.",
+      "duration": "30–45 min",
+      "startingAt": "from $300",
+      "category": "Laser",
+      "badges": [],
+      "cta": { "label": "Learn more", "href": "/book" }
+    },
+    {
+      "id": "moveo-glo",
+      "name": "Moveo GLO",
+      "tagline": "3-in-1 combination laser treatment for comprehensive results.",
+      "description": "Moveo GLO combines pigmentation reduction, skin revitalization, and vascular treatment in one session. Ideal for clients looking for comprehensive skin improvement with fewer visits.",
+      "duration": "45–60 min",
+      "startingAt": "from $575",
+      "category": "Laser",
+      "badges": [],
+      "cta": { "label": "Learn more", "href": "/book" }
+    },
+    {
+      "id": "aqua-facial",
+      "name": "Skinwave Aqua Facial",
+      "tagline": "Deep cleanse, exfoliate, and hydrate in one session.",
+      "description": "The Skinwave Aqua Facial cleanses, exfoliates, and hydrates while delivering antioxidant benefits and reducing inflammation. Suitable for all skin types including acne-prone and sensitive skin.",
+      "duration": "45–60 min",
+      "startingAt": "from $250",
+      "category": "Facial",
+      "badges": [],
+      "cta": { "label": "Learn more", "href": "/book" }
+    }
+  ]
+}

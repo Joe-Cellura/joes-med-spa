@@ -1,0 +1,147 @@
+{
+  "meta": {
+    "title": "Aura Skin & Laser | Cary, North Carolina",
+    "description": "Laser hair reduction, skin revitalization, and aqua facials in Cary, NC. Effective results with a boutique, personalized experience."
+  },
+  "sections": {
+    "promoStrip": {
+      "enabled": true,
+      "badge": "New Clients",
+      "message": "Book a free consultation for first-time guests.",
+      "link": { "label": "Book now", "href": "/book" }
+    },
+    "navbar": {},
+    "hero": {
+      "eyebrow": "Aura Skin & Laser — Cary, North Carolina",
+      "heading": "Treat your skin. Discover your Aura.",
+      "subheading": "Natural results, not obvious ones. Every treatment personally performed by founder Dipna Patel, RN.",
+      "highlights": [
+        "RN-led treatments",
+        "Advanced laser technology",
+        "All skin tones welcome"
+      ],
+      "primaryCta": { "label": "Request a Consultation", "href": "/book" },
+      "secondaryCta": { "label": "Explore Services", "href": "#treatments" },
+      "image": {
+        "src": "/images/hero-placeholder.jpg",
+        "alt": "Aura Skin & Laser studio"
+      }
+    },
+    "trustBar": {
+      "items": [
+        {
+          "label": "5.0",
+          "value": "Rating",
+          "sublabel": "from local reviews"
+        },
+        {
+          "label": "RN-led",
+          "value": "Treatments",
+          "sublabel": "licensed registered nurse"
+        },
+        {
+          "label": "All",
+          "value": "Skin Tones",
+          "sublabel": "inclusive expertise"
+        },
+        {
+          "label": "Motus",
+          "value": "AZ+ Laser",
+          "sublabel": "advanced technology"
+        }
+      ]
+    },
+    "featuredTreatments": {
+      "title": "Featured services",
+      "subtitle": "Advanced laser and skin treatments tailored to your goals and skin tone.",
+      "featuredIds": [
+        "hair-reduction",
+        "skin-revitalization",
+        "dark-spot-reduction",
+        "redness-vein-reduction",
+        "moveo-glo",
+        "aqua-facial"
+      ],
+      "sectionCta": { "label": "View all services", "href": "#treatments" }
+    },
+    "whyChooseUs": {
+      "title": "Why choose Aura",
+      "subtitle": "A boutique experience with clinical precision and personal attention.",
+      "items": [
+        {
+          "title": "Personal care",
+          "description": "Every treatment is performed by Dipna Patel, RN — not rotated between staff. You work with the same expert every visit."
+        },
+        {
+          "title": "Advanced technology",
+          "description": "Aura uses the Motus AZ+ laser platform, offering effective results for all skin tones with minimal discomfort."
+        },
+        {
+          "title": "Inclusive expertise",
+          "description": "Treatments are designed for light and dark skin tones alike, with protocols tailored to your unique skin profile."
+        }
+      ],
+      "cta": { "label": "Request a consultation", "href": "/book" }
+    },
+    "beforeAfterGallery": {
+      "title": "Results gallery",
+      "subtitle": "Real results from real clients.",
+      "items": [
+        {
+          "id": "ba-01",
+          "treatment": "Laser Hair Reduction",
+          "beforeSrc": "/images/before-1.jpg",
+          "afterSrc": "/images/after-1.jpg",
+          "alt": "Before and after laser hair reduction"
+        },
+        {
+          "id": "ba-02",
+          "treatment": "Skin Revitalization",
+          "beforeSrc": "/images/before-2.jpg",
+          "afterSrc": "/images/after-2.jpg",
+          "alt": "Before and after skin revitalization"
+        }
+      ],
+      "disclaimer": "Photos are representative. Individual results vary."
+    },
+    "testimonials": {
+      "title": "What clients say",
+      "subtitle": "A few words from Aura clients.",
+      "featuredIds": ["t-01", "t-02", "t-03"],
+      "cta": { "label": "Request a consultation", "href": "/book" }
+    },
+    "about": {
+      "title": "The Aura difference",
+      "body": "Aura Skin & Laser was founded by Dipna Patel, a registered nurse and skincare expert committed to helping people of all skin types look and feel their best. Because Dipna is the sole practitioner, every client receives her personal attention — before, during, and after each treatment.",
+      "bullets": [
+        "Every treatment performed by Dipna Patel, RN",
+        "Advanced Motus AZ+ laser technology",
+        "Personalized protocols for all skin tones"
+      ],
+      "image": {
+        "src": "/images/about-placeholder.jpg",
+        "alt": "Aura Skin & Laser studio"
+      }
+    },
+    "faq": {
+      "title": "FAQ",
+      "subtitle": "Quick answers to common questions.",
+      "featuredIds": ["faq-01", "faq-02", "faq-03", "faq-04", "faq-05", "faq-06", "faq-07"]
+    },
+    "finalCta": {
+      "title": "Ready to discover your Aura?",
+      "body": "Book a free consultation and let's build a treatment plan around your goals.",
+      "primaryCta": { "label": "Request a Consultation", "href": "/book" },
+      "secondaryCta": { "label": "Call now", "href": "tel:9192053693" }
+    },
+    "footer": {},
+    "stickyMobileCta": {
+      "enabled": true,
+      "items": [
+        { "type": "call", "label": "Call" },
+        { "type": "book", "label": "Book", "href": "/book" },
+        { "type": "chat", "label": "Get Personalized Guidance" }
+      ]
+    }
+  }
+}

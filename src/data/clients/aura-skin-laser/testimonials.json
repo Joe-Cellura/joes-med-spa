@@ -1,0 +1,26 @@
+{
+  "disclaimer": "Testimonials reflect individual experiences. Results may vary.",
+  "items": [
+    {
+      "id": "t-01",
+      "name": "Jasmine R.",
+      "quote": "I've tried laser hair removal at other places and always felt like just another appointment. At Aura, Dipna actually remembers me, knows my skin, and adjusts every session. The results have been incredible and I finally feel confident in my skin.",
+      "treatment": "Laser Hair Reduction",
+      "rating": 5
+    },
+    {
+      "id": "t-02",
+      "name": "Marcus W.",
+      "quote": "As a man with darker skin I was nervous about laser treatments. Dipna took the time to explain everything, was completely transparent about what to expect, and the results exceeded what I hoped for. The technology here is different from anything I've tried.",
+      "treatment": "Skin Revitalization",
+      "rating": 5
+    },
+    {
+      "id": "t-03",
+      "name": "Priya K.",
+      "quote": "I came in for the Aqua Facial before my wedding and my skin was glowing for weeks. Dipna was so thorough and made the whole experience feel luxurious. I've already booked my next appointment.",
+      "treatment": "Skinwave Aqua Facial",
+      "rating": 5
+    }
+  ]
+}

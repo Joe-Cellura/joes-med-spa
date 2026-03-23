@@ -1,0 +1,8 @@
+{
+  "enabled": true,
+  "triggerLabel": "Get Personalized Guidance",
+  "panelTitle": "Aura Virtual Assistant",
+  "welcomeTitle": "Aura Virtual Assistant",
+  "welcomeMessage": "Hi, I'm your Aura Virtual Assistant.\n\nI can answer questions about treatments, pricing, scheduling, and much more.\n\nHow can I help you today?",
+  "disclaimer": "This assistant provides general information and does not replace professional medical advice. Consult Dipna Patel, RN for personalized treatment guidance."
+}

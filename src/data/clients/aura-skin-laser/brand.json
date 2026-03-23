@@ -1,0 +1,48 @@
+{
+  "brand": {
+    "name": "Aura Skin & Laser",
+    "tagline": "Effective results. Boutique experience.",
+    "location": {
+      "city": "Cary",
+      "region": "North Carolina",
+      "display": "Cary, North Carolina"
+    },
+    "contact": {
+      "phone": "(919) 205-3693",
+      "addressLines": ["2739 NC-55, Suite 103", "Cary, NC 27519"],
+      "hours": ["Mon–Fri: By appointment", "Sat: By appointment", "Sun: Closed"]
+    },
+    "ctas": {
+      "book": { "label": "Book Now", "href": "/book" }
+    },
+    "social": {
+      "instagram": "https://instagram.com/auraskinandlaser",
+      "tiktok": ""
+    }
+  },
+  "navigation": {
+    "main": [
+      { "label": "Services", "href": "#treatments" },
+      { "label": "Results", "href": "#results" },
+      { "label": "Team", "href": "#team" },
+      { "label": "Reviews", "href": "#testimonials" },
+      { "label": "About", "href": "#about" },
+      { "label": "FAQ", "href": "#faq" },
+      { "label": "Blog", "href": "/blog" }
+    ],
+    "footer": [
+      { "label": "Accessibility", "href": "#" },
+      { "label": "Privacy", "href": "#" },
+      { "label": "Terms", "href": "#" }
+    ]
+  },
+  "theme": {
+    "background": "white",
+    "accent": "#0f766e",
+    "text": "#0b1220",
+    "mutedText": "#475569"
+  },
+  "legal": {
+    "disclaimerShort": "All treatments are performed by a licensed registered nurse. Individual results may vary."
+  }
+}
