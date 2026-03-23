@@ -1,4 +1,4 @@
-import { teamConfig } from "../../lib/content";
+import { teamConfig, brandConfig } from "../../lib/content";
 import Container from "../ui/Container";
 import SectionHeader from "../ui/SectionHeader";
 import Card from "../ui/Card";
@@ -11,7 +11,7 @@ export default function TeamSection() {
         <SectionHeader
           eyebrow="OUR TEAM"
           title="Meet Your Providers"
-          subtitle="Every treatment at Lumina is performed or supervised by licensed medical professionals. You will always know who is caring for you."
+          subtitle={`Every treatment at ${brandConfig.brand.name} is performed by licensed professionals. You will always know who is caring for you.`}
           centered
         />
 
