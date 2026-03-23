@@ -212,7 +212,7 @@ export function ChatWidget() {
   const handleCopy = () => {
     const transcript = messages
       .map((m) => {
-        const speaker = m.role === "assistant" ? "Lumina AI" : "You";
+        const speaker = m.role === "assistant" ? chatConfig.panelTitle : "You";
         const text = `${speaker}: ${m.text}`;
         if (m.role === "assistant" && m.showBookingCta) {
           return `${text}\n[Book a Consultation → /book]`;

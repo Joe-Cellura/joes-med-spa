@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { supabase } from "../../../src/lib/supabase";
+import { ACTIVE_CLIENT } from "../../../src/lib/client";
 
 export async function POST(request: Request) {
   try {
@@ -18,6 +19,7 @@ export async function POST(request: Request) {
       session_id: sessionId,
       type,
       metadata: metadata ?? null,
+      client_id: ACTIVE_CLIENT,
       page_url: pageUrl ?? null,
     });
 

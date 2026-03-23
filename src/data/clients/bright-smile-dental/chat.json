@@ -1,8 +1,8 @@
 {
   "enabled": true,
   "triggerLabel": "Get Personalized Guidance",
-  "panelTitle": "Bright Smile Virtual Assistant",
-  "welcomeTitle": "Bright Smile Virtual Assistant",
-  "welcomeMessage": "Hi, I'm your Bright Smile Virtual Assistant.\n\nI can answer questions about treatments, pricing, scheduling, and much more.\n\nHow can I help you today?",
+  "panelTitle": "Bright Virtual Assistant",
+  "welcomeTitle": "Bright Virtual Assistant",
+  "welcomeMessage": "Hi, I'm your Bright Virtual Assistant.\n\nI can answer questions about treatments, pricing, scheduling, and much more.\n\nHow can I help you today?",
   "disclaimer": "This assistant provides general information and does not replace professional dental advice. Consult a licensed dentist for personalized guidance."
 }
