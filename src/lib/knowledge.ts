@@ -31,19 +31,10 @@ export function getKnowledgeBase(): string {
   const baseDir = path.join(process.cwd(), "src", "data", "clients", "aura-skin-laser", "knowledge");
   const sections: string[] = [];
 
-  const topLevelFiles = [
-    "clinic-overview.txt",
-    "consultation-process.txt",
-    "booking-guidance.txt",
-    "faq.txt",
-    "team.txt",
-  ];
-
-  for (const fileName of topLevelFiles) {
-    const filePath = path.join(baseDir, fileName);
-    const content = readFileSafe(filePath);
-    if (!content) continue;
-    sections.push(`=== ${fileName.replace(".txt", "")} ===\n${content.trim()}`);
+  const rootFiles = readDirectoryFilesSafe(baseDir);
+  for (const file of rootFiles) {
+    const label = file.name.replace(".txt", "");
+    sections.push(`=== ${label} ===\n${file.content.trim()}`);
   }
 
   // Services
