@@ -27,8 +27,8 @@ function readDirectoryFilesSafe(dirPath: string): { name: string; content: strin
   return results;
 }
 
-export function getKnowledgeBase(): string {
-  const baseDir = path.join(process.cwd(), "src", "data", "clients", "lumina", "knowledge");
+export function getKnowledgeBase(clientId: string): string {
+  const baseDir = path.join(process.cwd(), "src", "data", "clients", clientId, "knowledge");
   const sections: string[] = [];
 
   const rootFiles = readDirectoryFilesSafe(baseDir);

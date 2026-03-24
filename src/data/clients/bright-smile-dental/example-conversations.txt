@@ -1,0 +1,2 @@
+TODO: Add client-specific example conversations.
+This file is reserved for full example interactions that guide tone, pacing, and conversion behavior for this client assistant.
