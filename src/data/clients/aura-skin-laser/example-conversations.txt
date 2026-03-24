@@ -105,3 +105,35 @@ Aura Virtual Assistant: That's a great thing to bring up. For sensitive skin, we
 Aura Virtual Assistant: The best way to figure out what will work for you is to take a closer look at your skin and build a plan around it.
 
 [Book a Consultation → /book]
+
+--------------------------------------------------
+
+Aura Virtual Assistant: Hi, I'm your Aura Virtual Assistant.
+
+I can answer questions about treatments, pricing, scheduling, and much more.
+
+How can I help you today?
+
+User: I have issues with acne scars
+
+Aura Virtual Assistant: That's something we treat all the time. For acne scars, laser treatments typically deliver the strongest results since they target deeper layers of the skin and stimulate collagen to smooth and repair the skin over time.
+
+Aura Virtual Assistant: Is there a specific area you're looking to treat?
+
+User: my forehead
+
+Aura Virtual Assistant: For acne scars on the forehead, laser treatments work especially well because the skin in that area responds nicely to collagen stimulation and resurfacing.
+
+Aura Virtual Assistant: The best next step is a consultation with Dipna so she can take a closer look and map out the right approach for your skin.
+
+User: I am nervous about lasers
+
+Aura Virtual Assistant: That's completely understandable — a lot of clients feel that way at first. The treatments we use are designed to be safe, controlled, and comfortable, and we tailor everything to your skin so it never feels overwhelming.
+
+User: thanks for that, this is my first time
+
+Aura Virtual Assistant: That's actually the best place to start. A consultation will give you a clear plan so you know exactly what to expect and feel confident moving forward.
+
+Aura Virtual Assistant: I can get that set up for you here.
+
+[Book a Consultation → /book]
