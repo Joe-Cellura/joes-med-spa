@@ -115,9 +115,14 @@ export function ChatWidget() {
 
           const metaIndex = accumulated.indexOf("__META__");
 
+          // Strip raw CTA text patterns the LLM may echo from behavior file examples
+          // e.g. "[Book a Consultation → /book]" should never appear in the bubble
+          const stripCtaText = (raw: string) =>
+            raw.replace(/\[Book[^\]]*\]/gi, "").trimEnd();
+
           if (metaIndex >= 0) {
             // Split: everything before __META__ is text, everything after is JSON
-            const textPart = accumulated.slice(0, metaIndex);
+            const textPart = stripCtaText(accumulated.slice(0, metaIndex));
             const metaPart = accumulated.slice(metaIndex + "__META__".length);
 
             setMessages((prev) =>
@@ -133,9 +138,13 @@ export function ChatWidget() {
                   ? meta.showBookingCta
                   : false;
               setMessages((prev) =>
-                prev.map((m) =>
-                  m.id === assistantId ? { ...m, showBookingCta } : m,
-                ),
+                prev.map((m) => {
+                  if (m.id === assistantId) return { ...m, showBookingCta };
+                  // When a new CTA fires, deactivate the button on all previous
+                  // messages so only one booking button is visible at a time
+                  if (showBookingCta && m.showBookingCta) return { ...m, showBookingCta: false };
+                  return m;
+                }),
               );
               if (showBookingCta) {
                 logBookingShown();
@@ -144,8 +153,8 @@ export function ChatWidget() {
               // Ignore metadata parse errors — showBookingCta stays false
             }
           } else {
-            // Pure text chunk — update the message in place
-            const currentText = accumulated;
+            // Pure text chunk — strip CTA text patterns before updating the bubble
+            const currentText = stripCtaText(accumulated);
             setMessages((prev) =>
               prev.map((m) =>
                 m.id === assistantId ? { ...m, text: currentText } : m,
