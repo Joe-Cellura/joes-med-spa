@@ -1,0 +1,2 @@
+TODO: Add client-specific assistant behavior guidance.
+This file is reserved for tone, style, conversion behavior, and response rules for this client assistant.
