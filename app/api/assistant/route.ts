@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import OpenAI from "openai";
 import { getKnowledgeBase } from "../../../src/lib/knowledge";
-import { getClientPromptAssets, buildAssistantPrompt } from "../../../src/lib/prompt";
+import { getGlobalPromptAssets, getClientPromptAssets, buildAssistantPrompt } from "../../../src/lib/prompt";
 import { supabase } from "../../../src/lib/supabase";
 import { ACTIVE_CLIENT } from "../../../src/lib/client";
 import { brandConfig, chatConfig } from "../../../src/lib/content";
@@ -45,11 +45,13 @@ export async function POST(request: Request) {
   const openai = new OpenAI({ apiKey });
 
   const knowledge = getKnowledgeBase(ACTIVE_CLIENT);
+  const { behavior: globalBehavior } = getGlobalPromptAssets();
   const { behavior, examples } = getClientPromptAssets(ACTIVE_CLIENT);
   const systemPrompt = buildAssistantPrompt({
     brandConfig,
     chatConfig,
     knowledge,
+    globalBehavior,
     behavior,
     examples,
   });
