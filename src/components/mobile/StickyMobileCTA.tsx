@@ -12,7 +12,7 @@ export function StickyMobileCTA() {
   if (!sticky.enabled) return null;
 
   const handleChatClick = () => {
-    window.dispatchEvent(new Event("open-lumina-chat"));
+    window.dispatchEvent(new CustomEvent("open-chat-widget"));
   };
 
   return (

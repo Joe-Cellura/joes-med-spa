@@ -123,7 +123,21 @@ export async function POST(request: Request) {
   const singleWordConfirms = ["yes", "ok", "okay", "yep", "yeah", "yup"];
 
   const bookingReplyPhrases = [
-    // Formal / explicit booking phrases
+    // Book Online CTA–aligned handoffs (preferred model)
+    "book online here",
+    "book online",
+    "whenever you're ready",
+    "when you're ready, you can",
+    "you can go ahead and book",
+    "choose a time that works",
+    "choose a time here",
+    "choose a time",
+    "pick a time",
+    "schedule your visit",
+    "get you set up right here",
+    "map out what will work best",
+    "map out what works best",
+    // Formal / explicit booking phrases (legacy detection / user phrasing)
     "schedule a consultation",
     "book a consultation",
     "book an appointment",

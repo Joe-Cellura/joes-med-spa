@@ -1,5 +1,39 @@
 Aura Virtual Assistant: Hi, I'm your Aura Virtual Assistant.
 
+I can answer questions about treatments, pricing, scheduling, and much more.
+
+How can I help you today?
+
+User: I'm interested in laser hair removal
+
+Aura Virtual Assistant: That's a great choice — laser hair reduction can provide long-lasting results. Are you looking to treat a specific area, or do you have a few areas in mind?
+
+User: forehead
+
+Aura Virtual Assistant: Laser hair reduction on the forehead can be very effective, especially since the Motus AZ+ laser we use is designed to be comfortable and safe for all skin tones. Most clients typically need around 6 to 12 sessions for optimal results.
+
+Before we move forward — have you done this type of treatment before, or would this be your first time?
+
+User: first time
+
+Aura Virtual Assistant: Got it — we'll take a look at your skin and help you figure out the right approach so everything feels tailored to you.
+
+Do you have any concerns about the treatment, like discomfort or how your skin might react?
+
+User: I'm nervous about discomfort
+
+Aura Virtual Assistant: That's completely normal — a lot of clients feel that way at first. Most people describe the sensation as a mild warmth rather than pain, and everything is adjusted to your comfort level during the session.
+
+User: okay that makes me feel better
+
+Aura Virtual Assistant: I'm glad to hear that. Whenever you're ready, you can book online here and we'll make sure you're set up for the right treatment.
+
+[Book Online → https://auraskinandlaser.myaestheticrecord.com/online-booking]
+
+--------------------------------------------------
+
+Aura Virtual Assistant: Hi, I'm your Aura Virtual Assistant.
+
 I can answer questions about treatments, pricing, 
 scheduling, and much more.
 
@@ -41,14 +75,20 @@ painful. The Motus AZ+ laser we use is designed to be
 much more comfortable than traditional lasers while 
 still delivering strong results.
 
+Before we talk pricing — have you done laser treatments for acne scarring before, or would this be your first time?
+
+User: It would be my first time
+
+Aura Virtual Assistant: Thanks for sharing that. We'll build a plan around your goals and walk you through exactly what to expect once we see your skin in person.
+
 User: How much does something like that cost?
 
 Aura Virtual Assistant: Laser treatments for acne scars 
 typically start around $350 per session, and many 
 clients choose a package since a series of treatments 
-usually delivers the best results. The next step would 
-be to meet with Dipna so she can assess your skin and 
-map out a plan tailored to you.
+usually delivers the best results. From there, we can map out exactly what will work best for your skin.
+
+You can go ahead and book online here and we'll make sure you're set up correctly.
 
 [Book Online → https://auraskinandlaser.myaestheticrecord.com/online-booking]
 
@@ -64,17 +104,19 @@ User: What are your prices?
 
 Aura Virtual Assistant: For most treatments, pricing depends on what you're looking to address. For example, laser treatments for acne scars typically start around $350 per session, and treatments like the Skinwave Aqua Facial are around $250 per session.
 
-Aura Virtual Assistant: If you have a specific concern in mind, I can help you figure out what would make the most sense for you.
+If you have a specific concern in mind, I can help you figure out what would make the most sense for you.
 
 User: I want to get rid of my acne scars
 
 Aura Virtual Assistant: That's something we see a lot, and many clients come in looking for a real solution. For acne scars, laser treatments typically deliver the strongest results since they target deeper layers of the skin and stimulate collagen production to smooth and repair the skin over time.
 
+Have you done this type of treatment before, or would this be your first time?
+
 User: first time
 
-Aura Virtual Assistant: That's actually the best place to start. A consultation with Dipna will give you a clear plan based on your skin and goals, so you know exactly what to expect.
+Aura Virtual Assistant: Got it — we'll help you figure out the right approach for your skin and map out what makes sense so you know exactly what to expect.
 
-Aura Virtual Assistant: I can get that set up for you here.
+When you're ready, you can choose a time here and we'll make sure you're set up correctly.
 
 [Book Online → https://auraskinandlaser.myaestheticrecord.com/online-booking]
 
@@ -90,9 +132,11 @@ User: Help me choose a treatment
 
 Aura Virtual Assistant: I can definitely help with that. Most treatments are based on what you're looking to improve — things like acne, pigmentation, or overall skin quality.
 
-User: im nervous, is it safe?
+Have you had professional skin or laser treatments before, or would this be your first time going that route?
 
-Aura Virtual Assistant: That's completely normal — a lot of clients feel that way at first. Everything we do is designed to be safe, controlled, and tailored to your skin, and we use technology that works across all skin tones while keeping comfort a priority.
+User: first time. im nervous, is it safe?
+
+Aura Virtual Assistant: That's completely normal for a first visit — a lot of clients feel that way at first. Everything we do is designed to be safe, controlled, and tailored to your skin, and we use technology that works across all skin tones while keeping comfort a priority.
 
 User: how long does recovery take?
 
@@ -102,7 +146,9 @@ User: I have sensitive skin
 
 Aura Virtual Assistant: That's a great thing to bring up. For sensitive skin, we usually lean toward treatments that are gentle but still effective — options like the Skinwave Aqua Facial are great for hydration and improving skin without irritation.
 
-Aura Virtual Assistant: The best way to figure out what will work for you is to take a closer look at your skin and build a plan around it.
+Once we see you, we can look at your skin together and build a plan around your goals.
+
+If you're ready, you can book online here and we'll make sure you're set up correctly.
 
 [Book Online → https://auraskinandlaser.myaestheticrecord.com/online-booking]
 
@@ -118,22 +164,20 @@ User: I have issues with acne scars
 
 Aura Virtual Assistant: That's something we treat all the time. For acne scars, laser treatments typically deliver the strongest results since they target deeper layers of the skin and stimulate collagen to smooth and repair the skin over time.
 
-Aura Virtual Assistant: Is there a specific area you're looking to treat?
+Have you done laser treatments for scarring before, or would this be your first time?
 
-User: my forehead
+User: first time — mostly my forehead
 
-Aura Virtual Assistant: For acne scars on the forehead, laser treatments work especially well because the skin in that area responds nicely to collagen stimulation and resurfacing.
-
-Aura Virtual Assistant: The best next step is a consultation with Dipna so she can take a closer look and map out the right approach for your skin.
+Aura Virtual Assistant: Thanks for saying that. An initial visit is a great way to get oriented — we'll take a look at your skin and map out what makes sense. For the forehead, laser treatments tend to respond really well because the area takes nicely to collagen stimulation and resurfacing.
 
 User: I am nervous about lasers
 
-Aura Virtual Assistant: That's completely understandable — a lot of clients feel that way at first. The treatments we use are designed to be safe, controlled, and comfortable, and we tailor everything to your skin so it never feels overwhelming.
+Aura Virtual Assistant: That's completely understandable — a lot of clients feel that way at first. The treatments we use are designed to be safe, controlled, and comfortable, and we adjust everything to your skin so it never feels overwhelming.
 
-User: thanks for that, this is my first time
+User: thanks, that really helps
 
-Aura Virtual Assistant: That's actually the best place to start. A consultation will give you a clear plan so you know exactly what to expect and feel confident moving forward.
+Aura Virtual Assistant: I'm glad to hear that. You're in a good place — we'll walk you through everything at your pace so you feel confident before anything happens.
 
-Aura Virtual Assistant: I can get that set up for you here.
+You can book online here whenever it works for you, and we'll make sure you're set up for the right next step.
 
 [Book Online → https://auraskinandlaser.myaestheticrecord.com/online-booking]
