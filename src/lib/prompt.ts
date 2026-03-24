@@ -17,6 +17,13 @@ function readPromptAsset(filePath: string): string | null {
   }
 }
 
+export function getGlobalPromptAssets(): { behavior: string | null } {
+  const globalDir = path.join(process.cwd(), "src", "data", "global");
+  return {
+    behavior: readPromptAsset(path.join(globalDir, "assistant-base-behavior.txt")),
+  };
+}
+
 export function getClientPromptAssets(clientId: string): ClientPromptAssets {
   const clientDir = path.join(
     process.cwd(),
@@ -35,12 +42,14 @@ export function buildAssistantPrompt({
   brandConfig,
   chatConfig,
   knowledge,
+  globalBehavior,
   behavior,
   examples,
 }: {
   brandConfig: BrandConfig;
   chatConfig: ChatConfig;
   knowledge: string;
+  globalBehavior: string | null;
   behavior: string | null;
   examples: string | null;
 }): string {
@@ -223,12 +232,16 @@ SAFETY
 
   const sections: string[] = [baseRules];
 
+  if (globalBehavior) {
+    sections.push(`GLOBAL ASSISTANT BEHAVIOR:\n${globalBehavior}`);
+  }
+
   if (behavior) {
     sections.push(`ASSISTANT BEHAVIOR GUIDANCE:\n${behavior}`);
   }
 
   if (examples) {
-    sections.push(`EXAMPLE CONVERSATIONS:\nThe following example conversations represent the ideal tone, pacing, and conversational style for this assistant. Match this style closely in your responses, including:\n- warm, human acknowledgment before giving guidance\n- natural conversational phrasing\n- helpful context before suggesting next steps\n- specific follow-up questions tied to what the user just said\n\nDo NOT copy responses verbatim. Use them as a strong reference for how to speak and guide the user toward the right answer and next step.\n\n${examples}`);
+    sections.push(`EXAMPLE CONVERSATIONS:\nThe following example conversations represent the ground truth for how this assistant should speak.\n\nYou should strongly prefer the tone, phrasing, and response style shown below over generic assistant language.\n\nKey expectations:\n- Lead with natural, human acknowledgment when appropriate (e.g., first-time users, uncertainty, sensitive concerns)\n- Use conversational, real-world phrasing — not formal or generic assistant language\n- Avoid default or templated openings like "Starting your journey..." or "That is a great option..."\n- Provide helpful context before suggesting next steps\n- Vary language naturally, but stay consistent with the tone demonstrated in the examples\n\nDo NOT copy responses verbatim. Instead, use these as a strong stylistic reference for how to speak, guide, and convert naturally.\n\n${examples}`);
   }
 
   return sections.join("\n\n");
