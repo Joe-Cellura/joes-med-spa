@@ -56,7 +56,8 @@ export async function POST(request: Request) {
     examples,
   });
 
-  const bookingUserPhrases = [
+  // Explicit booking intent from the user — always triggers regardless of conversation context
+  const explicitBookingPhrases = [
     "i want to book",
     "i'd like to book",
     "id like to book",
@@ -88,7 +89,6 @@ export async function POST(request: Request) {
     "go ahead and book",
     "yes i'd like to",
     "yes id like to",
-    "sounds good",
     "let's go ahead",
     "lets go ahead",
     "yes go ahead",
@@ -101,16 +101,26 @@ export async function POST(request: Request) {
     "schedule now",
     "can we book",
     "can we schedule",
+    "please do",
+  ];
+
+  // Soft affirmations — only count as booking intent when the previous assistant
+  // message was already in booking mode (prevents firing on general conversation)
+  const contextualConfirmPhrases = [
+    "sounds good",
     "alright",
     "sure",
     "that works",
     "lets go",
     "let's go",
-    "please do",
     "go ahead",
   ];
 
+  // Single-word confirmations — only count when previous assistant was in booking mode
+  const singleWordConfirms = ["yes", "ok", "okay", "yep", "yeah", "yup"];
+
   const bookingReplyPhrases = [
+    // Formal / explicit booking phrases
     "schedule a consultation",
     "book a consultation",
     "book an appointment",
@@ -138,6 +148,19 @@ export async function POST(request: Request) {
     "can i get that booked",
     "get that booked for you",
     "would you like to get that booked",
+    // Natural-language patterns (specific enough to avoid false positives)
+    "get that set up",
+    "get this set up",
+    "let's get you",
+    "get you scheduled",
+    "get that scheduled",
+    "get you booked",
+    "pull up a time",
+    "pull up availability",
+    "take a look at availability",
+    "set that up for you",
+    "set it up for you",
+    "get it set up",
   ];
 
   try {
@@ -170,13 +193,33 @@ export async function POST(request: Request) {
           const lowerUser = message.toLowerCase();
           const lowerReply = fullReply.toLowerCase();
 
-          const userIntent = bookingUserPhrases.some((phrase) =>
-            lowerUser.includes(phrase),
+          // Check whether the previous assistant turn was already in booking mode.
+          // This gates contextual and single-word triggers so they don't fire
+          // on general conversational messages (e.g. "sure, tell me more").
+          const lastAssistantMsg = [...history].reverse().find((m) => m.role === "assistant");
+          const lastAssistantText = lastAssistantMsg?.content.toLowerCase() ?? "";
+          const lastAssistantWasBooking = bookingReplyPhrases.some((p) =>
+            lastAssistantText.includes(p),
           );
-          const replyIntent = bookingReplyPhrases.some((phrase) =>
-            lowerReply.includes(phrase),
-          );
-          const showBookingCta = userIntent || replyIntent;
+
+          // Always-explicit user intent (context-independent)
+          const userIntent = explicitBookingPhrases.some((p) => lowerUser.includes(p));
+
+          // Soft affirmations only count when last assistant was already in booking mode
+          const contextualIntent =
+            lastAssistantWasBooking &&
+            contextualConfirmPhrases.some((p) => lowerUser.includes(p));
+
+          // Bare single-word confirmations — compare the full normalized message
+          // so "yes" doesn't match inside "I'm not sure yet"
+          const normalizedUser = lowerUser.replace(/[^a-z]/g, "");
+          const isShortConfirm =
+            lastAssistantWasBooking && singleWordConfirms.includes(normalizedUser);
+
+          // Assistant reply contains booking intent
+          const replyIntent = bookingReplyPhrases.some((p) => lowerReply.includes(p));
+
+          const showBookingCta = userIntent || contextualIntent || isShortConfirm || replyIntent;
 
           // Supabase logging
           try {
