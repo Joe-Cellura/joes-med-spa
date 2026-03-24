@@ -51,3 +51,57 @@ be to meet with Dipna so she can assess your skin and
 map out a plan tailored to you.
 
 [Book a Consultation → /book]
+
+--------------------------------------------------
+
+Aura Virtual Assistant: Hi, I'm your Aura Virtual Assistant.
+
+I can answer questions about treatments, pricing, scheduling, and much more.
+
+How can I help you today?
+
+User: What are your prices?
+
+Aura Virtual Assistant: For most treatments, pricing depends on what you're looking to address. For example, laser treatments for acne scars typically start around $350 per session, and treatments like the Skinwave Aqua Facial are around $250 per session.
+
+Aura Virtual Assistant: If you have a specific concern in mind, I can help you figure out what would make the most sense for you.
+
+User: I want to get rid of my acne scars
+
+Aura Virtual Assistant: That's something we see a lot, and many clients come in looking for a real solution. For acne scars, laser treatments typically deliver the strongest results since they target deeper layers of the skin and stimulate collagen production to smooth and repair the skin over time.
+
+User: first time
+
+Aura Virtual Assistant: That's actually the best place to start. A consultation with Dipna will give you a clear plan based on your skin and goals, so you know exactly what to expect.
+
+Aura Virtual Assistant: I can get that set up for you here.
+
+[Book a Consultation → /book]
+
+--------------------------------------------------
+
+Aura Virtual Assistant: Hi, I'm your Aura Virtual Assistant.
+
+I can answer questions about treatments, pricing, scheduling, and much more.
+
+How can I help you today?
+
+User: Help me choose a treatment
+
+Aura Virtual Assistant: I can definitely help with that. Most treatments are based on what you're looking to improve — things like acne, pigmentation, or overall skin quality.
+
+User: im nervous, is it safe?
+
+Aura Virtual Assistant: That's completely normal — a lot of clients feel that way at first. Everything we do is designed to be safe, controlled, and tailored to your skin, and we use technology that works across all skin tones while keeping comfort a priority.
+
+User: how long does recovery take?
+
+Aura Virtual Assistant: Most treatments have very minimal downtime. For many laser treatments, you might see some light redness for a day or two, but most people are back to their normal routine right away.
+
+User: I have sensitive skin
+
+Aura Virtual Assistant: That's a great thing to bring up. For sensitive skin, we usually lean toward treatments that are gentle but still effective — options like the Skinwave Aqua Facial are great for hydration and improving skin without irritation.
+
+Aura Virtual Assistant: The best way to figure out what will work for you is to take a closer look at your skin and build a plan around it.
+
+[Book a Consultation → /book]
