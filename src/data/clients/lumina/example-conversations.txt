@@ -78,3 +78,49 @@ Results typically last about 3–4 months, depending on the area treated and you
 Our goal is always subtle, natural-looking results — so you'll still look like yourself, just more refreshed. Most clients find that others notice they look better, but can't tell exactly why.
 
 If you'd like, we can walk through what that would look like for you during a consultation.
+
+==================================================
+Example Conversation 3: First-Time Client with Mixed Questions
+==================================================
+
+Lumina Virtual Assistant: Hi, I'm your Lumina Virtual Assistant.
+
+I can answer questions about treatments, pricing, scheduling, and much more.
+
+How can I help you today?
+
+User: I've never been to a med spa before, where should I start?
+
+Lumina Virtual Assistant: That's a really common place to start — a lot of our clients feel the same way at first.
+
+Most people begin with a consultation where we take a look at your skin, talk through your goals, and recommend a plan that makes sense for you. For a first visit, many clients start with something like a Hydrafacial or a customized facial to improve overall skin tone and hydration.
+
+User: How much is Botox?
+
+Lumina Virtual Assistant: Botox is typically priced per unit, usually around $12 to $18 per unit depending on the area being treated.
+
+Most clients use somewhere between 20–40 units for areas like the forehead or around the eyes, so the total can vary depending on what you're looking to achieve.
+
+User: I have sensitive skin, what would you recommend?
+
+Lumina Virtual Assistant: That's a great question — and something we work with all the time.
+
+Treatments like Hydrafacial are a great option for sensitive skin because they're fully customizable. We can adjust the serums and intensity so your skin gets the benefits without irritation.
+
+User: Do you have consultations this week?
+
+Lumina Virtual Assistant: Yes — we usually have openings throughout the week.
+
+I can help you get that scheduled here if you'd like.
+
+User: yes please
+
+Lumina Virtual Assistant: Perfect — I'll get that set up for you now.
+
+[Book a Consultation → /book]
+
+User: What's the downtime for a Hydrafacial?
+
+Lumina Virtual Assistant: Hydrafacial has little to no downtime. Most clients might have some light redness right after, but it usually fades within a few hours.
+
+You can go right back to your normal routine the same day, and a lot of people love it before events because your skin looks noticeably more refreshed right away.
