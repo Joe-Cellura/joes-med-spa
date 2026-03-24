@@ -54,6 +54,7 @@ export async function POST(request: Request) {
     globalBehavior,
     behavior,
     examples,
+    bookingHref: brandConfig.brand.ctas.book.href,
   });
 
   // Explicit booking intent from the user — always triggers regardless of conversation context
@@ -78,6 +79,8 @@ export async function POST(request: Request) {
     "ready to book",
     "ready to schedule",
     "book an appointment",
+    "book online",
+    "i want to book online",
     "make an appointment",
     "yes lets do it",
     "yes let's do it",

@@ -9,7 +9,7 @@
       "startingAt": "from $125",
       "category": "Laser",
       "badges": ["Most requested"],
-      "cta": { "label": "Learn more", "href": "/book" }
+      "cta": { "label": "Learn more", "href": "https://auraskinandlaser.myaestheticrecord.com/online-booking" }
     },
     {
       "id": "skin-revitalization",
@@ -20,7 +20,7 @@
       "startingAt": "from $350",
       "category": "Laser",
       "badges": [],
-      "cta": { "label": "Learn more", "href": "/book" }
+      "cta": { "label": "Learn more", "href": "https://auraskinandlaser.myaestheticrecord.com/online-booking" }
     },
     {
       "id": "dark-spot-reduction",
@@ -31,7 +31,7 @@
       "startingAt": "from $215",
       "category": "Laser",
       "badges": [],
-      "cta": { "label": "Learn more", "href": "/book" }
+      "cta": { "label": "Learn more", "href": "https://auraskinandlaser.myaestheticrecord.com/online-booking" }
     },
     {
       "id": "redness-vein-reduction",
@@ -42,7 +42,7 @@
       "startingAt": "from $300",
       "category": "Laser",
       "badges": [],
-      "cta": { "label": "Learn more", "href": "/book" }
+      "cta": { "label": "Learn more", "href": "https://auraskinandlaser.myaestheticrecord.com/online-booking" }
     },
     {
       "id": "moveo-glo",
@@ -53,7 +53,7 @@
       "startingAt": "from $575",
       "category": "Laser",
       "badges": [],
-      "cta": { "label": "Learn more", "href": "/book" }
+      "cta": { "label": "Learn more", "href": "https://auraskinandlaser.myaestheticrecord.com/online-booking" }
     },
     {
       "id": "aqua-facial",
@@ -64,7 +64,7 @@
       "startingAt": "from $250",
       "category": "Facial",
       "badges": [],
-      "cta": { "label": "Learn more", "href": "/book" }
+      "cta": { "label": "Learn more", "href": "https://auraskinandlaser.myaestheticrecord.com/online-booking" }
     }
   ]
 }

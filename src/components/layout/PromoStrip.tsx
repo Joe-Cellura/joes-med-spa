@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { homepageConfig } from "../../lib/content";
 import type { PromoStripConfig } from "../../lib/types";
+import { AppLink } from "../ui/AppLink";
 
 const promo = homepageConfig.sections.promoStrip as PromoStripConfig;
 
@@ -17,12 +17,12 @@ export function PromoStrip() {
         ) : null}
         <span>{promo.message}</span>
         {promo.link ? (
-          <Link
+          <AppLink
             href={promo.link.href}
             className="font-semibold text-teal-600 underline-offset-2 hover:text-teal-500 hover:underline"
           >
             {promo.link.label}
-          </Link>
+          </AppLink>
         ) : null}
       </div>
     </div>

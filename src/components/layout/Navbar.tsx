@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { brandConfig } from "../../lib/content";
+import { AppLink } from "../ui/AppLink";
 import { toTelHref } from "../../lib/utils";
 import Container from "../ui/Container";
 import Button from "../ui/Button";
@@ -11,8 +12,9 @@ export function Navbar() {
   const { brand, navigation } = brandConfig;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const bookHref = brand.ctas.book.href;
   const resolveHref = (href: string) =>
-    href === "#book" ? "/book" : href.startsWith("#") ? `/${href}` : href;
+    href === "#book" ? bookHref : href.startsWith("#") ? `/${href}` : href;
 
   const closeMenu = () => setIsMenuOpen(false);
 
@@ -59,20 +61,20 @@ export function Navbar() {
           >
             {brand.contact.phone}
           </a>
-          <Link href="/book">
+          <AppLink href={bookHref}>
             <Button className="px-5 py-2 text-sm">
               {brand.ctas.book.label}
             </Button>
-          </Link>
+          </AppLink>
         </div>
 
         {/* Mobile: Book Now + Hamburger */}
         <div className="flex items-center gap-3 md:hidden">
-          <Link href="/book">
+          <AppLink href={bookHref}>
             <Button className="px-4 py-2 text-sm">
               {brand.ctas.book.label}
             </Button>
-          </Link>
+          </AppLink>
           <button
             type="button"
             onClick={() => setIsMenuOpen((prev) => !prev)}

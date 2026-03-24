@@ -13,7 +13,7 @@
       "hours": ["Mon–Fri: By appointment", "Sat: By appointment", "Sun: Closed"]
     },
     "ctas": {
-      "book": { "label": "Book Now", "href": "/book" }
+      "book": { "label": "Book Now", "href": "https://auraskinandlaser.myaestheticrecord.com/online-booking" }
     },
     "social": {
       "instagram": "https://instagram.com/auraskinandlaser",

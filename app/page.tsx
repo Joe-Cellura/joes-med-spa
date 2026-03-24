@@ -12,8 +12,6 @@ import FAQSection from "../src/components/sections/FAQSection";
 import BlogPreviewSection from "../src/components/sections/BlogPreviewSection";
 import FinalCTA from "../src/components/sections/FinalCTA";
 import Footer from "../src/components/layout/Footer";
-import ChatWidget from "../src/components/ai/ChatWidget";
-import StickyMobileCTA from "../src/components/mobile/StickyMobileCTA";
 
 export default function Home() {
   return (
@@ -32,8 +30,6 @@ export default function Home() {
       <BlogPreviewSection />
       <FinalCTA />
       <Footer />
-      <ChatWidget />
-      <StickyMobileCTA />
     </div>
   );
 }

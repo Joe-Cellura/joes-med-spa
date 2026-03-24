@@ -1,7 +1,13 @@
-import { getFeaturedTestimonials, homepageConfig, testimonialsConfig } from "../../lib/content";
+import {
+  brandConfig,
+  getFeaturedTestimonials,
+  homepageConfig,
+  testimonialsConfig,
+} from "../../lib/content";
 import Container from "../ui/Container";
 import SectionHeader from "../ui/SectionHeader";
 import Card from "../ui/Card";
+import { AppLink } from "../ui/AppLink";
 
 export function TestimonialsSection() {
   const section = homepageConfig.sections.testimonials;
@@ -36,6 +42,21 @@ export function TestimonialsSection() {
             </Card>
           ))}
         </div>
+
+        {section.cta ? (
+          <div className="pt-2">
+            <AppLink
+              href={
+                section.cta.href === "#book"
+                  ? brandConfig.brand.ctas.book.href
+                  : section.cta.href
+              }
+              className="text-sm font-medium text-teal-600 underline-offset-2 hover:text-teal-500 hover:underline"
+            >
+              {section.cta.label}
+            </AppLink>
+          </div>
+        ) : null}
 
         {testimonialsConfig.disclaimer ? (
           <p className="text-xs font-light text-slate-500">{testimonialsConfig.disclaimer}</p>

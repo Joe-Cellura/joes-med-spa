@@ -1,9 +1,9 @@
-import Link from "next/link";
 import { getFeaturedTreatments, homepageConfig } from "../../lib/content";
 import Container from "../ui/Container";
 import SectionHeader from "../ui/SectionHeader";
 import Card from "../ui/Card";
 import Badge from "../ui/Badge";
+import { AppLink } from "../ui/AppLink";
 
 export function FeaturedTreatments() {
   const section = homepageConfig.sections.featuredTreatments;
@@ -52,24 +52,24 @@ export function FeaturedTreatments() {
                   {treatment.startingAt}
                 </span>
               </div>
-              <Link
+              <AppLink
                 href={treatment.cta.href}
                 className="text-sm font-medium text-teal-600 underline-offset-2 hover:text-teal-500 hover:underline"
               >
                 {treatment.cta.label}
-              </Link>
+              </AppLink>
             </Card>
           ))}
         </div>
 
         {section.sectionCta ? (
           <div className="pt-2">
-            <Link
+            <AppLink
               href={section.sectionCta.href}
               className="text-sm font-medium text-teal-600 underline-offset-2 hover:text-teal-500 hover:underline"
             >
               {section.sectionCta.label}
-            </Link>
+            </AppLink>
           </div>
         ) : null}
       </Container>

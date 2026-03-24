@@ -8,3 +8,7 @@ export function toTelHref(phone: string): string {
   return `tel:${phone.replace(/[^\d+]/g, "")}`;
 }
 
+export function isExternalUrl(href: string): boolean {
+  return /^https?:\/\//i.test(href);
+}
+

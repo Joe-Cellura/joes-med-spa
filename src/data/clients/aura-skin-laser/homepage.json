@@ -8,7 +8,7 @@
       "enabled": true,
       "badge": "New Clients",
       "message": "Book a free consultation for first-time guests.",
-      "link": { "label": "Book now", "href": "/book" }
+      "link": { "label": "Book now", "href": "https://auraskinandlaser.myaestheticrecord.com/online-booking" }
     },
     "navbar": {},
     "hero": {
@@ -20,7 +20,7 @@
         "Advanced laser technology",
         "All skin tones welcome"
       ],
-      "primaryCta": { "label": "Request a Consultation", "href": "/book" },
+      "primaryCta": { "label": "Request a Consultation", "href": "https://auraskinandlaser.myaestheticrecord.com/online-booking" },
       "secondaryCta": { "label": "Explore Services", "href": "#treatments" },
       "image": {
         "src": "/images/hero-placeholder.jpg",
@@ -81,7 +81,7 @@
           "description": "Treatments are designed for light and dark skin tones alike, with protocols tailored to your unique skin profile."
         }
       ],
-      "cta": { "label": "Request a consultation", "href": "/book" }
+      "cta": { "label": "Request a consultation", "href": "https://auraskinandlaser.myaestheticrecord.com/online-booking" }
     },
     "beforeAfterGallery": {
       "title": "Results gallery",
@@ -108,7 +108,7 @@
       "title": "What clients say",
       "subtitle": "A few words from Aura clients.",
       "featuredIds": ["t-01", "t-02", "t-03"],
-      "cta": { "label": "Request a consultation", "href": "/book" }
+      "cta": { "label": "Request a consultation", "href": "https://auraskinandlaser.myaestheticrecord.com/online-booking" }
     },
     "about": {
       "title": "The Aura difference",
@@ -131,7 +131,7 @@
     "finalCta": {
       "title": "Ready to discover your Aura?",
       "body": "Book a free consultation and let's build a treatment plan around your goals.",
-      "primaryCta": { "label": "Request a Consultation", "href": "/book" },
+      "primaryCta": { "label": "Request a Consultation", "href": "https://auraskinandlaser.myaestheticrecord.com/online-booking" },
       "secondaryCta": { "label": "Call now", "href": "tel:9192053693" }
     },
     "footer": {},
@@ -139,7 +139,7 @@
       "enabled": true,
       "items": [
         { "type": "call", "label": "Call" },
-        { "type": "book", "label": "Book", "href": "/book" },
+        { "type": "book", "label": "Book", "href": "https://auraskinandlaser.myaestheticrecord.com/online-booking" },
         { "type": "chat", "label": "Get Personalized Guidance" }
       ]
     }
