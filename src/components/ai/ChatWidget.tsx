@@ -29,8 +29,8 @@ export function ChatWidget() {
   useEffect(() => {
     if (!config.enabled) return;
     const handler = () => setOpen(true);
-    window.addEventListener("open-lumina-chat", handler);
-    return () => window.removeEventListener("open-lumina-chat", handler);
+    window.addEventListener("open-chat-widget", handler);
+    return () => window.removeEventListener("open-chat-widget", handler);
   }, [config.enabled]);
 
   useEffect(() => {
@@ -365,13 +365,13 @@ export function ChatWidget() {
       ) : null}
 
       <div className="pointer-events-auto">
-        <Button
+        <button
           type="button"
           onClick={() => setOpen((prev) => !prev)}
-          className="shadow-md shadow-teal-200/60"
+          className="inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-teal-500 bg-teal-600 text-white shadow-sm hover:bg-teal-500 shadow-md shadow-teal-200/60"
         >
           {config.triggerLabel}
-        </Button>
+        </button>
       </div>
     </div>
   );
