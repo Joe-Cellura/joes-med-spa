@@ -16,7 +16,7 @@ export function StickyMobileCTA() {
   };
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-slate-200 bg-white/95 px-4 py-2 shadow-[0_-4px_16px_rgba(15,23,42,0.08)] sm:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-[190] border-t border-slate-200 bg-white/95 px-4 py-2 shadow-[0_-4px_16px_rgba(15,23,42,0.08)] sm:hidden">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-2">
         {sticky.items.map((item) => {
           if (item.type === "call") {
@@ -36,7 +36,7 @@ export function StickyMobileCTA() {
             return (
               <a
                 key={item.type}
-                href="/book"
+                href={item.href}
                 className="flex-1 rounded-full bg-teal-600 px-3 py-2 text-center text-xs font-medium text-white"
               >
                 {item.label}

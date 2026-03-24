@@ -1,7 +1,7 @@
-import Link from "next/link";
 import { brandConfig, homepageConfig } from "../../lib/content";
 import Container from "../ui/Container";
 import Button from "../ui/Button";
+import { AppLink } from "../ui/AppLink";
 import { toTelHref } from "../../lib/utils";
 
 export function FinalCTA() {
@@ -26,11 +26,11 @@ export function FinalCTA() {
             </p>
           </div>
           <div className="mt-6 flex flex-col gap-3 sm:mt-0 sm:flex-row sm:items-center">
-            <Link href="/book">
+            <AppLink href={section.primaryCta.href}>
               <Button className="w-full min-w-[180px] px-6 py-3 sm:w-auto">
                 {section.primaryCta.label}
               </Button>
-            </Link>
+            </AppLink>
             {section.secondaryCta && secondaryHref ? (
               <a href={secondaryHref} className="block">
                 <Button variant="outline" className="w-full min-w-[140px] sm:w-auto">

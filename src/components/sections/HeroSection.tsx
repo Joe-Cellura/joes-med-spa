@@ -2,6 +2,7 @@ import Link from "next/link";
 import { brandConfig, homepageConfig } from "../../lib/content";
 import Container from "../ui/Container";
 import Button from "../ui/Button";
+import { AppLink } from "../ui/AppLink";
 import OptionalImage from "../ui/OptionalImage";
 
 export function HeroSection() {
@@ -41,11 +42,11 @@ export function HeroSection() {
             </ul>
           ) : null}
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
-            <Link href="/book">
+            <AppLink href={hero.primaryCta.href}>
               <Button className="min-w-[180px] px-6 py-3 text-sm">
                 {hero.primaryCta.label}
               </Button>
-            </Link>
+            </AppLink>
             {hero.secondaryCta ? (
               <Link href={hero.secondaryCta.href}>
                 <Button variant="outline" className="min-w-[160px] px-5 py-2.5 text-sm">

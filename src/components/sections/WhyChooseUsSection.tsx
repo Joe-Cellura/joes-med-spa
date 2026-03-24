@@ -1,7 +1,8 @@
-import { homepageConfig } from "../../lib/content";
+import { brandConfig, homepageConfig } from "../../lib/content";
 import Container from "../ui/Container";
 import SectionHeader from "../ui/SectionHeader";
 import Card from "../ui/Card";
+import { AppLink } from "../ui/AppLink";
 
 export function WhyChooseUsSection() {
   const section = homepageConfig.sections.whyChooseUs;
@@ -27,6 +28,21 @@ export function WhyChooseUsSection() {
             </Card>
           ))}
         </div>
+
+        {section.cta ? (
+          <div className="pt-2">
+            <AppLink
+              href={
+                section.cta.href === "#book"
+                  ? brandConfig.brand.ctas.book.href
+                  : section.cta.href
+              }
+              className="text-sm font-medium text-teal-600 underline-offset-2 hover:text-teal-500 hover:underline"
+            >
+              {section.cta.label}
+            </AppLink>
+          </div>
+        ) : null}
       </Container>
     </section>
   );

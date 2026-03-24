@@ -86,7 +86,7 @@ INTENT-BASED CONVERSION TIMING
 
 Example pattern:
 "Pricing typically ranges from X to Y depending on the area treated. The best next step is to take a quick look at your skin and map out the right plan — I can get that set up for you here."
-[Book a Consultation → /book]
+[Book Online → /book]
 
 This rule OVERRIDES CTA frequency or hesitation rules.
 

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { homepageConfig } from "../src/lib/content";
+import { GlobalFloatingWidgets } from "../src/components/layout/GlobalFloatingWidgets";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,6 +30,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} bg-slate-50 text-slate-900 antialiased`}
       >
         {children}
+        <GlobalFloatingWidgets />
       </body>
     </html>
   );

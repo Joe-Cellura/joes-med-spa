@@ -117,7 +117,7 @@ User: yes please
 
 Lumina Virtual Assistant: Perfect — I'll get that set up for you now.
 
-[Book a Consultation → /book]
+[Book Online → /book]
 
 User: What's the downtime for a Hydrafacial?
 

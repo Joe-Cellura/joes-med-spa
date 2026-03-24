@@ -1,9 +1,9 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import Link from "next/link";
-import { chatConfig } from "../../lib/content";
+import { bookingHref, chatConfig } from "../../lib/content";
 import Button from "../ui/Button";
+import { AppLink } from "../ui/AppLink";
 import { cn } from "../../lib/utils";
 
 type ChatMessage = {
@@ -116,7 +116,7 @@ export function ChatWidget() {
           const metaIndex = accumulated.indexOf("__META__");
 
           // Strip raw CTA text patterns the LLM may echo from behavior file examples
-          // e.g. "[Book a Consultation → /book]" should never appear in the bubble
+          // e.g. "[Book Online → …]" bracket placeholders should never appear in the bubble
           const stripCtaText = (raw: string) =>
             raw.replace(/\[Book[^\]]*\]/gi, "").trimEnd();
 
@@ -224,7 +224,7 @@ export function ChatWidget() {
         const speaker = m.role === "assistant" ? chatConfig.panelTitle : "You";
         const text = `${speaker}: ${m.text}`;
         if (m.role === "assistant" && m.showBookingCta) {
-          return `${text}\n[Book a Consultation → /book]`;
+          return `${text}\n[Book Online → ${bookingHref}]`;
         }
         return text;
       })
@@ -240,7 +240,7 @@ export function ChatWidget() {
   return (
     <div
       id="assistant"
-      className="pointer-events-none fixed bottom-20 right-4 z-40 flex flex-col items-end gap-2 sm:bottom-6 sm:right-6"
+      className="pointer-events-none fixed bottom-20 right-4 z-[200] flex flex-col items-end gap-2 sm:bottom-6 sm:right-6"
     >
       {open ? (
         <div className="pointer-events-auto w-80 max-w-[calc(100vw-2rem)] rounded-2xl border border-slate-200/90 bg-white shadow-[0_8px_30px_rgba(15,23,42,0.08)]">
@@ -285,12 +285,12 @@ export function ChatWidget() {
                 </div>
                 {message.role === "assistant" && message.showBookingCta && (
                   <div className="mt-2">
-                    <Link
-                      href="/book"
+                    <AppLink
+                      href={bookingHref}
                       onClick={logBookingClick}
                       className="inline-flex items-center gap-1.5 rounded-xl border border-teal-600 px-4 py-2 text-[13px] font-medium text-teal-700 bg-white transition-colors hover:bg-teal-50"
                     >
-                      Book a Consultation
+                      Book Online
                       <svg
                         width="14"
                         height="14"
@@ -306,14 +306,14 @@ export function ChatWidget() {
                           strokeLinejoin="round"
                         />
                       </svg>
-                    </Link>
+                    </AppLink>
                   </div>
                 )}
               </div>
             ))}
             {messages.length === 1 && !loading && (
               <div className="flex flex-wrap gap-2 pt-1">
-                {["What are your prices?", "Help me choose a treatment", "Book an appointment"].map((chip) => (
+                {["What are your prices?", "Help me choose a treatment", "Book online"].map((chip) => (
                   <button
                     key={chip}
                     onClick={() => sendMessage(chip)}
