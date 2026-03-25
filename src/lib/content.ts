@@ -11,41 +11,41 @@ import type {
   Testimonial,
 } from "./types";
 
-import luminaBrand from "../data/clients/glo-de-vie/brand.json";
-import luminaHomepage from "../data/clients/glo-de-vie/homepage.json";
-import luminaTreatments from "../data/clients/glo-de-vie/treatments.json";
-import luminaFaq from "../data/clients/glo-de-vie/faq.json";
-import luminaTestimonials from "../data/clients/glo-de-vie/testimonials.json";
-import luminaChat from "../data/clients/glo-de-vie/chat.json";
-import luminaTeam from "../data/clients/glo-de-vie/team.json";
-import { blogPosts as luminaBlogPosts } from "../data/clients/glo-de-vie/blogPosts";
+import luminaBrand from "../data/clients/aura-skin-laser/brand.json";
+import luminaHomepage from "../data/clients/aura-skin-laser/homepage.json";
+import luminaTreatments from "../data/clients/aura-skin-laser/treatments.json";
+import luminaFaq from "../data/clients/aura-skin-laser/faq.json";
+import luminaTestimonials from "../data/clients/aura-skin-laser/testimonials.json";
+import luminaChat from "../data/clients/aura-skin-laser/chat.json";
+import luminaTeam from "../data/clients/aura-skin-laser/team.json";
+import { blogPosts as luminaBlogPosts } from "../data/clients/aura-skin-laser/blogPosts";
 
-import auraBrand from "../data/clients/glo-de-vie/brand.json";
-import auraHomepage from "../data/clients/glo-de-vie/homepage.json";
-import auraTreatments from "../data/clients/glo-de-vie/treatments.json";
-import auraFaq from "../data/clients/glo-de-vie/faq.json";
-import auraTestimonials from "../data/clients/glo-de-vie/testimonials.json";
-import auraChat from "../data/clients/glo-de-vie/chat.json";
-import auraTeam from "../data/clients/glo-de-vie/team.json";
-import { blogPosts as auraBlogPosts } from "../data/clients/glo-de-vie/blogPosts";
+import auraBrand from "../data/clients/aura-skin-laser/brand.json";
+import auraHomepage from "../data/clients/aura-skin-laser/homepage.json";
+import auraTreatments from "../data/clients/aura-skin-laser/treatments.json";
+import auraFaq from "../data/clients/aura-skin-laser/faq.json";
+import auraTestimonials from "../data/clients/aura-skin-laser/testimonials.json";
+import auraChat from "../data/clients/aura-skin-laser/chat.json";
+import auraTeam from "../data/clients/aura-skin-laser/team.json";
+import { blogPosts as auraBlogPosts } from "../data/clients/aura-skin-laser/blogPosts";
 
-import brightBrand from "../data/clients/glo-de-vie/brand.json";
-import brightHomepage from "../data/clients/glo-de-vie/homepage.json";
-import brightTreatments from "../data/clients/glo-de-vie/treatments.json";
-import brightFaq from "../data/clients/glo-de-vie/faq.json";
-import brightTestimonials from "../data/clients/glo-de-vie/testimonials.json";
-import brightChat from "../data/clients/glo-de-vie/chat.json";
-import brightTeam from "../data/clients/glo-de-vie/team.json";
-import { blogPosts as brightBlogPosts } from "../data/clients/glo-de-vie/blogPosts";
+import brightBrand from "../data/clients/aura-skin-laser/brand.json";
+import brightHomepage from "../data/clients/aura-skin-laser/homepage.json";
+import brightTreatments from "../data/clients/aura-skin-laser/treatments.json";
+import brightFaq from "../data/clients/aura-skin-laser/faq.json";
+import brightTestimonials from "../data/clients/aura-skin-laser/testimonials.json";
+import brightChat from "../data/clients/aura-skin-laser/chat.json";
+import brightTeam from "../data/clients/aura-skin-laser/team.json";
+import { blogPosts as brightBlogPosts } from "../data/clients/aura-skin-laser/blogPosts";
 
-import gloBrand from "../data/clients/glo-de-vie/brand.json";
-import gloHomepage from "../data/clients/glo-de-vie/homepage.json";
-import gloTreatments from "../data/clients/glo-de-vie/treatments.json";
-import gloFaq from "../data/clients/glo-de-vie/faq.json";
-import gloTestimonials from "../data/clients/glo-de-vie/testimonials.json";
-import gloChat from "../data/clients/glo-de-vie/chat.json";
-import gloTeam from "../data/clients/glo-de-vie/team.json";
-import { blogPosts as gloBlogPosts } from "../data/clients/glo-de-vie/blogPosts";
+import gloBrand from "../data/clients/aura-skin-laser/brand.json";
+import gloHomepage from "../data/clients/aura-skin-laser/homepage.json";
+import gloTreatments from "../data/clients/aura-skin-laser/treatments.json";
+import gloFaq from "../data/clients/aura-skin-laser/faq.json";
+import gloTestimonials from "../data/clients/aura-skin-laser/testimonials.json";
+import gloChat from "../data/clients/aura-skin-laser/chat.json";
+import gloTeam from "../data/clients/aura-skin-laser/team.json";
+import { blogPosts as gloBlogPosts } from "../data/clients/aura-skin-laser/blogPosts";
 
 const CLIENT_IDS = [
   "lumina",
