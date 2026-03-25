@@ -29,6 +29,7 @@ import auraChat from "../data/clients/aura-skin-laser/chat.json";
 import auraTeam from "../data/clients/aura-skin-laser/team.json";
 import { blogPosts as auraBlogPosts } from "../data/clients/aura-skin-laser/blogPosts";
 
+<<<<<<< HEAD
 import brightBrand from "../data/clients/aura-skin-laser/brand.json";
 import brightHomepage from "../data/clients/aura-skin-laser/homepage.json";
 import brightTreatments from "../data/clients/aura-skin-laser/treatments.json";
@@ -46,6 +47,25 @@ import gloTestimonials from "../data/clients/aura-skin-laser/testimonials.json";
 import gloChat from "../data/clients/aura-skin-laser/chat.json";
 import gloTeam from "../data/clients/aura-skin-laser/team.json";
 import { blogPosts as gloBlogPosts } from "../data/clients/aura-skin-laser/blogPosts";
+=======
+import brightBrand from "../data/clients/bright-smile-dental/brand.json";
+import brightHomepage from "../data/clients/bright-smile-dental/homepage.json";
+import brightTreatments from "../data/clients/bright-smile-dental/treatments.json";
+import brightFaq from "../data/clients/bright-smile-dental/faq.json";
+import brightTestimonials from "../data/clients/bright-smile-dental/testimonials.json";
+import brightChat from "../data/clients/bright-smile-dental/chat.json";
+import brightTeam from "../data/clients/bright-smile-dental/team.json";
+import { blogPosts as brightBlogPosts } from "../data/clients/bright-smile-dental/blogPosts";
+
+import gloBrand from "../data/clients/glo-de-vie/brand.json";
+import gloHomepage from "../data/clients/glo-de-vie/homepage.json";
+import gloTreatments from "../data/clients/glo-de-vie/treatments.json";
+import gloFaq from "../data/clients/glo-de-vie/faq.json";
+import gloTestimonials from "../data/clients/glo-de-vie/testimonials.json";
+import gloChat from "../data/clients/glo-de-vie/chat.json";
+import gloTeam from "../data/clients/glo-de-vie/team.json";
+import { blogPosts as gloBlogPosts } from "../data/clients/glo-de-vie/blogPosts";
+>>>>>>> main
 
 const CLIENT_IDS = [
   "lumina",
