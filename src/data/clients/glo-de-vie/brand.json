@@ -1,29 +1,29 @@
 {
   "brand": {
-    "name": "Lumina Aesthetics",
-    "tagline": "Luxury medical aesthetics, refined.",
+    "name": "Glo de Vie Med Spa",
+    "tagline": "Boutique med spa. Real results.",
     "location": {
       "city": "Raleigh",
       "region": "North Carolina",
       "display": "Raleigh, North Carolina"
     },
     "contact": {
-      "phone": "(919) 555-0138",
-      "email": "hello@luminaaesthetics.com",
-      "addressLines": ["123 Glenwood Ave", "Raleigh, NC 27603"],
-      "hours": ["Mon–Fri: 9am–6pm", "Sat: 10am–3pm", "Sun: Closed"]
+      "phone": "(919) 510-5919",
+      "email": "",
+      "addressLines": ["4209 Lassiter Mill Rd, #133", "Raleigh, NC 27609"],
+      "hours": ["Mon: 8am–7pm", "Tue: 8am–7pm", "Wed: 8am–5pm", "Thu: 8am–7pm", "Fri: 8am–5pm", "Sat: 9am–3pm", "Sun: Closed"]
     },
     "ctas": {
       "book": { "label": "Book Now", "href": "/book" }
     },
     "social": {
-      "instagram": "https://instagram.com/luminaaesthetics",
-      "tiktok": "https://tiktok.com/@luminaaesthetics"
+      "instagram": "",
+      "tiktok": ""
     }
   },
   "navigation": {
     "main": [
-      { "label": "Treatments", "href": "#treatments" },
+      { "label": "Services", "href": "#treatments" },
       { "label": "Results", "href": "#results" },
       { "label": "Team", "href": "#team" },
       { "label": "Reviews", "href": "#testimonials" },
@@ -44,7 +44,6 @@
     "mutedText": "#475569"
   },
   "legal": {
-    "disclaimerShort": "All treatments are performed or supervised by licensed medical professionals. Individual results may vary."
+    "disclaimerShort": "All treatments are performed by licensed medical professionals. Individual results may vary."
   }
 }
-

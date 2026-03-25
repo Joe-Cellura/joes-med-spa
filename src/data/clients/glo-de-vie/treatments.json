@@ -1,0 +1,65 @@
+{
+  "items": [
+    {
+      "id": "cosmetic-injectables",
+      "name": "Cosmetic Injectables",
+      "tagline": "Botox, Dysport, and dermal fillers for natural-looking results.",
+      "description": "Our expert injectors use neuromodulators like Botox and Dysport to soften fine lines and wrinkles, and dermal fillers to restore volume and enhance facial contours. All treatments are customized to your facial structure for natural, balanced results.",
+      "duration": "30–60 min",
+      "startingAt": "Call for pricing",
+      "category": "Injectables",
+      "badges": ["Most requested"],
+      "cta": { "label": "Learn more", "href": "/book" }
+    },
+    {
+      "id": "laser-therapy",
+      "name": "Laser Therapy",
+      "tagline": "Advanced laser treatments for hair removal and skin concerns.",
+      "description": "Glo de Vie offers laser hair removal and laser-based skin treatments to address a wide range of concerns. Our technology is safe for multiple skin types and delivers effective, lasting results.",
+      "duration": "30–60 min",
+      "startingAt": "Call for pricing",
+      "category": "Laser",
+      "cta": { "label": "Learn more", "href": "/book" }
+    },
+    {
+      "id": "skin-rejuvenation",
+      "name": "Skin Rejuvenation",
+      "tagline": "Restore radiance and improve overall skin health.",
+      "description": "Our skin rejuvenation treatments address tone, texture, and overall skin quality using a combination of advanced technologies and medical-grade techniques tailored to your skin type.",
+      "duration": "45–60 min",
+      "startingAt": "Call for pricing",
+      "category": "Skin",
+      "cta": { "label": "Learn more", "href": "/book" }
+    },
+    {
+      "id": "emface",
+      "name": "EMFACE",
+      "tagline": "Non-invasive facial lifting and toning treatment.",
+      "description": "EMFACE is a breakthrough non-invasive treatment that simultaneously emits RF energy and HIFES technology to treat the skin and underlying facial muscles — reducing wrinkles and lifting facial contours without needles.",
+      "duration": "20 min per session",
+      "startingAt": "Call for pricing",
+      "category": "Face",
+      "cta": { "label": "Learn more", "href": "/book" }
+    },
+    {
+      "id": "body-transformation",
+      "name": "Body Transformation",
+      "tagline": "Non-surgical body contouring and sculpting.",
+      "description": "Using Exilis Ultra and Emsculpt technology, our body transformation treatments target stubborn fat, improve muscle tone, and tighten skin — without surgery or downtime.",
+      "duration": "30–60 min",
+      "startingAt": "Call for pricing",
+      "category": "Body",
+      "cta": { "label": "Learn more", "href": "/book" }
+    },
+    {
+      "id": "skin-resurfacing",
+      "name": "Skin Resurfacing",
+      "tagline": "Resurface and renew for smoother, younger-looking skin.",
+      "description": "Advanced skin resurfacing treatments stimulate collagen production and remove damaged outer layers of skin, improving texture, tone, and the appearance of fine lines, scars, and pigmentation.",
+      "duration": "45–60 min",
+      "startingAt": "Call for pricing",
+      "category": "Skin",
+      "cta": { "label": "Learn more", "href": "/book" }
+    }
+  ]
+}

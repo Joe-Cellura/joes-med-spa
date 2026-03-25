@@ -1,0 +1,26 @@
+{
+  "disclaimer": "Testimonials reflect individual experiences. Results may vary.",
+  "items": [
+    {
+      "id": "t-01",
+      "name": "Aeryn S.",
+      "quote": "The spa itself is very inviting, and the staff are very welcoming and friendly. I highly recommend Glo de Vie.",
+      "treatment": "General",
+      "rating": 5
+    },
+    {
+      "id": "t-02",
+      "name": "Sylvia M.",
+      "quote": "I really cannot say enough good things about this place. Everyone that works there is incredibly nice, professional, and attentive.",
+      "treatment": "General",
+      "rating": 5
+    },
+    {
+      "id": "t-03",
+      "name": "Tina",
+      "quote": "The staff is knowledgeable, friendly and professional. They right away put you at ease and make your experience there a very pleasant one.",
+      "treatment": "General",
+      "rating": 5
+    }
+  ]
+}

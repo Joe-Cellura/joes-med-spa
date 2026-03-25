@@ -1,0 +1,32 @@
+{
+  "providers": [
+    {
+      "id": "amanda-gallagher-dunning",
+      "initials": "AG",
+      "name": "Amanda Gallagher-Dunning, MS, APRN-BC, RNC",
+      "role": "Aesthetic Nurse Practitioner",
+      "bio": "Amanda leads the clinical team at Glo de Vie with advanced training in aesthetic medicine. As a board-certified nurse practitioner and registered nurse clinician, she brings expertise, precision, and a personalized approach to every treatment."
+    },
+    {
+      "id": "dr-benjamin-eskra",
+      "initials": "BE",
+      "name": "Dr. Benjamin Eskra, M.D.",
+      "role": "Medical Director",
+      "bio": "Dr. Eskra serves as Medical Director of Glo de Vie, providing clinical oversight and ensuring the highest standards of safety and care across all treatments and providers."
+    },
+    {
+      "id": "jen-p",
+      "initials": "JP",
+      "name": "Jen P.",
+      "role": "Medical Aesthetics Nurse Practitioner",
+      "bio": "Jen is a nurse practitioner specializing in medical aesthetics, bringing clinical precision and a gentle approach to injectable and skin treatments."
+    },
+    {
+      "id": "jacki-r",
+      "initials": "JR",
+      "name": "Jacki R., BSN, RN",
+      "role": "Medical Aesthetics Nurse",
+      "bio": "Jacki is a registered nurse on the medical aesthetics team, focused on delivering safe, effective treatments with exceptional patient care."
+    }
+  ]
+}

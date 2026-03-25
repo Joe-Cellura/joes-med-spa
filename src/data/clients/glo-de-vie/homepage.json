@@ -1,0 +1,147 @@
+{
+  "meta": {
+    "title": "Glo de Vie Med Spa | Raleigh, North Carolina",
+    "description": "Boutique med spa in North Hills Raleigh. Injectables, laser therapy, body transformation, and advanced skin treatments."
+  },
+  "sections": {
+    "promoStrip": {
+      "enabled": true,
+      "badge": "New Clients",
+      "message": "Request a consultation to get started.",
+      "link": { "label": "Request now", "href": "/book" }
+    },
+    "navbar": {},
+    "hero": {
+      "eyebrow": "Glo de Vie Med Spa — Raleigh, North Carolina",
+      "heading": "Boutique aesthetics. Personalized results.",
+      "subheading": "Natural results, not obvious ones. Expert-led care in a relaxing, intimate setting built around you.",
+      "highlights": [
+        "Expert-led treatments",
+        "Boutique experience",
+        "Personalized care plans"
+      ],
+      "primaryCta": { "label": "Request a Consultation", "href": "/book" },
+      "secondaryCta": { "label": "Explore Services", "href": "#treatments" },
+      "image": {
+        "src": "/images/hero-placeholder.jpg",
+        "alt": "Glo de Vie Med Spa treatment room"
+      }
+    },
+    "trustBar": {
+      "items": [
+        {
+          "label": "5.0",
+          "value": "Rating",
+          "sublabel": "Google reviews"
+        },
+        {
+          "label": "Expert",
+          "value": "Providers",
+          "sublabel": "licensed medical team"
+        },
+        {
+          "label": "North",
+          "value": "Hills",
+          "sublabel": "Raleigh location"
+        },
+        {
+          "label": "11+",
+          "value": "Services",
+          "sublabel": "personalized treatments"
+        }
+      ]
+    },
+    "featuredTreatments": {
+      "title": "Featured treatments",
+      "subtitle": "A curated set of services tailored to your goals.",
+      "featuredIds": [
+        "cosmetic-injectables",
+        "laser-therapy",
+        "skin-rejuvenation",
+        "emface",
+        "body-transformation",
+        "skin-resurfacing"
+      ],
+      "sectionCta": { "label": "View all options", "href": "#treatments" }
+    },
+    "whyChooseUs": {
+      "title": "Why choose Glo de Vie",
+      "subtitle": "An intimate boutique setting with expert providers and personalized care.",
+      "items": [
+        {
+          "title": "Expert providers",
+          "description": "Led by Amanda Gallagher-Dunning, MS, APRN-BC and Medical Director Dr. Benjamin Eskra — experienced professionals dedicated to natural results."
+        },
+        {
+          "title": "Boutique experience",
+          "description": "An intimate, relaxing environment where every treatment is tailored to your specific skin type and goals."
+        },
+        {
+          "title": "Comprehensive care",
+          "description": "From injectables and laser therapy to body transformation and skin rejuvenation — everything under one roof."
+        }
+      ],
+      "cta": { "label": "Request a consultation", "href": "/book" }
+    },
+    "beforeAfterGallery": {
+      "title": "Results gallery",
+      "subtitle": "Believable outcomes that still look like you.",
+      "items": [
+        {
+          "id": "ba-01",
+          "treatment": "Injectables: Natural refinement",
+          "beforeSrc": "/images/before-1.jpg",
+          "afterSrc": "/images/after-1.jpg",
+          "alt": "Before and after injectable results"
+        },
+        {
+          "id": "ba-02",
+          "treatment": "Skin rejuvenation: Texture & tone",
+          "beforeSrc": "/images/before-2.jpg",
+          "afterSrc": "/images/after-2.jpg",
+          "alt": "Before and after skin improvement"
+        }
+      ],
+      "disclaimer": "Photos are representative. Individual results vary."
+    },
+    "testimonials": {
+      "title": "What clients say",
+      "subtitle": "A few words from guests who trust Glo de Vie.",
+      "featuredIds": ["t-01", "t-02", "t-03"],
+      "cta": { "label": "Request a consultation", "href": "/book" }
+    },
+    "about": {
+      "title": "A different kind of med spa",
+      "body": "Glo de Vie Med Spa was built on a simple belief: that everyone deserves expert aesthetic care in a setting that feels personal, not clinical. Our boutique North Hills studio offers a warm, intimate environment where every treatment is customized to you — no cookie-cutter plans, no rushed appointments.",
+      "bullets": [
+        "Licensed medical professionals on every treatment",
+        "Personalized treatment plans",
+        "Boutique North Hills Raleigh location"
+      ],
+      "image": {
+        "src": "/images/about-placeholder.jpg",
+        "alt": "Glo de Vie Med Spa"
+      }
+    },
+    "faq": {
+      "title": "FAQ",
+      "subtitle": "Quick answers to common questions.",
+      "featuredIds": ["faq-01", "faq-02", "faq-03", "faq-04", "faq-05", "faq-06", "faq-07"]
+    },
+    "finalCta": {
+      "title": "Ready to discover your best skin?",
+      "body": "Schedule a consultation and let our team build a personalized plan around your goals.",
+      "primaryCta": { "label": "Request your consultation", "href": "/book" },
+      "secondaryCta": { "label": "Call now", "href": "tel" }
+    },
+    "footer": {},
+    "stickyMobileCta": {
+      "enabled": true,
+      "items": [
+        { "type": "call", "label": "Call" },
+        { "type": "book", "label": "Book", "href": "/book" },
+        { "type": "chat", "label": "Get Personalized Guidance" }
+      ]
+    }
+  }
+}
