@@ -11,14 +11,14 @@ import type {
   Testimonial,
 } from "./types";
 
-import luminaBrand from "../data/clients/aura-skin-laser/brand.json";
-import luminaHomepage from "../data/clients/aura-skin-laser/homepage.json";
-import luminaTreatments from "../data/clients/aura-skin-laser/treatments.json";
-import luminaFaq from "../data/clients/aura-skin-laser/faq.json";
-import luminaTestimonials from "../data/clients/aura-skin-laser/testimonials.json";
-import luminaChat from "../data/clients/aura-skin-laser/chat.json";
-import luminaTeam from "../data/clients/aura-skin-laser/team.json";
-import { blogPosts as luminaBlogPosts } from "../data/clients/aura-skin-laser/blogPosts";
+import luminaBrand from "../data/clients/lumina/brand.json";
+import luminaHomepage from "../data/clients/lumina/homepage.json";
+import luminaTreatments from "../data/clients/lumina/treatments.json";
+import luminaFaq from "../data/clients/lumina/faq.json";
+import luminaTestimonials from "../data/clients/lumina/testimonials.json";
+import luminaChat from "../data/clients/lumina/chat.json";
+import luminaTeam from "../data/clients/lumina/team.json";
+import { blogPosts as luminaBlogPosts } from "../data/clients/lumina/blogPosts";
 
 import auraBrand from "../data/clients/aura-skin-laser/brand.json";
 import auraHomepage from "../data/clients/aura-skin-laser/homepage.json";
@@ -29,25 +29,6 @@ import auraChat from "../data/clients/aura-skin-laser/chat.json";
 import auraTeam from "../data/clients/aura-skin-laser/team.json";
 import { blogPosts as auraBlogPosts } from "../data/clients/aura-skin-laser/blogPosts";
 
-<<<<<<< HEAD
-import brightBrand from "../data/clients/aura-skin-laser/brand.json";
-import brightHomepage from "../data/clients/aura-skin-laser/homepage.json";
-import brightTreatments from "../data/clients/aura-skin-laser/treatments.json";
-import brightFaq from "../data/clients/aura-skin-laser/faq.json";
-import brightTestimonials from "../data/clients/aura-skin-laser/testimonials.json";
-import brightChat from "../data/clients/aura-skin-laser/chat.json";
-import brightTeam from "../data/clients/aura-skin-laser/team.json";
-import { blogPosts as brightBlogPosts } from "../data/clients/aura-skin-laser/blogPosts";
-
-import gloBrand from "../data/clients/aura-skin-laser/brand.json";
-import gloHomepage from "../data/clients/aura-skin-laser/homepage.json";
-import gloTreatments from "../data/clients/aura-skin-laser/treatments.json";
-import gloFaq from "../data/clients/aura-skin-laser/faq.json";
-import gloTestimonials from "../data/clients/aura-skin-laser/testimonials.json";
-import gloChat from "../data/clients/aura-skin-laser/chat.json";
-import gloTeam from "../data/clients/aura-skin-laser/team.json";
-import { blogPosts as gloBlogPosts } from "../data/clients/aura-skin-laser/blogPosts";
-=======
 import brightBrand from "../data/clients/bright-smile-dental/brand.json";
 import brightHomepage from "../data/clients/bright-smile-dental/homepage.json";
 import brightTreatments from "../data/clients/bright-smile-dental/treatments.json";
@@ -65,7 +46,6 @@ import gloTestimonials from "../data/clients/glo-de-vie/testimonials.json";
 import gloChat from "../data/clients/glo-de-vie/chat.json";
 import gloTeam from "../data/clients/glo-de-vie/team.json";
 import { blogPosts as gloBlogPosts } from "../data/clients/glo-de-vie/blogPosts";
->>>>>>> main
 
 const CLIENT_IDS = [
   "lumina",
