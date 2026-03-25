@@ -35,11 +35,6 @@ updateFile("src/lib/client.ts", (src) =>
   )
 );
 
-// src/lib/content.ts — update all "clients/<name>/" import paths
-updateFile("src/lib/content.ts", (src) =>
-  src.replace(/clients\/[^/]+\//g, `clients/${client}/`)
-);
-
 // src/lib/knowledge.ts — update the "clients", "<name>", "knowledge" path.join segment
 updateFile("src/lib/knowledge.ts", (src) =>
   src.replace(/"clients",\s*"[^"]+",\s*"knowledge"/g, `"clients", "${client}", "knowledge"`)
