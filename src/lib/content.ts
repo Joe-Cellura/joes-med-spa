@@ -11,41 +11,41 @@ import type {
   Testimonial,
 } from "./types";
 
-import luminaBrand from "../data/clients/lumina/brand.json";
-import luminaHomepage from "../data/clients/lumina/homepage.json";
-import luminaTreatments from "../data/clients/lumina/treatments.json";
-import luminaFaq from "../data/clients/lumina/faq.json";
-import luminaTestimonials from "../data/clients/lumina/testimonials.json";
-import luminaChat from "../data/clients/lumina/chat.json";
-import luminaTeam from "../data/clients/lumina/team.json";
-import { blogPosts as luminaBlogPosts } from "../data/clients/lumina/blogPosts";
+import luminaBrand from "../data/clients/glo-de-vie/brand.json";
+import luminaHomepage from "../data/clients/glo-de-vie/homepage.json";
+import luminaTreatments from "../data/clients/glo-de-vie/treatments.json";
+import luminaFaq from "../data/clients/glo-de-vie/faq.json";
+import luminaTestimonials from "../data/clients/glo-de-vie/testimonials.json";
+import luminaChat from "../data/clients/glo-de-vie/chat.json";
+import luminaTeam from "../data/clients/glo-de-vie/team.json";
+import { blogPosts as luminaBlogPosts } from "../data/clients/glo-de-vie/blogPosts";
 
-import auraBrand from "../data/clients/lumina/brand.json";
-import auraHomepage from "../data/clients/lumina/homepage.json";
-import auraTreatments from "../data/clients/lumina/treatments.json";
-import auraFaq from "../data/clients/lumina/faq.json";
-import auraTestimonials from "../data/clients/lumina/testimonials.json";
-import auraChat from "../data/clients/lumina/chat.json";
-import auraTeam from "../data/clients/lumina/team.json";
-import { blogPosts as auraBlogPosts } from "../data/clients/lumina/blogPosts";
+import auraBrand from "../data/clients/glo-de-vie/brand.json";
+import auraHomepage from "../data/clients/glo-de-vie/homepage.json";
+import auraTreatments from "../data/clients/glo-de-vie/treatments.json";
+import auraFaq from "../data/clients/glo-de-vie/faq.json";
+import auraTestimonials from "../data/clients/glo-de-vie/testimonials.json";
+import auraChat from "../data/clients/glo-de-vie/chat.json";
+import auraTeam from "../data/clients/glo-de-vie/team.json";
+import { blogPosts as auraBlogPosts } from "../data/clients/glo-de-vie/blogPosts";
 
-import brightBrand from "../data/clients/lumina/brand.json";
-import brightHomepage from "../data/clients/lumina/homepage.json";
-import brightTreatments from "../data/clients/lumina/treatments.json";
-import brightFaq from "../data/clients/lumina/faq.json";
-import brightTestimonials from "../data/clients/lumina/testimonials.json";
-import brightChat from "../data/clients/lumina/chat.json";
-import brightTeam from "../data/clients/lumina/team.json";
-import { blogPosts as brightBlogPosts } from "../data/clients/lumina/blogPosts";
+import brightBrand from "../data/clients/glo-de-vie/brand.json";
+import brightHomepage from "../data/clients/glo-de-vie/homepage.json";
+import brightTreatments from "../data/clients/glo-de-vie/treatments.json";
+import brightFaq from "../data/clients/glo-de-vie/faq.json";
+import brightTestimonials from "../data/clients/glo-de-vie/testimonials.json";
+import brightChat from "../data/clients/glo-de-vie/chat.json";
+import brightTeam from "../data/clients/glo-de-vie/team.json";
+import { blogPosts as brightBlogPosts } from "../data/clients/glo-de-vie/blogPosts";
 
-import gloBrand from "../data/clients/lumina/brand.json";
-import gloHomepage from "../data/clients/lumina/homepage.json";
-import gloTreatments from "../data/clients/lumina/treatments.json";
-import gloFaq from "../data/clients/lumina/faq.json";
-import gloTestimonials from "../data/clients/lumina/testimonials.json";
-import gloChat from "../data/clients/lumina/chat.json";
-import gloTeam from "../data/clients/lumina/team.json";
-import { blogPosts as gloBlogPosts } from "../data/clients/lumina/blogPosts";
+import gloBrand from "../data/clients/glo-de-vie/brand.json";
+import gloHomepage from "../data/clients/glo-de-vie/homepage.json";
+import gloTreatments from "../data/clients/glo-de-vie/treatments.json";
+import gloFaq from "../data/clients/glo-de-vie/faq.json";
+import gloTestimonials from "../data/clients/glo-de-vie/testimonials.json";
+import gloChat from "../data/clients/glo-de-vie/chat.json";
+import gloTeam from "../data/clients/glo-de-vie/team.json";
+import { blogPosts as gloBlogPosts } from "../data/clients/glo-de-vie/blogPosts";
 
 const CLIENT_IDS = [
   "lumina",
