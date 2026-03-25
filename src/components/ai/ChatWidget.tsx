@@ -45,6 +45,13 @@ export function ChatWidget() {
   }, [open, messages.length, config.welcomeMessage]);
 
   useEffect(() => {
+    if (!config.enabled) return;
+    window.dispatchEvent(
+      new CustomEvent("assistant-widget-state", { detail: { open } }),
+    );
+  }, [open, config.enabled]);
+
+  useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, loading]);
 
@@ -364,7 +371,8 @@ export function ChatWidget() {
         </div>
       ) : null}
 
-      <div className="pointer-events-auto">
+      {/* Floating trigger: desktop only — mobile uses StickyMobileCTA */}
+      <div className="pointer-events-auto hidden sm:block">
         <button
           type="button"
           onClick={() => setOpen((prev) => !prev)}
