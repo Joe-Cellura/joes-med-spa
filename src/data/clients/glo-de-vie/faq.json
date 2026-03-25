@@ -1,0 +1,39 @@
+{
+  "items": [
+    {
+      "id": "faq-01",
+      "question": "Who performs treatments at Glo de Vie?",
+      "answer": "All treatments are performed by our licensed medical team, led by Amanda Gallagher-Dunning, MS, APRN-BC and overseen by Medical Director Dr. Benjamin Eskra, M.D."
+    },
+    {
+      "id": "faq-02",
+      "question": "Do you offer consultations?",
+      "answer": "Yes. We recommend starting with a consultation so our team can assess your goals and recommend a personalized treatment plan. Consultations can be requested online or by phone."
+    },
+    {
+      "id": "faq-03",
+      "question": "What injectables do you offer?",
+      "answer": "We offer neuromodulators including Botox and Dysport for fine lines and wrinkles, as well as a range of dermal fillers for volume restoration and facial contouring."
+    },
+    {
+      "id": "faq-04",
+      "question": "What is EMFACE?",
+      "answer": "EMFACE is a non-invasive facial treatment that uses RF energy and HIFES technology to simultaneously treat skin and facial muscles, reducing wrinkles and lifting contours without needles or downtime."
+    },
+    {
+      "id": "faq-05",
+      "question": "Do you offer body contouring?",
+      "answer": "Yes. We offer body transformation treatments using Exilis Ultra and Emsculpt technology for non-surgical fat reduction, muscle toning, and skin tightening."
+    },
+    {
+      "id": "faq-06",
+      "question": "What are your hours?",
+      "answer": "Monday and Tuesday 8am to 7pm, Wednesday 8am to 5pm, Thursday 8am to 7pm, Friday 8am to 5pm, Saturday 9am to 3pm, Sunday closed."
+    },
+    {
+      "id": "faq-07",
+      "question": "Where are you located?",
+      "answer": "We are located at 4209 Lassiter Mill Rd, Suite 133, Raleigh, NC 27609, in the North Hills area."
+    }
+  ]
+}

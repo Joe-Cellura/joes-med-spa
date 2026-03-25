@@ -1,0 +1,8 @@
+{
+  "enabled": true,
+  "triggerLabel": "Get Personalized Guidance",
+  "panelTitle": "Glo de Vie Assistant",
+  "welcomeTitle": "Glo de Vie Assistant",
+  "welcomeMessage": "Hi, I'm your Glo de Vie Virtual Assistant.\n\nI can answer questions about treatments, pricing, scheduling, and much more.\n\nHow can I help you today?",
+  "disclaimer": "This assistant provides general information and does not replace professional medical advice. Consult a licensed provider for personalized treatment guidance."
+}

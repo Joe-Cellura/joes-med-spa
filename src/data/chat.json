@@ -1,8 +1,0 @@
-{
-  "enabled": true,
-  "triggerLabel": "Get Personalized Guidance",
-  "panelTitle": "Lumina Virtual Assistant",
-  "welcomeTitle": "Lumina Virtual Assistant",
-  "welcomeMessage": "Hi, I'm your Lumina Virtual Assistant.\n\nI can answer questions about treatments, pricing, scheduling, and much more.\n\nHow can I help you today?",
-  "disclaimer": "This assistant provides general information and does not replace medical advice. Consult a licensed provider for personalized guidance."
-}
