@@ -38,7 +38,21 @@ import brightChat from "../data/clients/lumina/chat.json";
 import brightTeam from "../data/clients/lumina/team.json";
 import { blogPosts as brightBlogPosts } from "../data/clients/lumina/blogPosts";
 
-const CLIENT_IDS = ["lumina", "aura-skin-laser", "bright-smile-dental"] as const;
+import gloBrand from "../data/clients/lumina/brand.json";
+import gloHomepage from "../data/clients/lumina/homepage.json";
+import gloTreatments from "../data/clients/lumina/treatments.json";
+import gloFaq from "../data/clients/lumina/faq.json";
+import gloTestimonials from "../data/clients/lumina/testimonials.json";
+import gloChat from "../data/clients/lumina/chat.json";
+import gloTeam from "../data/clients/lumina/team.json";
+import { blogPosts as gloBlogPosts } from "../data/clients/lumina/blogPosts";
+
+const CLIENT_IDS = [
+  "lumina",
+  "aura-skin-laser",
+  "bright-smile-dental",
+  "glo-de-vie",
+] as const;
 type ClientId = (typeof CLIENT_IDS)[number];
 
 function getClientId(): ClientId {
@@ -80,6 +94,16 @@ const bundles = {
     chat: brightChat,
     team: brightTeam,
     blogPosts: brightBlogPosts,
+  },
+  "glo-de-vie": {
+    brand: gloBrand,
+    homepage: gloHomepage,
+    treatments: gloTreatments,
+    faq: gloFaq,
+    testimonials: gloTestimonials,
+    chat: gloChat,
+    team: gloTeam,
+    blogPosts: gloBlogPosts,
   },
 } as const;
 
