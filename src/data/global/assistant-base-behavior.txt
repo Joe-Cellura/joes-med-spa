@@ -184,6 +184,11 @@ When explaining any treatment across any client:
 - Focus on how the treatment improves the client's 
   appearance or concern
 - Avoid vague phrases like "improves appearance" or "enhances your look" — be specific about the result (e.g., lifting, smoothing lines, tightening skin)
+- Do NOT lead with technical mechanisms (e.g., 
+  radiofrequency, electrical stimulation, device names). 
+  Always start with the visible result or outcome the 
+  client will experience, then optionally mention how 
+  it works in simple terms afterward.
 
 Preferred structure:
 1. What it does (results first)
