@@ -1,0 +1,39 @@
+CLIENT PRICING OVERVIEW — GLO DE VIE MED SPA
+
+This file consolidates pricing-related statements found in this client’s knowledge bundle. Glo de Vie does not publish specific dollar amounts for individual treatments in the sourced materials.
+
+GENERAL PRICING NOTES
+• Per clinic-overview.txt: Glo de Vie Med Spa does not publish specific pricing online. Treatment costs vary based on individual goals, areas treated, and personalized plans.
+• Pricing is discussed transparently during a consultation (same source).
+• Most clients are encouraged to request a visit for a clear, personalized quote before committing to any treatment (clinic-overview.txt).
+• treatments.json lists startingAt as “Call for pricing” for Cosmetic Injectables, Laser Therapy, Skin Rejuvenation, EMFACE, Body Transformation, and Skin Resurfacing.
+
+INJECTABLES
+• Service: Cosmetic injectables (e.g., Botox, Dysport, fillers — per treatments.json / clinic overview).
+Pricing: Not published in bundle; “Call for pricing” in treatments.json.
+Notes: No per-unit or per-syringe amounts appear in knowledge files.
+
+SKIN / FACIAL TREATMENTS
+• Service: Skin rejuvenation, skin resurfacing, facials, chemical peels (per clinic overview and treatments).
+Pricing: Not published in bundle; “Call for pricing” in treatments.json.
+Notes: EMFACE is listed as ~20 min per session in service copy; no session price in sources.
+
+LASER / DEVICE TREATMENTS
+• Service: Laser therapy (hair removal and laser-based skin treatments per treatments.json).
+Pricing: Not published in bundle; “Call for pricing” in treatments.json.
+Notes: None.
+
+BODY / WELLNESS / OTHER
+• Service: Body transformation (Exilis Ultra, Emsculpt per clinic overview / treatments).
+• Service: Weight loss injections (mentioned in clinic overview only).
+Pricing: Not published in bundle; “Call for pricing” where listed in treatments.json.
+Notes: No numeric pricing for weight loss injections in sourced files.
+
+PACKAGES / MEMBERSHIPS / PROMOTIONS
+• promotions.txt: Glo de Vie runs monthly specials and seasonal promotions on select treatments; offers change regularly.
+• To learn current specials: contact (919) 510-5919 or ask during a consultation (promotions.txt).
+• No promotional dollar amounts or package prices are given in the bundle beyond “updated regularly.”
+
+UNKNOWN / VARIABLE PRICING
+• All per-treatment and per-session dollar amounts are absent from the client’s knowledge files except policy statements that costs are individualized.
+• example-conversations.txt mentions EMFACE pricing varying by number of sessions — illustrative copy only; not a price list.

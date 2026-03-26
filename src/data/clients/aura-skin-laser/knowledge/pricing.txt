@@ -1,0 +1,71 @@
+CLIENT PRICING OVERVIEW — AURA SKIN & LASER
+
+Consolidated from knowledge/services/*.txt, knowledge/blog/skinwave-aqua-facial-guide.txt, knowledge/promotions.txt, knowledge/faq.txt, knowledge/booking-guidance.txt, knowledge/consultation-process.txt, and treatments.json “startingAt” fields.
+
+GENERAL PRICING NOTES
+• knowledge/faq.txt: Most services are available as individual sessions or packages of 3 or 4 sessions with a discount; laser hair reduction also offers unlimited session packages (valid 2 years) for select areas.
+• knowledge/faq.txt & booking-guidance.txt: Complimentary first consultation; transparent pricing discussed before treatment begins.
+• knowledge/promotions.txt: Promotions may be seasonal or limited — confirm current availability with Aura directly.
+• treatments.json lists marketing “startingAt” strings (from $125, $350, $215, $300, $575, $250); detailed grids below come from service knowledge files.
+
+INJECTABLES
+• No injectable product pricing appears in this client’s knowledge bundle.
+
+SKIN / FACIAL TREATMENTS
+• Service: Skinwave Aqua Facial (knowledge/services/aqua-facial.txt; same figures in knowledge/blog/skinwave-aqua-facial-guide.txt)
+Pricing:
+– Face: $250 per session / $675 for 3 sessions
+– Face, neck, and decollete: $325 per session / $878 for 3 sessions
+– Back: $400 per session / $1,080 for 3 sessions
+Notes: Monthly maintenance referenced in service copy; not a separate price.
+
+LASER / DEVICE TREATMENTS
+• Service: Laser hair reduction (knowledge/services/laser-hair-reduction.txt)
+Individual sessions:
+– Upper lip: $125 | Chin: $125 | Full face: $175 | Underarms: $135 | Bikini line: $175 | Brazilian: $275 | Forearms: $250 | Full arms: $325 | Lower leg: $250 | Upper legs: $300 | Full legs: $400 | Full back: $375 | Chest: $325 | Abdomen: $250 | Shoulders: $175
+Packages of 4 sessions (~10% savings per line item in source):
+– Upper lip: $450 | Chin: $450 | Full face: $630 | Underarms: $486 | Bikini line: $630 | Brazilian: $990 | Forearms: $900 | Full arms: $1,170 | Lower leg: $900 | Upper legs: $1,080 | Full legs: $1,440 | Full back: $1,350 | Chest: $1,170 | Abdomen: $900 | Shoulders: $630
+Unlimited session packages (valid 2 years):
+– X-small area: $1,000 | Small: $1,500 | Medium: $2,000 | Large: $2,500 | X-large: $3,000
+Notes: Most clients need 6–12 sessions for optimal results (faq / service files).
+
+• Service: Skin revitalization — Moveo SR (knowledge/services/skin-revitalization.txt)
+Pricing:
+– Non-ablative laser facial: $350 per session / $945 for 3 sessions
+– Tone & texture treatment: $450 per session / $1,215 for 3 sessions
+
+• Service: Dark spot / pigmentation — Moveo PL (knowledge/services/dark-spot-reduction.txt)
+Pricing:
+– Face: $250 per session / $675 for 3 sessions
+– Chest: $250 / $675
+– Arms: $275 / $742
+– Back: $300 / $810
+– Legs: $215 / $580
+
+• Service: Redness / vascular — Moveo VL (knowledge/services/redness-vein-reduction.txt)
+Pricing:
+– Facial vascular treatment: $300 per session / $810 for 3 sessions
+– Diffuse redness: $300 / $810
+– Superficial veins: $450 / $1,215
+
+• Service: Moveo GLO combination (knowledge/services/moveo-glo.txt)
+Pricing:
+– Face: $575 per session / $1,552 for 3 sessions
+– Chest: $625 / $1,687
+– Face & chest: $850 / $2,295
+– Arms: $900 / $2,430
+– Legs: $1,200 / $3,240
+
+BODY / WELLNESS / OTHER
+• No separate body-contour or IV pricing in the Aura knowledge bundle.
+
+PACKAGES / MEMBERSHIPS / PROMOTIONS
+• Summer Ready Package (knowledge/promotions.txt — labeled limited / seasonal; confirm before quoting):
+– Unlimited laser hair reduction sessions for two areas for 2 years
+– Investment: $1,800
+– Details in source: unlimited sessions 2 years, two areas; positioning vs per-session pay-as-you-go described in promotions.txt
+• treatments.json “startingAt” values are summary marketing anchors, not a full price list.
+
+UNKNOWN / VARIABLE PRICING
+• Final plan and totals may still be confirmed at consultation (faq / booking-guidance) even though many list prices exist above.
+• Summer Ready Package availability is time-sensitive per promotions.txt.
