@@ -1,0 +1,8 @@
+{
+  "enabled": true,
+  "triggerLabel": "Get Personalized Guidance",
+  "panelTitle": "MedSpa 501 Assistant",
+  "welcomeTitle": "MedSpa 501 Assistant",
+  "welcomeMessage": "Hi, I'm your MedSpa 501 Virtual Assistant.\n\nI can answer questions about treatments, pricing, memberships, scheduling, and much more.\n\nHow can I help you today?",
+  "disclaimer": "This assistant provides general information and does not replace professional medical advice. Consult a licensed provider for personalized treatment guidance."
+}

@@ -147,9 +147,6 @@ export function ChatWidget() {
               setMessages((prev) =>
                 prev.map((m) => {
                   if (m.id === assistantId) return { ...m, showBookingCta };
-                  // When a new CTA fires, deactivate the button on all previous
-                  // messages so only one booking button is visible at a time
-                  if (showBookingCta && m.showBookingCta) return { ...m, showBookingCta: false };
                   return m;
                 }),
               );

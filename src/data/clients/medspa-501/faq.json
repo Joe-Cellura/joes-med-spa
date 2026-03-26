@@ -1,0 +1,49 @@
+{
+  "items": [
+    {
+      "id": "faq-01",
+      "question": "Who performs treatments at MedSpa 501?",
+      "answer": "Treatments are performed by our licensed team including physicians, nurse practitioners, physician associates, nurse injectors, and licensed aestheticians. Every treatment is matched to the right provider for your goals."
+    },
+    {
+      "id": "faq-02",
+      "question": "Do you offer consultations?",
+      "answer": "Yes. New clients are encouraged to start with a consultation so we can understand your goals and recommend the right treatment plan. Book online or call (984) 336-0501."
+    },
+    {
+      "id": "faq-03",
+      "question": "What neuromodulators do you offer?",
+      "answer": "We offer Botox, Xeomin, and Daxxify. Daxxify is our longest-lasting option with results typically lasting 6 months or more. All three are customized for natural results."
+    },
+    {
+      "id": "faq-04",
+      "question": "Do you offer memberships?",
+      "answer": "Yes. We offer The Glow Collective memberships: GlowTox (quarterly neuromodulator treatments, $2,200/year) and SkinGlow (monthly skin treatments, $2,000/year). Both include 15% savings on skincare and require a 3-month minimum commitment."
+    },
+    {
+      "id": "faq-05",
+      "question": "Do you offer medical weight loss?",
+      "answer": "Yes. We offer GLP-1 based medical weight loss programs supervised by our licensed providers including Dr. Josh Dobstaff, MD."
+    },
+    {
+      "id": "faq-06",
+      "question": "What is IV nutrient therapy?",
+      "answer": "IV therapy delivers vitamins, minerals, and hydration directly into the bloodstream for full absorption. Our formulations are custom-designed in partnership with 501 Pharmacy."
+    },
+    {
+      "id": "faq-07",
+      "question": "What are your hours?",
+      "answer": "Monday through Friday: 9am to 6pm. Saturday and Sunday: Closed."
+    },
+    {
+      "id": "faq-08",
+      "question": "Where are you located?",
+      "answer": "69 Knox Way, Suite 108, Chapel Hill, NC 27516."
+    },
+    {
+      "id": "faq-09",
+      "question": "How do I book?",
+      "answer": "Book online through our Boulevard portal, call (984) 336-0501, or email hello@medspa501.com."
+    }
+  ]
+}

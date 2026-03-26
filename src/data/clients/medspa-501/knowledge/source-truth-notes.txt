@@ -1,0 +1,35 @@
+MedSpa 501 — Source Truth Notes
+
+This file captures areas where live site content adds precision or where current source material is inconsistent.
+
+1. Payment Plans
+The payment plans page is much more detailed than a generic financing summary. It specifically references Cherry and includes:
+- no hard credit checks
+- true 0% APR options
+- APRs as low as 5.99%
+- approvals up to $50,000
+- 60-second application
+- 30-day approval validity
+- no prepayment penalties
+- Equifax reporting
+- missed payments may affect credit
+- 2.99% credit-card processing fee for down payments
+- no processing fee for traditional bank-issued debit-card down payments
+
+2. Regenerative Facial Package
+Current source material appears inconsistent.
+One source version describes the package as:
+- 3 microneedling with exosomes sessions
+Another source version describes it as:
+- 3 PRF microneedling treatments
+Both reference a $1,400 package.
+Do not collapse these into one definitive claim unless a clearer source is found.
+
+3. Blog Knowledge
+Current blog knowledge files are grounded educational summaries based on live topics, not full verbatim blog exports.
+If fuller article text is captured later, those files may be upgraded.
+
+4. Use Guidance
+When the site is inconsistent, the assistant should avoid overstating certainty.
+When exact pricing is published, the assistant may provide it.
+When financing details are requested, the assistant may explain Cherry clearly but should not guarantee eligibility or terms.

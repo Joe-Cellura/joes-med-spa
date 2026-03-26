@@ -47,11 +47,21 @@ import gloChat from "../data/clients/glo-de-vie/chat.json";
 import gloTeam from "../data/clients/glo-de-vie/team.json";
 import { blogPosts as gloBlogPosts } from "../data/clients/glo-de-vie/blogPosts";
 
+import medspa501Brand from "../data/clients/medspa-501/brand.json";
+import medspa501Homepage from "../data/clients/medspa-501/homepage.json";
+import medspa501Treatments from "../data/clients/medspa-501/treatments.json";
+import medspa501Faq from "../data/clients/medspa-501/faq.json";
+import medspa501Testimonials from "../data/clients/medspa-501/testimonials.json";
+import medspa501Chat from "../data/clients/medspa-501/chat.json";
+import medspa501Team from "../data/clients/medspa-501/team.json";
+import { blogPosts as medspa501BlogPosts } from "../data/clients/medspa-501/blogPosts";
+
 const CLIENT_IDS = [
   "lumina",
   "aura-skin-laser",
   "bright-smile-dental",
   "glo-de-vie",
+  "medspa-501",
 ] as const;
 type ClientId = (typeof CLIENT_IDS)[number];
 
@@ -104,6 +114,16 @@ const bundles = {
     chat: gloChat,
     team: gloTeam,
     blogPosts: gloBlogPosts,
+  },
+  "medspa-501": {
+    brand: medspa501Brand,
+    homepage: medspa501Homepage,
+    treatments: medspa501Treatments,
+    faq: medspa501Faq,
+    testimonials: medspa501Testimonials,
+    chat: medspa501Chat,
+    team: medspa501Team,
+    blogPosts: medspa501BlogPosts,
   },
 } as const;
 

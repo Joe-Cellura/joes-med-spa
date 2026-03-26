@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "id": "injectables",
+      "name": "Botox, Xeomin & Daxxify",
+      "tagline": "Neuromodulators to soften fine lines and wrinkles naturally.",
+      "description": "MedSpa 501 offers Botox, Xeomin, and Daxxify — three leading neuromodulators that relax the muscles causing dynamic lines and wrinkles. Daxxify is the longest-lasting option at 6+ months. All treatments are customized for natural, refreshed results.",
+      "duration": "15–30 min",
+      "startingAt": "See pricing",
+      "category": "Injectables",
+      "badges": ["Most requested"],
+      "cta": {
+        "label": "Learn more",
+        "href": "https://dashboard.boulevard.io/booking/businesses/b7325b72-d007-4e95-9568-1db4e4f31d06/widget#/visit-type/"
+      }
+    },
+    {
+      "id": "fillers",
+      "name": "Dermal Fillers",
+      "tagline": "Restore volume, smooth lines, and enhance facial contours.",
+      "description": "Dermal fillers restore lost volume, smooth static lines, and enhance facial features including lips, cheeks, jawline, and under-eyes. Our providers use a conservative, artful approach for natural-looking results.",
+      "duration": "30–60 min",
+      "startingAt": "See pricing",
+      "category": "Injectables",
+      "cta": {
+        "label": "Learn more",
+        "href": "https://dashboard.boulevard.io/booking/businesses/b7325b72-d007-4e95-9568-1db4e4f31d06/widget#/visit-type/"
+      }
+    },
+    {
+      "id": "iv-therapy",
+      "name": "IV Nutrient Therapy",
+      "tagline": "Replenish, hydrate, and energize from the inside out.",
+      "description": "IV nutrient therapy delivers vitamins, minerals, and hydration directly into the bloodstream for full absorption. MedSpa 501 offers customized IV formulations designed in partnership with 501 Pharmacy.",
+      "duration": "45–60 min",
+      "startingAt": "See pricing",
+      "category": "Wellness",
+      "cta": {
+        "label": "Learn more",
+        "href": "https://dashboard.boulevard.io/booking/businesses/b7325b72-d007-4e95-9568-1db4e4f31d06/widget#/visit-type/"
+      }
+    },
+    {
+      "id": "medical-weight-loss",
+      "name": "Medical Weight Loss",
+      "tagline": "GLP-1 and medically supervised weight loss programs.",
+      "description": "MedSpa 501 offers medically supervised weight loss programs including GLP-1 based treatments. All programs are personalized and monitored by licensed providers for safe, sustainable results.",
+      "duration": "Ongoing program",
+      "startingAt": "See pricing",
+      "category": "Wellness",
+      "cta": {
+        "label": "Learn more",
+        "href": "https://dashboard.boulevard.io/booking/businesses/b7325b72-d007-4e95-9568-1db4e4f31d06/widget#/visit-type/"
+      }
+    },
+    {
+      "id": "aesthetics",
+      "name": "Facials & Microneedling",
+      "tagline": "Advanced skin treatments for a healthy, radiant complexion.",
+      "description": "MedSpa 501 offers HydraFacials, customized facials, and microneedling (SkinStylus) to improve skin texture, tone, hydration, and radiance. Treatments are tailored to your specific skin type and concerns.",
+      "duration": "45–75 min",
+      "startingAt": "See pricing",
+      "category": "Skin",
+      "cta": {
+        "label": "Learn more",
+        "href": "https://dashboard.boulevard.io/booking/businesses/b7325b72-d007-4e95-9568-1db4e4f31d06/widget#/visit-type/"
+      }
+    },
+    {
+      "id": "prf",
+      "name": "PRF",
+      "tagline": "Platelet-rich fibrin for natural skin rejuvenation and hair restoration.",
+      "description": "PRF uses your body's own growth factors to stimulate collagen, improve skin quality, and support hair restoration. A natural regenerative treatment with no synthetic additives and progressive results over weeks.",
+      "duration": "45–60 min",
+      "startingAt": "See pricing",
+      "category": "Skin",
+      "cta": {
+        "label": "Learn more",
+        "href": "https://dashboard.boulevard.io/booking/businesses/b7325b72-d007-4e95-9568-1db4e4f31d06/widget#/visit-type/"
+      }
+    }
+  ]
+}

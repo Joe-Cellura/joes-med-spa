@@ -1,0 +1,20 @@
+MedSpa 501 Bundle Status
+
+This bundle includes:
+- Brand and homepage data
+- Treatments, pricing, promotions, and memberships
+- Team and provider knowledge
+- FAQ and booking guidance
+- Payment plan / Cherry financing knowledge
+- Service-specific knowledge files
+- Blog-derived educational knowledge
+- UI blog post inventory based on real site topics
+
+Known unresolved ambiguities:
+1. Regenerative Facial Package is described in source material both as:
+   - 3 microneedling with exosomes sessions
+   - 3 PRF microneedling treatments
+2. Some services have pricing but limited long-form treatment detail, such as Fire & Ice Treatment
+3. Blog UI content is realistic and grounded but not a full verbatim export of site articles
+
+This bundle is suitable for demo use, assistant grounding, and UI rendering, with a few known source-truth caveats preserved intentionally.
