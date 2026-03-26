@@ -205,3 +205,6 @@ Recommended additions:
 - policies.txt (cancellation, deposits, refunds)
 - promotions.txt (current offers)
 - proof-points.txt (results and outcomes language)
+- pricing-policy.txt (how pricing is handled — 
+  published rates, by-quote, or consultation-based. 
+  Prevents the assistant from hallucinating pricing.)
