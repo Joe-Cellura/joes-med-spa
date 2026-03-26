@@ -1,0 +1,53 @@
+CLIENT PRICING OVERVIEW — LUMINA AESTHETICS
+
+Consolidated from Lumina knowledge/services/*.txt, treatments.json, knowledge/faq.txt, knowledge/consultation-process.txt, and related bundle files. Ranges are approximate where stated in sources.
+
+GENERAL PRICING NOTES
+• knowledge/faq.txt & consultation-process.txt: Pricing is discussed during consultation; you receive an estimate before treatment. Injectables may be per unit or per area; skin and body treatments may be per session or as a series. Transparent; no hidden fees (faq.txt).
+• Neurotoxin service file: Total cost depends on units used; recommended units and total cost are discussed before treatment.
+• Hydrafacial service file: Quote at booking or check-in for that visit.
+• Several services say “we will quote at your consultation” in their service descriptions.
+
+INJECTABLES
+• Service: Neuromodulators (neurotoxins)
+Pricing: Typically per unit. knowledge/services/neurotoxins.txt: approximately $12–18 per unit depending on product and area. treatments.json lists Neuromodulators as “from $14/unit” (starting-at label; falls within the stated per-unit range in long-form copy).
+Notes: Total cost depends on units used. Conservative dosing stated in neurotoxins.txt.
+
+• Service: Dermal filler
+Pricing: Typically per syringe or per area. knowledge/services/dermal-fillers.txt: often approximately $750–1,200+ per syringe depending on product and area. treatments.json lists dermal filler as “from $750.”
+Notes: Multiple areas or syringes increase cost. Estimate at consultation (dermal-fillers.txt).
+
+SKIN / FACIAL TREATMENTS
+• Service: Hydrafacial
+Pricing: knowledge/services/hydrafacial.txt: approximately $199–299 per session depending on add-ons and customization. treatments.json: “from $199.”
+Notes: Quote at booking or check-in (hydrafacial.txt).
+
+• Service: Microneedling
+Pricing: knowledge/services/microneedling.txt: approximately $399–599 per session depending on device, area, and combined serums; series pricing may be available. treatments.json: “from $399.”
+Notes: Quote at consultation.
+
+• Service: Chemical peels
+Pricing: knowledge/services/chemical-peels.txt: approximately $150–450+ per session depending on peel type and depth.
+Notes: Quote at consultation.
+
+• Service: Acne-related / facial (acne-treatments.txt)
+Pricing: Facials may start approximately $150–250; peels and microneedling priced per their service descriptions (acne-treatments.txt).
+Notes: Plan and quote at consultation.
+
+LASER / DEVICE TREATMENTS
+• Service: Laser hair removal
+Pricing: Often per area or as a package. knowledge/services/laser-hair-removal.txt: single sessions may start approximately $129–299+ depending on area size; packages can offer better value. treatments.json: “from $129.”
+Notes: Quote at consultation.
+
+BODY / WELLNESS / OTHER
+• Service: Body contouring
+Pricing: Typically per area or per session. knowledge/services/body-contouring.txt: single sessions may start approximately $499–1,000+ depending on technology and area; packages may be available. treatments.json: “from $499.”
+Notes: Quote at consultation.
+
+PACKAGES / MEMBERSHIPS / PROMOTIONS
+• treatments.json provides “startingAt” display strings only (see injectables/skin/body above); no separate membership dollar amounts appear in the Lumina knowledge bundle beyond those fields.
+• homepage.json references a promoStrip structure; no specific promotion prices are included in the grep-visible knowledge text for Lumina.
+
+UNKNOWN / VARIABLE PRICING
+• Exact quotes depend on area, product, plan, and consultation (per multiple service files).
+• If treatments.json “startingAt” and service-file ranges ever diverge, treat both as sourced: use long-form service files for ranges and treatments.json for site “from” labels.
