@@ -72,16 +72,27 @@ export async function POST(request: Request) {
     "i want to come in",
     "i'd like to come in",
     "id like to come in",
+    "can i come in",
+    "how soon can i come in",
     "i'm ready to book",
     "im ready to book",
+    "i'm ready",
+    "im ready",
+    "i'm ready to move forward",
+    "im ready to move forward",
     "i want to make an appointment",
     "i'd like to make an appointment",
     "ready to book",
     "ready to schedule",
     "book an appointment",
     "book online",
+    "book me",
+    "schedule me",
     "i want to book online",
     "make an appointment",
+    "i want to do it",
+    "i want to proceed",
+    "i want to move forward",
     "yes lets do it",
     "yes let's do it",
     "yes i do",
@@ -105,6 +116,10 @@ export async function POST(request: Request) {
     "can we book",
     "can we schedule",
     "please do",
+    "what's next",
+    "whats next",
+    "how do i start",
+    "how do i get started",
   ];
 
   // Soft affirmations — only count as booking intent when the previous assistant
@@ -198,17 +213,21 @@ export async function POST(request: Request) {
     const readable = new ReadableStream({
       async start(controller) {
         try {
+          let rawAccumulated = "";
           for await (const chunk of stream) {
             const delta = chunk.choices[0]?.delta?.content ?? "";
             if (delta) {
-              fullReply += delta;
-              controller.enqueue(encoder.encode(delta));
+              rawAccumulated += delta;
+              const cleaned = delta.replace(/__SHOW_BOOKING_CTA__/g, "");
+              if (cleaned) {
+                fullReply += cleaned;
+                controller.enqueue(encoder.encode(cleaned));
+              }
             }
           }
 
           // Post-processing after stream completes
           const lowerUser = message.toLowerCase();
-          const lowerReply = fullReply.toLowerCase();
 
           // Check whether the previous assistant turn was already in booking mode.
           // This gates contextual and single-word triggers so they don't fire
@@ -233,8 +252,9 @@ export async function POST(request: Request) {
           const isShortConfirm =
             lastAssistantWasBooking && singleWordConfirms.includes(normalizedUser);
 
-          // Assistant reply contains booking intent
-          const replyIntent = bookingReplyPhrases.some((p) => lowerReply.includes(p));
+          // Assistant reply contains the explicit booking CTA token
+          const replyIntent = rawAccumulated.includes("__SHOW_BOOKING_CTA__");
+          fullReply = fullReply.replace(/__SHOW_BOOKING_CTA__/g, "").trimEnd();
 
           const showBookingCta = userIntent || contextualIntent || isShortConfirm || replyIntent;
 

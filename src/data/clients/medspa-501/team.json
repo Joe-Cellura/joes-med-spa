@@ -1,0 +1,46 @@
+{
+  "providers": [
+    {
+      "id": "josh-dobstaff",
+      "initials": "JD",
+      "name": "Josh Dobstaff, MD",
+      "role": "Physician & Co-Founder",
+      "bio": "Board-certified physician and hospitalist with over a decade of experience. Specializes in medical weight loss, hormone optimization, and regenerative health."
+    },
+    {
+      "id": "allie-vivirito",
+      "initials": "AV",
+      "name": "Allie Vivirito, RN, BSN",
+      "role": "Co-Founder & Nurse",
+      "bio": "Healthcare leader with over 16 years of nursing experience. Degrees from Virginia Tech and Johns Hopkins. Passionate about reducing barriers to wellness."
+    },
+    {
+      "id": "samantha-danesi",
+      "initials": "SD",
+      "name": "Samantha Danesi, PA-C, LMT",
+      "role": "Physician Associate",
+      "bio": "Board-certified PA with over 17 years of experience in aesthetic medicine, plastic surgery, and dermatology. Known for artful, natural-looking injectable results."
+    },
+    {
+      "id": "holly-meehan",
+      "initials": "HM",
+      "name": "Holly Meehan, RN, BSN",
+      "role": "Nurse Injector",
+      "bio": "Certified nurse injector with a background in orthopedic and reconstructive plastic surgery at UNC. Works closely with each client to meet their individual goals."
+    },
+    {
+      "id": "kristin-timpy",
+      "initials": "KT",
+      "name": "Kristin Timpy, MSN, APRN, IFMCP",
+      "role": "Nurse Practitioner",
+      "bio": "Board-certified nurse practitioner with nearly two decades of experience in cardiology, family medicine, and functional medicine. Institute for Functional Medicine certified provider."
+    },
+    {
+      "id": "brittany-duval",
+      "initials": "BD",
+      "name": "Brittany Duval",
+      "role": "Aesthetician",
+      "bio": "Licensed aesthetician with over a decade of experience specializing in chemical peels, microneedling, and customized facials."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "disclaimer": "Testimonials reflect individual experiences. Results may vary.",
+  "items": [
+    {
+      "id": "t-01",
+      "name": "Deb",
+      "quote": "My least painful injections ever — and that is without topical numbing. Samantha is highly educated in aesthetic procedures and facial anatomy. She listened well, offered her recommendations with no pressure, and carried out the procedures in an expert and gentle manner.",
+      "treatment": "Injectables",
+      "rating": 5
+    },
+    {
+      "id": "t-02",
+      "name": "Tammy",
+      "quote": "I love MedSpa 501. The staff is knowledgeable and personable. They will not push extra services on you. They want what is the best for you and your budget. I am 51 and feel my skin is in the best shape it has ever been.",
+      "treatment": "General",
+      "rating": 5
+    },
+    {
+      "id": "t-03",
+      "name": "Mary",
+      "quote": "Holly took the time to thoroughly explain the process and the different options available, which made me feel really comfortable and informed. The HydraFacial itself was incredible — my skin feels so clean, refreshed, and glowing.",
+      "treatment": "HydraFacial",
+      "rating": 5
+    }
+  ]
+}

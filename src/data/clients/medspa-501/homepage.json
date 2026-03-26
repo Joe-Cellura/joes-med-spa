@@ -1,0 +1,176 @@
+{
+  "meta": {
+    "title": "MedSpa 501 | Chapel Hill, North Carolina",
+    "description": "Chapel Hill's award-winning medspa. Injectables, IV therapy, medical weight loss, aesthetics, and functional wellness."
+  },
+  "sections": {
+    "promoStrip": {
+      "enabled": true,
+      "badge": "New Clients",
+      "message": "Book a consultation to get started.",
+      "link": {
+        "label": "Book now",
+        "href": "https://dashboard.boulevard.io/booking/businesses/b7325b72-d007-4e95-9568-1db4e4f31d06/widget#/visit-type/"
+      }
+    },
+    "navbar": {},
+    "hero": {
+      "eyebrow": "MedSpa 501 — Chapel Hill, North Carolina",
+      "heading": "Confidence: Inside and Out.",
+      "subheading": "Personalized anti-aging and wellness solutions — blending cutting-edge aesthetic treatments with functional medicine in Chapel Hill's most trusted medspa.",
+      "highlights": [
+        "Best Spa — Chapel Hill Magazine 2025",
+        "Multi-provider expert team",
+        "Aesthetics + functional wellness"
+      ],
+      "primaryCta": {
+        "label": "Book a Consultation",
+        "href": "https://dashboard.boulevard.io/booking/businesses/b7325b72-d007-4e95-9568-1db4e4f31d06/widget#/visit-type/"
+      },
+      "secondaryCta": { "label": "Explore Services", "href": "#treatments" },
+      "image": {
+        "src": "/images/hero-placeholder.jpg",
+        "alt": "MedSpa 501 treatment room"
+      }
+    },
+    "trustBar": {
+      "items": [
+        {
+          "label": "Best",
+          "value": "Spa 2025",
+          "sublabel": "Chapel Hill Magazine"
+        },
+        {
+          "label": "8+",
+          "value": "Providers",
+          "sublabel": "licensed medical team"
+        },
+        {
+          "label": "Chapel",
+          "value": "Hill NC",
+          "sublabel": "serving the Triangle"
+        },
+        {
+          "label": "13+",
+          "value": "Services",
+          "sublabel": "aesthetics + wellness"
+        }
+      ]
+    },
+    "featuredTreatments": {
+      "title": "Featured treatments",
+      "subtitle": "A curated set of services tailored to your goals.",
+      "featuredIds": [
+        "injectables",
+        "fillers",
+        "iv-therapy",
+        "medical-weight-loss",
+        "aesthetics",
+        "prf"
+      ],
+      "sectionCta": { "label": "View all options", "href": "#treatments" }
+    },
+    "whyChooseUs": {
+      "title": "Why choose MedSpa 501",
+      "subtitle": "Award-winning care from an expert team in Chapel Hill.",
+      "items": [
+        {
+          "title": "Expert multi-provider team",
+          "description": "Board-certified physicians, nurse practitioners, physician associates, nurse injectors, and licensed aestheticians — each bringing deep expertise and a personalized approach."
+        },
+        {
+          "title": "Aesthetics meets wellness",
+          "description": "MedSpa 501 offers more than surface treatments — IV therapy, functional wellness, medical weight loss, and peptide therapy sit alongside injectables and advanced skin care."
+        },
+        {
+          "title": "Award-winning care",
+          "description": "Voted Best Spa and Best New Business by Chapel Hill Magazine in 2025. Trusted by the Triangle community since opening."
+        }
+      ],
+      "cta": {
+        "label": "Book a consultation",
+        "href": "https://dashboard.boulevard.io/booking/businesses/b7325b72-d007-4e95-9568-1db4e4f31d06/widget#/visit-type/"
+      }
+    },
+    "beforeAfterGallery": {
+      "title": "Results gallery",
+      "subtitle": "Believable outcomes that still look like you.",
+      "items": [
+        {
+          "id": "ba-01",
+          "treatment": "Injectables: Natural refinement",
+          "beforeSrc": "/images/before-1.jpg",
+          "afterSrc": "/images/after-1.jpg",
+          "alt": "Before and after injectable results"
+        },
+        {
+          "id": "ba-02",
+          "treatment": "Skin rejuvenation: Texture & tone",
+          "beforeSrc": "/images/before-2.jpg",
+          "afterSrc": "/images/after-2.jpg",
+          "alt": "Before and after skin improvement"
+        }
+      ],
+      "disclaimer": "Photos are representative. Individual results vary."
+    },
+    "testimonials": {
+      "title": "What clients say",
+      "subtitle": "A few words from guests who trust MedSpa 501.",
+      "featuredIds": ["t-01", "t-02", "t-03"],
+      "cta": {
+        "label": "Book a consultation",
+        "href": "https://dashboard.boulevard.io/booking/businesses/b7325b72-d007-4e95-9568-1db4e4f31d06/widget#/visit-type/"
+      }
+    },
+    "about": {
+      "title": "Chapel Hill's trusted medspa",
+      "body": "MedSpa 501 was founded on the belief that aging well is a choice — and that true confidence starts from within. Our multi-provider team blends the art of aesthetics with the science of wellness, delivering personalized care tailored to your unique goals. Founded by Franklin Roye, Allie Vivirito, Greg Vassie, Josh Dobstaff MD, and Han Su, MedSpa 501 brings together healthcare leadership, pharmacy expertise, and clinical excellence under one roof.",
+      "bullets": [
+        "Best Spa + Best New Business — Chapel Hill Magazine 2025",
+        "Partnered with 501 Pharmacy for custom IV and skincare formulations",
+        "Multi-provider team with deep aesthetic and wellness expertise"
+      ],
+      "image": {
+        "src": "/images/about-placeholder.jpg",
+        "alt": "MedSpa 501"
+      }
+    },
+    "faq": {
+      "title": "FAQ",
+      "subtitle": "Quick answers to common questions.",
+      "featuredIds": [
+        "faq-01",
+        "faq-02",
+        "faq-03",
+        "faq-04",
+        "faq-05",
+        "faq-06",
+        "faq-07",
+        "faq-08",
+        "faq-09"
+      ]
+    },
+    "finalCta": {
+      "title": "Ready to feel your best?",
+      "body": "Book a consultation and let our team build a personalized plan around your goals.",
+      "primaryCta": {
+        "label": "Book your consultation",
+        "href": "https://dashboard.boulevard.io/booking/businesses/b7325b72-d007-4e95-9568-1db4e4f31d06/widget#/visit-type/"
+      },
+      "secondaryCta": { "label": "Call now", "href": "tel" }
+    },
+    "footer": {},
+    "stickyMobileCta": {
+      "enabled": true,
+      "items": [
+        { "type": "call", "label": "Call" },
+        {
+          "type": "book",
+          "label": "Book",
+          "href": "https://dashboard.boulevard.io/booking/businesses/b7325b72-d007-4e95-9568-1db4e4f31d06/widget#/visit-type/"
+        },
+        { "type": "chat", "label": "Get Personalized Guidance" }
+      ]
+    }
+  }
+}
