@@ -8,8 +8,27 @@ import { brandConfig, chatConfig } from "../../../src/lib/content";
 
 type MessageHistory = { role: "user" | "assistant"; content: string }[];
 
+const CTA_TOKEN = "__SHOW_BOOKING_CTA__";
+
+function stripCtaToken(text: string) {
+  return text.replace(/__SHOW_BOOKING_CTA__/g, "").trim();
+}
+
+/** Split-buffer streaming: never emit a suffix that could be an incomplete CTA token. */
+function takeStreamablePrefix(buffer: string): { emit: string; hold: string } {
+  let cleaned = buffer.replace(/__SHOW_BOOKING_CTA__/g, "");
+  const maxHold = CTA_TOKEN.length - 1;
+  for (let n = Math.min(maxHold, cleaned.length); n > 0; n--) {
+    const tail = cleaned.slice(-n);
+    if (CTA_TOKEN.startsWith(tail)) {
+      return { emit: cleaned.slice(0, -n), hold: tail };
+    }
+  }
+  return { emit: cleaned, hold: "" };
+}
+
 export async function POST(request: Request) {
-  console.log("[assistant] POST /api/lumina-ai received");
+  console.log("[assistant] POST /api/assistant received");
 
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey || apiKey.trim() === "") {
@@ -137,6 +156,13 @@ export async function POST(request: Request) {
   // Single-word confirmations — only count when previous assistant was in booking mode
   const singleWordConfirms = ["yes", "ok", "okay", "yep", "yeah", "yup"];
 
+  const isHighIntent =
+    explicitBookingPhrases.some((p) => message.toLowerCase().includes(p)) ||
+    contextualConfirmPhrases.some((p) => message.toLowerCase().includes(p)) ||
+    singleWordConfirms.includes(message.toLowerCase().replace(/[^a-z]/g, ""));
+
+  const model = isHighIntent ? "gpt-4o" : "gpt-4o-mini";
+
   const bookingReplyPhrases = [
     // Book Online CTA–aligned handoffs (preferred model)
     "book online here",
@@ -197,13 +223,13 @@ export async function POST(request: Request) {
 
   try {
     const stream = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
+      model: model,
       messages: [
         { role: "system", content: systemPrompt },
-        ...history.slice(-10),
+        ...history.slice(-6),
         { role: "user", content: message },
       ],
-      max_tokens: 512,
+      max_tokens: 250,
       stream: true,
     });
 
@@ -214,16 +240,31 @@ export async function POST(request: Request) {
       async start(controller) {
         try {
           let rawAccumulated = "";
+          let streamHold = "";
           for await (const chunk of stream) {
             const delta = chunk.choices[0]?.delta?.content ?? "";
             if (delta) {
               rawAccumulated += delta;
-              const cleaned = delta.replace(/__SHOW_BOOKING_CTA__/g, "");
-              if (cleaned) {
-                fullReply += cleaned;
-                controller.enqueue(encoder.encode(cleaned));
+              const { emit, hold } = takeStreamablePrefix(streamHold + delta);
+              streamHold = hold;
+              if (emit) {
+                fullReply += emit;
+                controller.enqueue(encoder.encode(emit));
               }
             }
+          }
+          let tail = streamHold;
+          if (
+            tail &&
+            CTA_TOKEN.startsWith(tail) &&
+            tail.length < CTA_TOKEN.length
+          ) {
+            tail = "";
+          }
+          const finalFlush = stripCtaToken(tail);
+          if (finalFlush) {
+            fullReply += finalFlush;
+            controller.enqueue(encoder.encode(finalFlush));
           }
 
           // Post-processing after stream completes
@@ -252,9 +293,9 @@ export async function POST(request: Request) {
           const isShortConfirm =
             lastAssistantWasBooking && singleWordConfirms.includes(normalizedUser);
 
-          // Assistant reply contains the explicit booking CTA token
-          const replyIntent = rawAccumulated.includes("__SHOW_BOOKING_CTA__");
-          fullReply = fullReply.replace(/__SHOW_BOOKING_CTA__/g, "").trimEnd();
+          // Assistant reply contains the explicit booking CTA token (raw stream, before UI strip)
+          const replyIntent = rawAccumulated.includes(CTA_TOKEN);
+          fullReply = stripCtaToken(fullReply);
 
           const showBookingCta = userIntent || contextualIntent || isShortConfirm || replyIntent;
 
