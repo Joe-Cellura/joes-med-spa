@@ -1,0 +1,28 @@
+MedSpa 501 Team
+
+FOUNDERS:
+Franklin Roye, PharmD — Co-Founder. Over 20 years in healthcare. Doctor of Pharmacy from UNC Chapel Hill. Former GlaxoSmithKline commercial leader. Co-founder of IndyCare, an on-demand health and wellness practice.
+
+Allie Vivirito, RN, BSN — Co-Founder and Nurse. Over 16 years of nursing experience. Degrees from Virginia Tech and Johns Hopkins. Specializes in concierge wellness.
+
+Greg Vassie, PharmD — Co-Founder. Over 20 years building community pharmacies in NC. Co-founder of 501 Pharmacy and Pittsboro Discount Drug. Doctor of Pharmacy from UNC Eshelman School of Pharmacy.
+
+Josh Dobstaff, MD — Co-Founder and Physician. Board-certified physician and hospitalist. Specializes in medical weight loss and hormone optimization.
+
+Han Su, PharmD — Co-Founder. Co-founder of 501 Pharmacy, nine-time Best of Chapel Hill winner. Doctor of Pharmacy from University of South Carolina. Certified immunizer.
+
+FEATURED PROVIDERS (shown in demo UI):
+Samantha Danesi, PA-C, LMT — Physician Associate. 17+ years in aesthetic medicine, plastic surgery, and dermatology. Specializes in facial contouring, fillers, neuromodulators, and non-surgical rejuvenation.
+
+Holly Meehan, RN, BSN — Nurse Injector. Background in orthopedic and reconstructive plastic surgery at UNC. Bilingual (English and Spanish).
+
+Kristin Timpy, MSN, APRN, AGPCNP-BC, IFMCP — Nurse Practitioner. Nearly two decades of experience in cardiology, family medicine, and functional medicine. Institute for Functional Medicine certified.
+
+Brittany Duval — Aesthetician. 10+ years specializing in chemical peels, microneedling, and customized facials.
+
+ADDITIONAL TEAM MEMBERS (referenced in source material, not shown in demo UI):
+Allison Ancona, FNP — Family Nurse Practitioner. 15+ years in critical care and integrative wellness. Specializes in functional medicine, weight management, and hormonal balance.
+
+Kara Pendergrass — Client Experience Coordinator. Associate degree in Healthcare Administration.
+
+Nadine Yamout, MA — Pursuing Master of Nursing at Duke University. Background in aesthetic and primary care settings with a focus on GLP-1 weight management.
