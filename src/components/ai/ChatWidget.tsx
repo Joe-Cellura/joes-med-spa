@@ -19,6 +19,7 @@ export function ChatWidget() {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
+  const [isStreaming, setIsStreaming] = useState(false);
   const [copied, setCopied] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -110,6 +111,7 @@ export function ChatWidget() {
         ]);
         setLoading(false);
 
+        setIsStreaming(true);
         const reader = res.body!.getReader();
         const decoder = new TextDecoder();
         let accumulated = "";
@@ -166,7 +168,9 @@ export function ChatWidget() {
             );
           }
         }
+        setIsStreaming(false);
       } catch {
+        setIsStreaming(false);
         setMessages((prev) => [
           ...prev,
           {
@@ -247,7 +251,7 @@ export function ChatWidget() {
       className="pointer-events-none fixed bottom-20 right-4 z-[200] flex flex-col items-end gap-2 sm:bottom-6 sm:right-6"
     >
       {open ? (
-        <div className="pointer-events-auto w-80 max-w-[calc(100vw-2rem)] rounded-2xl border border-slate-200/90 bg-white shadow-[0_8px_30px_rgba(15,23,42,0.08)]">
+        <div className="pointer-events-auto w-80 sm:w-[22rem] max-w-[calc(100vw-2rem)] rounded-2xl border border-slate-200/90 bg-white shadow-[0_8px_30px_rgba(15,23,42,0.08)]">
           <div className="flex items-center justify-between border-b border-slate-200/80 px-4 py-3">
             <p className="text-sm font-semibold text-slate-900">
               {config.panelTitle}
@@ -279,15 +283,17 @@ export function ChatWidget() {
               <div key={message.id}>
                 <div
                   className={cn(
-                    "max-w-[90%] rounded-2xl px-3.5 py-2.5 text-[13px] leading-relaxed whitespace-pre-wrap",
+                    "max-w-[90%] rounded-2xl px-3.5 py-2.5 text-[13px] leading-relaxed whitespace-pre-wrap break-words",
                     message.role === "assistant"
                       ? "bg-slate-100/90 text-slate-800"
                       : "ml-auto bg-teal-600 text-white",
                   )}
                 >
-                  {message.text}
+                  {message.showBookingCta
+                    ? message.text.replace(/https?:\/\/\S+/g, "").trim()
+                    : message.text}
                 </div>
-                {message.role === "assistant" && message.showBookingCta && (
+                {message.role === "assistant" && message.showBookingCta && !isStreaming && (
                   <div className="mt-2">
                     <AppLink
                       href={bookingHref}
