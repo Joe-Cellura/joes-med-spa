@@ -76,150 +76,9 @@ export async function POST(request: Request) {
     bookingHref: brandConfig.brand.ctas.book.href,
   });
 
-  // Explicit booking intent from the user — always triggers regardless of conversation context
-  const explicitBookingPhrases = [
-    "i want to book",
-    "i'd like to book",
-    "id like to book",
-    "i want to schedule",
-    "i'd like to schedule",
-    "id like to schedule",
-    "how do i book",
-    "how do i schedule",
-    "can i book",
-    "can i schedule",
-    "i want to come in",
-    "i'd like to come in",
-    "id like to come in",
-    "can i come in",
-    "how soon can i come in",
-    "i'm ready to book",
-    "im ready to book",
-    "i'm ready",
-    "im ready",
-    "i'm ready to move forward",
-    "im ready to move forward",
-    "i want to make an appointment",
-    "i'd like to make an appointment",
-    "ready to book",
-    "ready to schedule",
-    "book an appointment",
-    "book online",
-    "book me",
-    "schedule me",
-    "i want to book online",
-    "make an appointment",
-    "i want to do it",
-    "i want to proceed",
-    "i want to move forward",
-    "yes lets do it",
-    "yes let's do it",
-    "yes i do",
-    "yes please",
-    "lets do it",
-    "let's do it",
-    "yes book",
-    "go ahead and book",
-    "yes i'd like to",
-    "yes id like to",
-    "let's go ahead",
-    "lets go ahead",
-    "yes go ahead",
-    "lets book",
-    "let's book",
-    "lets book a consultation",
-    "let's book a consultation",
-    "book a consultation",
-    "book now",
-    "schedule now",
-    "can we book",
-    "can we schedule",
-    "please do",
-    "what's next",
-    "whats next",
-    "how do i start",
-    "how do i get started",
-  ];
+  const hasUserIntent = /\b(book|schedule|let'?s? do ?it|lets?doit|let'?s go|i want to book|i'?m ready|what'?s next|whats next|how do i start|get started|sign me up|i want to proceed|i want to do it)\b/i.test(message);
 
-  // Soft affirmations — only count as booking intent when the previous assistant
-  // message was already in booking mode (prevents firing on general conversation)
-  const contextualConfirmPhrases = [
-    "sounds good",
-    "alright",
-    "sure",
-    "that works",
-    "lets go",
-    "let's go",
-    "go ahead",
-  ];
-
-  // Single-word confirmations — only count when previous assistant was in booking mode
-  const singleWordConfirms = ["yes", "ok", "okay", "yep", "yeah", "yup"];
-
-  const isHighIntent =
-    explicitBookingPhrases.some((p) => message.toLowerCase().includes(p)) ||
-    contextualConfirmPhrases.some((p) => message.toLowerCase().includes(p)) ||
-    singleWordConfirms.includes(message.toLowerCase().replace(/[^a-z]/g, ""));
-
-  const model = isHighIntent ? "gpt-4o" : "gpt-4o-mini";
-
-  const bookingReplyPhrases = [
-    // Book Online CTA–aligned handoffs (preferred model)
-    "book online here",
-    "book online",
-    "whenever you're ready",
-    "when you're ready, you can",
-    "you can go ahead and book",
-    "choose a time that works",
-    "choose a time here",
-    "choose a time",
-    "pick a time",
-    "schedule your visit",
-    "get you set up right here",
-    "map out what will work best",
-    "map out what works best",
-    // Formal / explicit booking phrases (legacy detection / user phrasing)
-    "schedule a consultation",
-    "book a consultation",
-    "book an appointment",
-    "come in for a visit",
-    "grab a time",
-    "choose a time",
-    "works for you right here",
-    "booking page",
-    "book your",
-    "schedule your",
-    "booking a consultation is",
-    "schedule a visit",
-    "book your consultation",
-    "booking a visit",
-    "set up a consultation",
-    "arrange a consultation",
-    "come in for a consultation",
-    "we can schedule",
-    "we can book",
-    "a consultation is a great way",
-    "a consultation would be",
-    "scheduling a consultation",
-    "get you set up",
-    "i'll get you set up",
-    "can i get that booked",
-    "get that booked for you",
-    "would you like to get that booked",
-    // Natural-language patterns (specific enough to avoid false positives)
-    "get that set up",
-    "get this set up",
-    "let's get you",
-    "get you scheduled",
-    "get that scheduled",
-    "get you booked",
-    "pull up a time",
-    "pull up availability",
-    "take a look at availability",
-    "set that up for you",
-    "set it up for you",
-    "get it set up",
-  ];
+  const model = hasUserIntent ? "gpt-4o" : "gpt-4o-mini";
 
   try {
     const stream = await openai.chat.completions.create({
@@ -268,36 +127,9 @@ export async function POST(request: Request) {
           }
 
           // Post-processing after stream completes
-          const lowerUser = message.toLowerCase();
-
-          // Check whether the previous assistant turn was already in booking mode.
-          // This gates contextual and single-word triggers so they don't fire
-          // on general conversational messages (e.g. "sure, tell me more").
-          const lastAssistantMsg = [...history].reverse().find((m) => m.role === "assistant");
-          const lastAssistantText = lastAssistantMsg?.content.toLowerCase() ?? "";
-          const lastAssistantWasBooking = bookingReplyPhrases.some((p) =>
-            lastAssistantText.includes(p),
-          );
-
-          // Always-explicit user intent (context-independent)
-          const userIntent = explicitBookingPhrases.some((p) => lowerUser.includes(p));
-
-          // Soft affirmations only count when last assistant was already in booking mode
-          const contextualIntent =
-            lastAssistantWasBooking &&
-            contextualConfirmPhrases.some((p) => lowerUser.includes(p));
-
-          // Bare single-word confirmations — compare the full normalized message
-          // so "yes" doesn't match inside "I'm not sure yet"
-          const normalizedUser = lowerUser.replace(/[^a-z]/g, "");
-          const isShortConfirm =
-            lastAssistantWasBooking && singleWordConfirms.includes(normalizedUser);
-
-          // Assistant reply contains the explicit booking CTA token (raw stream, before UI strip)
-          const replyIntent = rawAccumulated.includes(CTA_TOKEN);
           fullReply = stripCtaToken(fullReply);
 
-          const showBookingCta = userIntent || contextualIntent || isShortConfirm || replyIntent;
+          const showBookingCta = rawAccumulated.includes("__SHOW_BOOKING_CTA__");
 
           // Supabase logging
           try {
