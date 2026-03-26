@@ -1,99 +1,153 @@
-MedSpa 501 — Full Pricing
+CLIENT PRICING OVERVIEW — MEDSPA 501
+
+Consolidated from knowledge/pricing.txt (legacy full list in repo), knowledge/memberships.txt, knowledge/promotions.txt, knowledge/payment-plans.txt, knowledge/faq.txt, knowledge/clinic-overview.txt, knowledge/services/*, faq.json, treatments.json, and related bundle files. Accuracy over completeness — conflicts called out in UNKNOWN.
+
+GENERAL PRICING NOTES
+• clinic-overview.txt / assistant-behavior references: MedSpa 501 publishes pricing at medspa501.com/pricing; clients may also book a consultation for a personalized quote.
+• knowledge/faq.txt: MedSpa 501 has a public pricing page and publishes pricing for many services, memberships, and packages.
+• Payment plans (knowledge/payment-plans.txt — Cherry): no hard credit checks; true 0% APR options may be available for eligible clients; interest-bearing plans as low as 5.99% APR; approvals up to $50,000; ~60 second application; approvals valid 30 days; no prepayment penalties; 2.99% processing fee for credit-card down payments; no processing fee for traditional bank-issued debit down payments; refunds require MedSpa 501 authorization (see full file for details).
 
 INJECTABLES
-Xeomin: $13.50 per unit
-Botox: $14.50 per unit
-Daxxify: $10.00 per unit
-Lip Flip (standalone): $175
-Glass Skin Micro-Tox: $450 per treatment
-Dermal Fillers (Radiesse, RHA, Restylane): $800 per syringe. Buy 2nd syringe, get 10% off 2nd syringe.
-HyperDilute Radiesse: $950 per syringe. Buy 2 syringes, get 2nd syringe $50 off.
+• Service: Xeomin
+Pricing: $13.50 per unit (knowledge/pricing.txt)
 
-FILLER PACKAGES
-The Boost: $2,200 (3 syringes)
-The Glow Up: $3,600 (5 syringes)
-The Total Refresh: $4,900 (7 syringes)
-The Volume Reset: $1,800 (3 syringes, for patients on medical weight loss program)
+• Service: Botox
+Pricing: $14.50 per unit (knowledge/pricing.txt)
 
-NON-SURGICAL BBL
-Consultation required: $100 (45 minutes, applied to treatment)
-The Mini BBL: $4,999 (10 syringes)
-The Curvy Cutie: $8,999 (20 syringes)
-The Full Peach: $13,499 (30 syringes)
-The Bombshell Booty: $17,899 (40 syringes)
+• Service: Daxxify
+Pricing: $10.00 per unit (knowledge/pricing.txt)
 
-AESTHETICS
-Hydrafacial Signature: $225 (35 min)
-Hydrafacial Deluxe: $265 (45 min, includes serum booster and red/blue light therapy)
-Hydrafacial Monthly Membership: $300/month (includes monthly dermaplaning + hydrafacial, 15% off Daxxify, 15% off skincare)
-Teen Facial: $135 (35 min)
-Fire & Ice Treatment: $165 (45 min)
-MedSpa 501 Facial: $175 (50 min custom)
-Dermaplaning: $50
-Extractions (add-on): $25
-Microneedling: $375 per treatment (10% off package of 3)
-Exosome add-on to Microneedling: $250
-PRF add-on to Microneedling: $175
-Chemical Peel: $175 per peel (Grade 1, 2, or 3)
-Eye and Lip Chemical Peel: $150
-Chemical Peel Package: $450 (3 treatments, includes Glytone post-procedure skincare kit)
-Eye and Lip Chemical Peel Package: $400 (3 treatments)
-Glytone Post Procedure Skincare Kit: $80
-Teen Facial Package: $380 (3 facials over 4-6 weeks + personalized at-home skincare kit)
-Regenerative Facial Package: $1,400 (3 microneedling with exosomes sessions)
+• Service: Lip Flip (standalone)
+Pricing: $175 (knowledge/pricing.txt)
 
-PRF
-EZ Gel PRF Filler: $950 per session ($850 for 2nd session if within 60 days)
-EZ PRF: $850 per session
-Microneedling with PRF: $550 per session
-Regenerative Facial Package: $1,400 (3 PRF microneedling treatments)
+• Service: Glass Skin Micro-Tox
+Pricing: $450 per treatment (knowledge/pricing.txt; matches knowledge/services/glass-skin-microtox.txt)
 
-Note: The Regenerative Facial Package ($1,400) appears in two sections above. One source describes it as "3 microneedling with exosomes sessions" and the other as "3 PRF microneedling treatments." Both descriptions are preserved here because the source material is inconsistent. Do not collapse into one definitive claim unless a clearer source is found.
+• Service: Dermal fillers (Radiesse, RHA, Restylane)
+Pricing: $800 per syringe; buy 2nd syringe, get 10% off 2nd syringe (knowledge/pricing.txt)
 
-CONSULTATIONS
-General Aesthetics Consultation: $50 (waived if results in same-day treatment, product, membership, or package purchase)
-Functional Wellness Consultation: $350 (90-minute deep-dive with functional medicine certified provider)
+• Service: HyperDilute Radiesse
+Pricing: $950 per syringe; buy 2 syringes, get $50 off 2nd syringe (knowledge/pricing.txt)
 
-WELLNESS MEMBERSHIPS
-Optimize Membership: $200/month (6-month commitment)
-Elevate Membership: $300/month (6-month commitment, includes medication management for GLP-1s, hormones, etc.)
-Restore Membership: $400/month (6-month commitment, for complex/persistent symptoms)
+• Service: Filler packages
+Pricing (knowledge/pricing.txt):
+– The Boost: $2,200 (3 syringes)
+– The Glow Up: $3,600 (5 syringes)
+– The Total Refresh: $4,900 (7 syringes)
+– The Volume Reset: $1,800 (3 syringes, for patients on medical weight loss program)
 
-IV NUTRIENT THERAPY
-Pure Hydration: $99
-Recovery & Performance: $179
-Energy Boost: $179
-Immunity: $179
-Migraine Relief: $159
-Inner Beauty: $179
-Reboot: $179
-B-Lean IV: $179
-NAD+: $259
-NAD+ Max: $499
-Standard IV Package: $537 (buy 3 of the $179 IVs, get 4th free)
-Vitamin B12 Injection: $25
-Vitamin D3 Injection: $25
-Vitamin C Injection: $25
-Glutathione Injection: $25
-Glutathione Max 1g: $45
-Zofran: $25
-Toradol: $25
-MICC Injection: $30
-Friday IV Special: 15% off any IV when booked on a Friday (limited time, cannot combine with other offers)
+• Service: Non-surgical BBL (Radiesse-based, knowledge/services/injectables.txt + pricing.txt)
+Pricing:
+– Consultation required: $100 (45 minutes, applied to treatment) — pricing.txt
+– The Mini BBL: $4,999 (10 syringes)
+– The Curvy Cutie: $8,999 (20 syringes)
+– The Full Peach: $13,499 (30 syringes)
+– The Bombshell Booty: $17,899 (40 syringes)
+Notes: injectables.txt states options range from 10 to 40 syringes and $100 consult prior to booking.
 
-PERMANENT MAKEUP & PARAMEDICAL TATTOOS (by appointment only, call to book)
-Initial Lip Blushing: $700
-Lip Blushing Touchup (1.5-3 months post): $350
-Annual Lip Touchup: $500
-Initial Powder Brows: $650
-Powder Brows Touchup (1.5-3 months post): $350
-Annual Powder Brows Touchup: $500
-Unilateral Areola: $500
-Bilateral Areolas: $900
-Initial Areola Touchup: $350
-Annual Touchup Unilateral Areola: $350
-Annual Touchup Bilateral Areolas: $800
+SKIN / FACIAL TREATMENTS
+• Service: HydraFacial Signature
+Pricing: $225 (35 min) (knowledge/pricing.txt)
 
-GLOW COLLECTIVE MEMBERSHIPS
-GlowTox Membership: $2,200/year (quarterly billing, 3-month minimum)
-SkinGlow Membership: $2,000/year (monthly billing, 3-month minimum)
+• Service: HydraFacial Deluxe
+Pricing: $265 (45 min; includes serum booster and red/blue light therapy) (knowledge/pricing.txt)
+
+• Service: Teen Facial
+Pricing: $135 (35 min) (knowledge/pricing.txt)
+
+• Service: Fire & Ice Treatment
+Pricing: $165 (45 min) (knowledge/pricing.txt; knowledge/services/fire-and-ice-treatment.txt)
+
+• Service: MedSpa 501 Facial
+Pricing: $175 (50 min custom) (knowledge/pricing.txt)
+
+• Service: Dermaplaning
+Pricing: $50 (knowledge/pricing.txt; knowledge/services/dermaplaning.txt)
+
+• Service: Extractions (add-on)
+Pricing: $25 (knowledge/pricing.txt)
+
+• Service: Microneedling
+Pricing: $375 per treatment; 10% off package of 3 (knowledge/pricing.txt)
+
+• Service: Exosome add-on to microneedling
+Pricing: $250 (knowledge/pricing.txt)
+
+• Service: PRF add-on to microneedling
+Pricing: $175 (knowledge/pricing.txt)
+
+• Service: Chemical peel (Grade 1, 2, or 3)
+Pricing: $175 per peel (knowledge/pricing.txt)
+
+• Service: Eye and Lip Chemical Peel
+Pricing: $150 (knowledge/pricing.txt)
+
+• Service: Chemical Peel Package
+Pricing: $450 (3 treatments, includes Glytone post-procedure skincare kit) (knowledge/pricing.txt)
+
+• Service: Eye and Lip Chemical Peel Package
+Pricing: $400 (3 treatments) (knowledge/pricing.txt)
+
+• Service: Glytone Post Procedure Skincare Kit
+Pricing: $80 (knowledge/pricing.txt)
+
+• Service: Teen Facial Package
+Pricing: $380 (3 facials over 4–6 weeks + personalized at-home skincare kit) (knowledge/pricing.txt; knowledge/services/teen-facial-package.txt)
+
+• Service: Regenerative Facial Package
+Pricing: $1,400 (knowledge/pricing.txt)
+Notes: CONFLICT — see UNKNOWN.
+
+• Service: EZ Gel PRF Filler
+Pricing: $950 per session ($850 for 2nd session if within 60 days) (knowledge/pricing.txt; knowledge/services/prf-detailed.txt)
+
+• Service: EZ PRF
+Pricing: $850 per session (knowledge/pricing.txt; prf-detailed.txt)
+
+• Service: Microneedling with PRF
+Pricing: $550 per session (knowledge/pricing.txt; prf-detailed.txt)
+
+• Service: Regenerative Facial Package (listed again under PRF in pricing.txt)
+Pricing: $1,400 described as “3 PRF microneedling treatments” in PRF section vs “3 microneedling with exosomes sessions” under aesthetics section — same file, inconsistent descriptions (see UNKNOWN).
+
+LASER / DEVICE TREATMENTS
+• No laser-specific dollar line items appear in the MedSpa 501 knowledge bundle beyond general references in blog/overview.
+
+BODY / WELLNESS / OTHER
+• Consultations (knowledge/pricing.txt):
+– General Aesthetics Consultation: $50 (waived if same-day treatment, product, membership, or package purchase)
+– Functional Wellness Consultation: $350 (90-minute with functional medicine certified provider)
+
+• Wellness memberships (knowledge/pricing.txt):
+– Optimize: $200/month (6-month commitment)
+– Elevate: $300/month (6-month commitment; includes medication management for GLP-1s, hormones, etc.)
+– Restore: $400/month (6-month commitment; complex/persistent symptoms)
+
+• IV nutrient therapy (knowledge/pricing.txt):
+– Pure Hydration: $99 | Recovery & Performance: $179 | Energy Boost: $179 | Immunity: $179 | Migraine Relief: $159 | Inner Beauty: $179 | Reboot: $179 | B-Lean IV: $179 | NAD+: $259 | NAD+ Max: $499
+– Standard IV Package: $537 (buy 3 of the $179 IVs, get 4th free)
+– Friday IV Special: 15% off any IV when booked on a Friday (cannot combine; knowledge/promotions.txt and pricing.txt)
+
+• Injections (knowledge/pricing.txt): B12, D3, Vitamin C, Glutathione ($25 each); Glutathione Max 1g: $45; Zofran, Toradol ($25); MICC: $30
+
+• Permanent makeup & paramedical (knowledge/pricing.txt; by appointment, call to book):
+– Initial Lip Blushing: $700 | Touchup (1.5–3 mo): $350 | Annual lip: $500
+– Initial Powder Brows: $650 | Touchup: $350 | Annual: $500
+– Unilateral Areola: $500 | Bilateral: $900 | Initial areola touchup: $350 | Annual touchup unilateral: $350 | Annual bilateral: $800
+
+PACKAGES / MEMBERSHIPS / PROMOTIONS
+• Glow Collective (knowledge/pricing.txt + memberships.txt + faq.json):
+– GlowTox: $2,200/year (quarterly billing, 3-month minimum). Includes 4 neuromodulator visits/year, unlimited toxin units in forehead/11s/crow’s feet per visit, one complimentary precision enhancement per visit (details in memberships.txt). Member: 15% off skincare, 15% off fillers and filler packages, priority access. Stated approximate annual savings vs pay-per-visit: Botox ~$1,049, Xeomin ~$825, Daxxify ~$1,800 (memberships.txt).
+– SkinGlow: $2,000/year (monthly billing, 3-month minimum). One personalized skin treatment/month rotating peels, microneedling, HydraFacials, or customized facials. 15% off skincare and enhancements/add-ons. Approximate annual savings ~$1,100 (memberships.txt).
+
+• HydraFacial Monthly Membership (knowledge/memberships.txt + pricing.txt):
+– $300/month: one HydraFacial/month (Signature or Deluxe) + monthly dermaplaning; 15% off Daxxify and skincare. Rules: no rollover, non-transferable, cannot combine with other promos/points, 30-day cancel notice after 3-month minimum, billing date starts membership (memberships.txt).
+
+• promotions.txt: Friday IV 15% off; ZO Exfoliating Polish featured (no price in file); holiday promos via Instagram; limited-time offers at medspa501.com/limited-time-offers or (984) 336-0501.
+
+• treatments.json: items use “See pricing” for startingAt — use knowledge pricing files, not JSON, for numbers.
+
+UNKNOWN / VARIABLE PRICING
+• Regenerative Facial Package ($1,400): knowledge/pricing.txt lists it twice — once as “3 microneedling with exosomes sessions” and once as “3 PRF microneedling treatments.” knowledge/source-truth-notes.txt and final-bundle-status.txt document the same inconsistency. Do not merge into one claim without a clearer source.
+• Cherry: exact APR, term length, and down payment depend on eligibility and purchase details (payment-plans.txt).
+• Membership “approximate savings” figures are from memberships.txt as estimates, not guarantees.
