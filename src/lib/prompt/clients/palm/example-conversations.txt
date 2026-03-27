@@ -1,0 +1,7 @@
+TODO: Palm Concierge Agency example conversations — populate after real services and flow are defined.
+
+PLACEHOLDER — remove this line when adding real examples.
+
+TODO: Replace with grounded examples once real services, tone, and booking/inquiry flow are defined.
+
+Do not copy med spa patterns (treatments, consultations, downtime) unless Palm explicitly offers clinical services documented in knowledge.
