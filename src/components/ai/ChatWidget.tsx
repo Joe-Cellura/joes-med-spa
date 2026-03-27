@@ -116,6 +116,20 @@ export function ChatWidget() {
         const decoder = new TextDecoder();
         let accumulated = "";
 
+        const hasCtaText = (raw: string) =>
+          /\[Book Online\s*→[^\]]+\]/i.test(raw);
+
+        // Display cleanup: hide complete bracket lines and any in-progress `[Book Online…` tail during streaming
+        const stripCtaText = (raw: string) => {
+          const partialIdx = raw.search(/\[Book Online/i);
+          if (partialIdx !== -1) {
+            return raw.slice(0, partialIdx).trimEnd();
+          }
+          return raw.replace(/\[Book[^\]]*\]/gi, "").trimEnd();
+        };
+
+        let bookingShownLogged = false;
+
         while (true) {
           const { done, value } = await reader.read();
           if (done) break;
@@ -124,48 +138,53 @@ export function ChatWidget() {
 
           const metaIndex = accumulated.indexOf("__META__");
 
-          // Strip raw CTA text patterns the LLM may echo from behavior file examples
-          // e.g. "[Book Online → …]" bracket placeholders should never appear in the bubble
-          const stripCtaText = (raw: string) =>
-            raw.replace(/\[Book[^\]]*\]/gi, "").trimEnd();
-
           if (metaIndex >= 0) {
             // Split: everything before __META__ is text, everything after is JSON
             const textPart = stripCtaText(accumulated.slice(0, metaIndex));
             const metaPart = accumulated.slice(metaIndex + "__META__".length);
 
+            let showBookingCta = hasCtaText(accumulated);
+            try {
+              const meta = JSON.parse(metaPart) as {
+                showBookingCta?: boolean;
+              };
+              if (meta.showBookingCta === true) {
+                showBookingCta = true;
+              }
+            } catch {
+              // Invalid or partial JSON — still honor visible CTA line if present
+            }
+
             setMessages((prev) =>
               prev.map((m) =>
-                m.id === assistantId ? { ...m, text: textPart } : m,
+                m.id === assistantId
+                  ? { ...m, text: textPart, showBookingCta }
+                  : m,
               ),
             );
 
-            try {
-              const meta = JSON.parse(metaPart);
-              const showBookingCta =
-                typeof meta.showBookingCta === "boolean"
-                  ? meta.showBookingCta
-                  : false;
-              setMessages((prev) =>
-                prev.map((m) => {
-                  if (m.id === assistantId) return { ...m, showBookingCta };
-                  return m;
-                }),
-              );
-              if (showBookingCta) {
-                logBookingShown();
-              }
-            } catch {
-              // Ignore metadata parse errors — showBookingCta stays false
+            if (showBookingCta && !bookingShownLogged) {
+              logBookingShown();
+              bookingShownLogged = true;
             }
           } else {
-            // Pure text chunk — strip CTA text patterns before updating the bubble
+            // Pure text chunk — strip CTA line for display; flag button if bracket line is present
             const currentText = stripCtaText(accumulated);
+            const ctaFromText = hasCtaText(accumulated);
             setMessages((prev) =>
-              prev.map((m) =>
-                m.id === assistantId ? { ...m, text: currentText } : m,
-              ),
+              prev.map((m) => {
+                if (m.id !== assistantId) return m;
+                return {
+                  ...m,
+                  text: currentText,
+                  showBookingCta: ctaFromText ? true : m.showBookingCta,
+                };
+              }),
             );
+            if (ctaFromText && !bookingShownLogged) {
+              logBookingShown();
+              bookingShownLogged = true;
+            }
           }
         }
         setIsStreaming(false);
