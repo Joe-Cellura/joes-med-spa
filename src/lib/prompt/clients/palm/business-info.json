@@ -1,0 +1,6 @@
+{
+  "vertical": "concierge",
+  "displayName": "Palm Concierge Agency",
+  "_placeholder": true,
+  "_note": "SCAFFOLD ONLY — do not treat as verified business data. Populate brand, knowledge, and services in a follow-up. Wire ACTIVE_CLIENT + src/lib/content.ts when ready."
+}
