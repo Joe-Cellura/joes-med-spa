@@ -1,7 +1,12 @@
 import { NextResponse } from "next/server";
 import OpenAI from "openai";
 import { getKnowledgeBase } from "../../../src/lib/knowledge";
-import { getGlobalPromptAssets, getClientPromptAssets, buildAssistantPrompt } from "../../../src/lib/prompt";
+import {
+  getGlobalPromptAssets,
+  getClientPromptAssets,
+  getVerticalPromptAssets,
+  buildAssistantPrompt,
+} from "../../../src/lib/prompt";
 import { supabase } from "../../../src/lib/supabase";
 import { ACTIVE_CLIENT } from "../../../src/lib/client";
 import { brandConfig, chatConfig } from "../../../src/lib/content";
@@ -65,15 +70,18 @@ export async function POST(request: Request) {
 
   const knowledge = getKnowledgeBase(ACTIVE_CLIENT);
   const { behavior: globalBehavior } = getGlobalPromptAssets();
-  const { behavior, examples } = getClientPromptAssets(ACTIVE_CLIENT);
+  const { behavior, examples, vertical } = getClientPromptAssets(ACTIVE_CLIENT);
+  const { behavior: verticalBehavior } = getVerticalPromptAssets(vertical);
   const systemPrompt = buildAssistantPrompt({
     brandConfig,
     chatConfig,
     knowledge,
     globalBehavior,
+    verticalBehavior,
     behavior,
     examples,
     bookingHref: brandConfig.brand.ctas.book.href,
+    vertical,
   });
 
   const hasUserIntent = /\b(book|schedule|let'?s? do ?it|lets?doit|let'?s go|i want to book|i'?m ready|what'?s next|whats next|how do i start|get started|sign me up|i want to proceed|i want to do it)\b/i.test(message);
