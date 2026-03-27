@@ -1,0 +1,4 @@
+{
+  "vertical": "medspa",
+  "_note": "Vertical key selects src/lib/prompt/verticals/{vertical}/assistant-behavior.txt"
+}
