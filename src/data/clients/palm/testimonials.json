@@ -1,0 +1,33 @@
+{
+  "disclaimer": "Testimonials reflect individual experiences. Results may vary.",
+  "items": [
+    {
+      "id": "t-01",
+      "name": "Emily J.",
+      "quote": "Palm Concierge Agency was a lifesaver for our family! We found an amazing nanny who instantly connected with our kids. The process was easy, and the team really listens to your needs.",
+      "treatment": "Nanny Placement",
+      "rating": 5
+    },
+    {
+      "id": "t-02",
+      "name": "Mark T.",
+      "quote": "I've used their dog-walking services for a few months now, and I couldn't be happier. The walker is reliable, friendly, and my dog absolutely loves her.",
+      "treatment": "Dog Walking",
+      "rating": 5
+    },
+    {
+      "id": "t-03",
+      "name": "Jessica R.",
+      "quote": "We hired a babysitter through Palm Concierge, and the whole experience was smooth. The sitter was punctual, kind, and the kids had a blast.",
+      "treatment": "Babysitting",
+      "rating": 5
+    },
+    {
+      "id": "t-04",
+      "name": "David L.",
+      "quote": "I can't thank Palm Concierge enough for their help. I was struggling to find a reliable nanny and the team matched me with the perfect person.",
+      "treatment": "Nanny Placement",
+      "rating": 5
+    }
+  ]
+}
