@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { ACTIVE_CLIENT } from "../../lib/client";
 import { bookingHref, chatConfig } from "../../lib/content";
 import Button from "../ui/Button";
 import { AppLink } from "../ui/AppLink";
@@ -15,6 +16,14 @@ type ChatMessage = {
 
 export function ChatWidget() {
   const config = chatConfig;
+  const bookingCtaLabel =
+    ACTIVE_CLIENT === "palm" ? "Apply Online" : "Book Online";
+  const bookingChipLabel =
+    ACTIVE_CLIENT === "palm" ? "Apply online" : "Book online";
+  const chooseHelpChipLabel =
+    ACTIVE_CLIENT === "palm"
+      ? "Help me choose a service"
+      : "Help me choose a treatment";
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState("");
@@ -251,7 +260,7 @@ export function ChatWidget() {
         const speaker = m.role === "assistant" ? chatConfig.panelTitle : "You";
         const text = `${speaker}: ${m.text}`;
         if (m.role === "assistant" && m.showBookingCta) {
-          return `${text}\n[Book Online → ${bookingHref}]`;
+          return `${text}\n[${bookingCtaLabel} → ${bookingHref}]`;
         }
         return text;
       })
@@ -319,7 +328,7 @@ export function ChatWidget() {
                       onClick={logBookingClick}
                       className="inline-flex items-center gap-1.5 rounded-xl border border-teal-600 px-4 py-2 text-[13px] font-medium text-teal-700 bg-white transition-colors hover:bg-teal-50"
                     >
-                      Book Online
+                      {bookingCtaLabel}
                       <svg
                         width="14"
                         height="14"
@@ -342,7 +351,7 @@ export function ChatWidget() {
             ))}
             {messages.length === 1 && !loading && (
               <div className="flex flex-wrap gap-2 pt-1">
-                {["What are your prices?", "Help me choose a treatment", "Book online"].map((chip) => (
+                {["What are your prices?", chooseHelpChipLabel, bookingChipLabel].map((chip) => (
                   <button
                     key={chip}
                     onClick={() => sendMessage(chip)}

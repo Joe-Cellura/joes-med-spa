@@ -1,0 +1,45 @@
+{
+  "items": [
+    {
+      "id": "nanny",
+      "name": "Nanny Placement",
+      "tagline": "Find the perfect nanny for your family.",
+      "description": "Full-service nanny placement including consultation, candidate search, interviews, paid trial, and placement. Registration fee $250, placement fee is 4 weeks of agreed salary.",
+      "duration": "Process takes 2–4 weeks",
+      "startingAt": "from $250 registration",
+      "category": "Childcare",
+      "badges": ["Most requested"],
+      "cta": { "label": "Get Started", "href": "https://form.jotform.com/242545954800156" }
+    },
+    {
+      "id": "babysitting",
+      "name": "Babysitting Placement",
+      "tagline": "Vetted babysitters for on-call needs.",
+      "description": "Placement of up to 2 vetted babysitters for on-call family needs. Additional sitters available for $50 each. Maximum 4 sitters per family.",
+      "duration": "Process takes 1–2 weeks",
+      "startingAt": "from $100 registration",
+      "category": "Childcare",
+      "cta": { "label": "Get Started", "href": "https://form.jotform.com/242545954800156" }
+    },
+    {
+      "id": "dog-walker",
+      "name": "Dog Walker / Dog Sitter",
+      "tagline": "Trusted care for your furry family member.",
+      "description": "Experienced, background-checked dog walkers and sitters. Flexible scheduling tailored to your dog's needs. One-time registration fee, ongoing rates agreed directly with the professional.",
+      "duration": "Flexible scheduling",
+      "startingAt": "from $50 registration",
+      "category": "Pet Care",
+      "cta": { "label": "Get Started", "href": "https://form.jotform.com/242545954800156" }
+    },
+    {
+      "id": "errand-runner",
+      "name": "Errand Runner / Home Organizer",
+      "tagline": "More time for what matters most.",
+      "description": "Errand running and home organization including grocery shopping, dry cleaning, decluttering, and storage solutions. One-time registration fee, ongoing rates agreed directly with the professional.",
+      "duration": "Flexible scheduling",
+      "startingAt": "from $100 registration",
+      "category": "Home Support",
+      "cta": { "label": "Get Started", "href": "https://form.jotform.com/242545954800156" }
+    }
+  ]
+}
