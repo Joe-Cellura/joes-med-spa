@@ -1,0 +1,7 @@
+{
+  "enabled": true,
+  "panelTitle": "Palm Concierge Assistant",
+  "triggerLabel": "Chat with us",
+  "welcomeMessage": "Hi, I'm your Palm Concierge Assistant.\n\nI can answer questions about our services, the placement process, fees, and more.\n\nHow can I help you today?",
+  "disclaimer": "This assistant provides general information. For personalized placement guidance, please contact us directly."
+}

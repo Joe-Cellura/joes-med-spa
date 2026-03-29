@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "id": "faq-01",
+      "question": "What services do you offer?",
+      "answer": "We provide nanny placement, babysitting placement, dog walking and sitting, and errand running and home organization services.",
+      "category": "General"
+    },
+    {
+      "id": "faq-02",
+      "question": "How do I get started?",
+      "answer": "Submit a family application through our website or contact us by phone or email. After a consultation, we'll match you with the right professional.",
+      "category": "Booking"
+    },
+    {
+      "id": "faq-03",
+      "question": "How do you ensure quality?",
+      "answer": "Every professional undergoes background checks, reference checks, and qualification verification before being placed.",
+      "category": "Vetting"
+    },
+    {
+      "id": "faq-04",
+      "question": "Can I meet the professional before committing?",
+      "answer": "Yes — we encourage families to meet candidates to ensure the right fit before moving forward.",
+      "category": "Process"
+    },
+    {
+      "id": "faq-05",
+      "question": "What areas do you serve?",
+      "answer": "We currently serve the Tampa Bay Area in Florida.",
+      "category": "General"
+    },
+    {
+      "id": "faq-06",
+      "question": "Are there registration fees?",
+      "answer": "Yes — all non-refundable. Nanny: $250, Babysitting: $100, Dog walker: $50 / Dog sitter: $75, Errand runner/organizer: $100–$150.",
+      "category": "Pricing"
+    }
+  ]
+}

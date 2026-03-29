@@ -124,6 +124,11 @@ ${knowledge}`;
     );
   }
 
+  sections.push(
+    `[BOOKING CTA TOKEN (INTERNAL — UI)]
+- Never paste a raw URL or markdown link in your response when guiding a user to get started or submit an application. The booking button appears automatically in the UI — simply tell them the next step in plain text and append __SHOW_BOOKING_CTA__ at the end.`,
+  );
+
   if (behavior) {
     sections.push(`[CLIENT RULES]\n${behavior}`);
   }
