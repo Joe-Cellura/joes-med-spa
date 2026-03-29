@@ -1,4 +1,5 @@
 import { ACTIVE_CLIENT } from "./client";
+import { CLIENT_IDS, type ClientId } from "./client-ids";
 import type {
   BrandConfig,
   HomepageConfig,
@@ -65,21 +66,11 @@ import palmChat from "../data/clients/palm/chat.json";
 import palmTeam from "../data/clients/palm/team.json";
 import { blogPosts as palmBlogPosts } from "../data/clients/palm/blogPosts";
 
-const CLIENT_IDS = [
-  "lumina",
-  "aura-skin-laser",
-  "bright-smile-dental",
-  "glo-de-vie",
-  "medspa-501",
-  "palm",
-] as const;
-type ClientId = (typeof CLIENT_IDS)[number];
-
 function getClientId(): ClientId {
-  if (!CLIENT_IDS.includes(ACTIVE_CLIENT as ClientId)) {
+  if (!CLIENT_IDS.includes(ACTIVE_CLIENT)) {
     throw new Error(`Unknown ACTIVE_CLIENT: ${ACTIVE_CLIENT}`);
   }
-  return ACTIVE_CLIENT as ClientId;
+  return ACTIVE_CLIENT;
 }
 
 const cid = getClientId();
