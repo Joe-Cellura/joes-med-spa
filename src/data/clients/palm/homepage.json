@@ -1,0 +1,137 @@
+{
+  "meta": {
+    "title": "Palm Concierge Agency — Tampa Bay Area",
+    "description": "Connecting families with trusted, vetted professionals for nanny, babysitting, dog walking, and errand running services in the Tampa Bay Area."
+  },
+  "sections": {
+    "promoStrip": {
+      "enabled": false,
+      "badge": "",
+      "message": "",
+      "link": { "label": "", "href": "" }
+    },
+    "navbar": {},
+    "hero": {
+      "eyebrow": "Palm Concierge Agency — Tampa Bay Area, FL",
+      "heading": "Care You Can Count On, Right at Your Doorstep",
+      "subheading": "Connecting families with trusted professionals for childcare, pet care, and home support.",
+      "highlights": [
+        "Background-checked professionals",
+        "Personalized matching",
+        "Serving Tampa Bay Area"
+      ],
+      "primaryCta": {
+        "label": "Get Started Today",
+        "href": "https://form.jotform.com/242545954800156"
+      },
+      "secondaryCta": {
+        "label": "Learn More",
+        "href": "#services"
+      },
+      "image": {
+        "src": "/images/hero-placeholder.jpg",
+        "alt": "Palm Concierge Agency"
+      }
+    },
+    "trustBar": {
+      "items": [
+        {
+          "label": "Vetted",
+          "value": "Professionals",
+          "sublabel": "background checked"
+        },
+        {
+          "label": "Tampa",
+          "value": "Bay Area",
+          "sublabel": "Florida"
+        },
+        {
+          "label": "Personal",
+          "value": "Matching",
+          "sublabel": "tailored to your family"
+        },
+        {
+          "label": "Family",
+          "value": "Focused",
+          "sublabel": "care you can trust"
+        }
+      ]
+    },
+    "featuredTreatments": {
+      "title": "Our Services",
+      "subtitle": "Trusted professionals for every family need.",
+      "featuredIds": ["nanny", "babysitting", "dog-walker", "errand-runner"],
+      "sectionCta": { "label": "Get Started", "href": "https://form.jotform.com/242545954800156" }
+    },
+    "whyChooseUs": {
+      "title": "Why Choose Palm Concierge Agency?",
+      "subtitle": "Boutique matching. Trusted professionals. Peace of mind.",
+      "items": [
+        {
+          "title": "Trusted Professionals",
+          "description": "Every professional is thoroughly background-checked, reference-verified, and qualified."
+        },
+        {
+          "title": "Personalized Matching",
+          "description": "We take the time to understand your family's needs and match you with the right fit."
+        },
+        {
+          "title": "Peace of Mind",
+          "description": "Your family, pets, and home are in safe, trusted hands."
+        }
+      ],
+      "cta": { "label": "Get Started", "href": "https://form.jotform.com/242545954800156" }
+    },
+    "beforeAfterGallery": {
+      "title": "",
+      "subtitle": "",
+      "items": [],
+      "disclaimer": ""
+    },
+    "testimonials": {
+      "title": "What Families Are Saying",
+      "subtitle": "Real families, real results.",
+      "featuredIds": ["t-01", "t-02", "t-03", "t-04"],
+      "cta": { "label": "Get Started", "href": "https://form.jotform.com/242545954800156" }
+    },
+    "about": {
+      "title": "Your Trusted Partner in Family Care",
+      "body": "Palm Concierge Agency is a boutique agency dedicated to connecting Tampa Bay Area families with reliable, vetted professionals. Whether you need a nanny, babysitter, dog walker, or errand runner, we handle the search so you don't have to.",
+      "bullets": [
+        "Background checks and reference verification on every professional",
+        "Personalized consultation and customized matching",
+        "Ongoing support throughout the placement process"
+      ],
+      "image": {
+        "src": "/images/about-placeholder.jpg",
+        "alt": "Palm Concierge Agency"
+      }
+    },
+    "faq": {
+      "title": "FAQ",
+      "subtitle": "Common questions about our services and process.",
+      "featuredIds": ["faq-01", "faq-02", "faq-03", "faq-04", "faq-05", "faq-06"]
+    },
+    "finalCta": {
+      "title": "Ready to Get Started?",
+      "body": "Submit your family application and we'll match you with the right professional.",
+      "primaryCta": {
+        "label": "Get Started Today",
+        "href": "https://form.jotform.com/242545954800156"
+      },
+      "secondaryCta": {
+        "label": "Contact Us",
+        "href": "tel:+16319013328"
+      }
+    },
+    "footer": {},
+    "stickyMobileCta": {
+      "enabled": true,
+      "items": [
+        { "type": "call", "label": "Call" },
+        { "type": "book", "label": "Get Started", "href": "https://form.jotform.com/242545954800156" },
+        { "type": "chat", "label": "Chat with Us" }
+      ]
+    }
+  }
+}

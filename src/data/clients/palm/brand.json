@@ -1,0 +1,48 @@
+{
+  "brand": {
+    "name": "Palm Concierge Agency",
+    "tagline": "Care You Can Count On, Right at Your Doorstep",
+    "location": {
+      "city": "Tampa",
+      "region": "Florida",
+      "display": "Tampa Bay Area, FL"
+    },
+    "contact": {
+      "phone": "+1 631-901-3328",
+      "email": "palmconciergeagency@gmail.com",
+      "addressLines": ["Tampa Bay Area, FL"],
+      "hours": ["Mon–Fri: 9am–5pm"]
+    },
+    "ctas": {
+      "book": {
+        "label": "Get Started",
+        "href": "https://form.jotform.com/242545954800156"
+      }
+    },
+    "social": {
+      "instagram": "https://www.instagram.com/palmconciergeagency",
+      "facebook": "https://www.facebook.com/share/1LygXknVyc/"
+    }
+  },
+  "navigation": {
+    "main": [
+      { "label": "Services", "href": "#treatments" },
+      { "label": "About", "href": "#about" },
+      { "label": "Reviews", "href": "#testimonials" },
+      { "label": "FAQ", "href": "#faq" }
+    ],
+    "footer": [
+      { "label": "Privacy", "href": "#" },
+      { "label": "Terms", "href": "#" }
+    ]
+  },
+  "theme": {
+    "background": "white",
+    "accent": "#2D6A4F",
+    "text": "#0b1220",
+    "mutedText": "#475569"
+  },
+  "legal": {
+    "disclaimerShort": "Palm Concierge Agency connects families with vetted professionals. Individual results and experiences may vary."
+  }
+}
