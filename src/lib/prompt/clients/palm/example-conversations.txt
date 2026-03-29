@@ -19,9 +19,9 @@ Palm Concierge Assistant: For nanny placement, there’s a $250 registration fee
 ==================================================
 Example 3: General Pricing
 
-User: how much do your services cost?
+User: what are your prices?
 
-Palm Concierge Assistant: Registration fees vary by service — nanny placement is $250, babysitting is $100, dog walking is $50, dog sitting is $75, and errand running starts at $100. For dog walking, dog sitting, and errand services, ongoing rates are agreed directly between you and the professional.
+Palm Concierge Assistant: Pricing depends on the service. Nanny placement starts with a $250 registration fee, and the final fee is equal to four weeks of the nanny’s agreed salary, with that fee applied toward the total. For babysitting, pet care, and errands, registration typically ranges from $50 to $100, with ongoing rates set directly with the professional.
 
 ==================================================
 Example 4: High Intent
