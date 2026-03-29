@@ -1,11 +1,71 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkBreaks from "remark-breaks";
+import type { Components } from "react-markdown";
 import { ACTIVE_CLIENT } from "../../lib/client";
 import { bookingHref, chatConfig } from "../../lib/content";
 import Button from "../ui/Button";
 import { AppLink } from "../ui/AppLink";
 import { cn } from "../../lib/utils";
+
+/** Known Aura treatment phrases — wrapped client-side so the model need not emit `**bold**`. */
+const TREATMENT_EMPHASIS_PHRASES = [
+  "Skin Revitalization (Moveo SR)",
+  "Moveo GLO",
+  "Skinwave Aqua Facial",
+] as const;
+
+function escapeRegex(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+/** Injects markdown emphasis for known names only (rendered as semibold span via `strong` mapping). */
+function injectTreatmentEmphasis(text: string): string {
+  let result = text;
+  for (const phrase of TREATMENT_EMPHASIS_PHRASES) {
+    const re = new RegExp(escapeRegex(phrase), "gi");
+    result = result.replace(re, (match, offset, full) => {
+      const start = offset;
+      const end = offset + match.length;
+      const alreadyBold =
+        full.slice(Math.max(0, start - 2), start) === "**" &&
+        full.slice(end, end + 2) === "**";
+      if (alreadyBold) return match;
+      return `**${match}**`;
+    });
+  }
+  return result;
+}
+
+const CHAT_MARKDOWN_COMPONENTS: Partial<Components> = {
+  p: ({ children, ...props }) => (
+    <p className="my-0 leading-[1.35]" {...props}>
+      {children}
+    </p>
+  ),
+  ul: ({ children, ...props }) => (
+    <ul className="my-0.5 list-disc space-y-0 pl-4" {...props}>
+      {children}
+    </ul>
+  ),
+  ol: ({ children, ...props }) => (
+    <ol className="my-0.5 list-decimal space-y-0 pl-4" {...props}>
+      {children}
+    </ol>
+  ),
+  li: ({ children, ...props }) => (
+    <li className="my-0 leading-[1.35]" {...props}>
+      {children}
+    </li>
+  ),
+  strong: ({ children, ...props }) => (
+    <span className="font-semibold text-inherit" {...props}>
+      {children}
+    </span>
+  ),
+};
 
 type ChatMessage = {
   id: string;
@@ -307,19 +367,36 @@ export function ChatWidget() {
           </div>
 
           <div className="max-h-64 space-y-3 overflow-y-auto px-4 py-4">
-            {messages.map((message) => (
+            {messages.map((message) => {
+              const rawDisplay = message.showBookingCta
+                ? message.text.replace(/https?:\/\/\S+/g, "").trim()
+                : message.text;
+              const displayText = injectTreatmentEmphasis(rawDisplay);
+              return (
               <div key={message.id}>
                 <div
                   className={cn(
-                    "max-w-[90%] rounded-2xl px-3.5 py-2.5 text-[13px] leading-relaxed whitespace-pre-wrap break-words",
+                    "max-w-[90%] rounded-2xl px-3.5 text-[13px] leading-relaxed break-words",
                     message.role === "assistant"
-                      ? "bg-slate-100/90 text-slate-800"
-                      : "ml-auto bg-teal-600 text-white",
+                      ? "bg-slate-100/90 py-2 text-slate-800"
+                      : "ml-auto bg-teal-600 py-2.5 text-white",
                   )}
                 >
-                  {message.showBookingCta
-                    ? message.text.replace(/https?:\/\/\S+/g, "").trim()
-                    : message.text}
+                  <div
+                    className={cn(
+                      "prose prose-sm max-w-none whitespace-pre-wrap [&_p]:my-0 [&_ul]:my-0.5 [&_ol]:my-0.5 [&_li]:my-0",
+                      message.role === "user"
+                        ? "text-white"
+                        : "text-slate-800",
+                    )}
+                  >
+                    <ReactMarkdown
+                      remarkPlugins={[remarkBreaks]}
+                      components={CHAT_MARKDOWN_COMPONENTS}
+                    >
+                      {displayText}
+                    </ReactMarkdown>
+                  </div>
                 </div>
                 {message.role === "assistant" && message.showBookingCta && !isStreaming && (
                   <div className="mt-2">
@@ -348,7 +425,8 @@ export function ChatWidget() {
                   </div>
                 )}
               </div>
-            ))}
+              );
+            })}
             {messages.length === 1 && !loading && (
               <div className="flex flex-wrap gap-2 pt-1">
                 {["What are your prices?", chooseHelpChipLabel, bookingChipLabel].map((chip) => (

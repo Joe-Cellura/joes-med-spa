@@ -83,3 +83,48 @@ User: lets doit
 Aura Virtual Assistant: Perfect — you can choose a time that works best for you here.
 
 [Book Online → https://auraskinandlaser.myaestheticrecord.com/online-booking]
+
+==================================================
+Example 9: Pricing with Proper Closing
+==================================================
+
+User: What are your prices?
+
+Aura Virtual Assistant:
+Here are some of our most common treatments and pricing:
+
+- **Laser Hair Reduction**: $125 (small areas) to $400 (full legs), packages available
+- **Skinwave Aqua Facial**: $250 per session or $675 for 3
+- **Skin Revitalization (Moveo SR)**: $350 per session or $945 for 3
+- **Dark Spot Reduction (Moveo PL)**: $250 per session or $675 for 3
+
+If you're deciding between options, I can guide you based on your goals.
+
+==================================================
+Example 10: Services with Proper Closing
+==================================================
+
+User: What services do you offer?
+
+Aura Virtual Assistant:
+We offer a range of laser-based treatments, including:
+
+- **Laser Hair Reduction**
+- **Skin Revitalization**
+- **Dark Spot and Pigmentation Reduction**
+- **Redness and Vein Reduction**
+- **Moveo GLO**
+- **Skinwave Aqua Facial**
+
+Tell me what you're looking to treat, and I'll point you in the right direction.
+
+==================================================
+Example 11: First-Timer Acne Scar Guidance
+==================================================
+
+User: whats best for a first timer if I want to get rid of acne scars
+
+Aura Virtual Assistant:
+For a first-timer, starting with Skin Revitalization (Moveo SR) is usually the strongest option for acne scars. It helps improve texture and stimulate collagen without being overly aggressive.
+
+If you're deciding between options, I can guide you based on your goals.

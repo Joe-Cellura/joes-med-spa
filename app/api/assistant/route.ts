@@ -15,8 +15,114 @@ type MessageHistory = { role: "user" | "assistant"; content: string }[];
 
 const CTA_TOKEN = "__SHOW_BOOKING_CTA__";
 
+/** Aura: strict closing patterns (must match assistant-behavior.txt). */
+const AURA_APPROVED_CLOSINGS = [
+  "If you're deciding between options, I can guide you based on your goals.",
+  "If you already know what you want, I can help you get scheduled.",
+  "Tell me what you're looking to treat, and I'll point you in the right direction.",
+] as const;
+
+/** Aura: soft / drift phrases — trailing sentences containing these are stripped before enforcing closings. */
+const AURA_FORBIDDEN_CLOSING_PHRASES = [
+  "if you're interested",
+  "if you'd like",
+  "let me know",
+  "i'm here to help",
+  "i recommend",
+  "we can schedule",
+  "help you get scheduled",
+  "schedule a consultation",
+] as const;
+
 function stripCtaToken(text: string) {
   return text.replace(/__SHOW_BOOKING_CTA__/g, "").trim();
+}
+
+/** Collapse spaces/tabs within each line, trim each line’s right side; preserve `\n` and empty lines. */
+function normalizeLineWhitespace(text: string): string {
+  return text
+    .split("\n")
+    .map((line) => line.replace(/[ \t]+/g, " ").replace(/[ \t]+$/g, ""))
+    .join("\n");
+}
+
+/**
+ * Split at the last `(?<=[.!?])` + whitespace boundary only. Prefix is unchanged so newlines
+ * and markdown lists above the tail stay intact.
+ */
+function splitOffTrailingSentence(text: string): { prefix: string; last: string } {
+  let t = text;
+  for (;;) {
+    const re = /(?<=[.!?])\s+/g;
+    let lastSplitEnd = -1;
+    let m: RegExpExecArray | null;
+    while ((m = re.exec(t)) !== null) {
+      lastSplitEnd = m.index + m[0].length;
+    }
+    if (lastSplitEnd === -1) {
+      return { prefix: "", last: t.trim() };
+    }
+    const last = t.slice(lastSplitEnd).trim();
+    if (last !== "") {
+      return { prefix: t.slice(0, lastSplitEnd), last };
+    }
+    t = t.slice(0, lastSplitEnd).replace(/\s+$/g, "");
+    if (!t.trim()) {
+      return { prefix: "", last: "" };
+    }
+  }
+}
+
+/** Peel weak CTA sentences from the string end only; does not reserialize the main body. */
+function stripWeakClosingTail(
+  text: string,
+  sentenceIsWeak: (s: string) => boolean,
+  maxPeels = 50,
+): string {
+  let current = text;
+  for (let i = 0; i < maxPeels; i++) {
+    if (!current.trim()) return current;
+    const { prefix, last } = splitOffTrailingSentence(current);
+    if (!last) break;
+    if (!sentenceIsWeak(last)) break;
+    current = prefix;
+  }
+  return current;
+}
+
+/**
+ * Removes every approved closing pattern from the text, peels weak tail sentences from the
+ * end only (preserves lists/paragraphs), normalizes per-line whitespace, then appends exactly
+ * `approvedPatterns[0]` once.
+ * No-op when `approvedPatterns` is empty.
+ */
+function enforceApprovedClosing(
+  text: string,
+  approvedPatterns: readonly string[],
+  forbiddenPhrases: readonly string[],
+): string {
+  if (approvedPatterns.length === 0) return text;
+
+  let cleaned = text;
+  for (const pattern of approvedPatterns) {
+    cleaned = cleaned.split(pattern).join("");
+  }
+  cleaned = normalizeLineWhitespace(cleaned).trim();
+  cleaned = cleaned.replace(/\s*([,;:])+\s*$/g, "");
+  cleaned = normalizeLineWhitespace(cleaned).trim();
+
+  const lowerForbidden = forbiddenPhrases.map((p) => p.toLowerCase());
+  const sentenceIsWeak = (sentence: string) =>
+    lowerForbidden.some((phrase) => sentence.toLowerCase().includes(phrase));
+
+  let body = stripWeakClosingTail(cleaned, sentenceIsWeak);
+  body = normalizeLineWhitespace(body).trim();
+  body = body.replace(/\s*([,;:])+\s*$/g, "");
+  body = normalizeLineWhitespace(body).trim();
+
+  const closing = approvedPatterns[0];
+  if (!body) return closing;
+  return normalizeLineWhitespace(`${body}\n\n${closing}`).trim();
 }
 
 /** Split-buffer streaming: never emit a suffix that could be an incomplete CTA token. */
@@ -102,6 +208,8 @@ export async function POST(request: Request) {
 
     const encoder = new TextEncoder();
     let fullReply = "";
+    const bufferAuraForClosingEnforcement =
+      ACTIVE_CLIENT === "aura-skin-laser";
 
     const readable = new ReadableStream({
       async start(controller) {
@@ -116,7 +224,9 @@ export async function POST(request: Request) {
               streamHold = hold;
               if (emit) {
                 fullReply += emit;
-                controller.enqueue(encoder.encode(emit));
+                if (!bufferAuraForClosingEnforcement) {
+                  controller.enqueue(encoder.encode(emit));
+                }
               }
             }
           }
@@ -131,13 +241,31 @@ export async function POST(request: Request) {
           const finalFlush = stripCtaToken(tail);
           if (finalFlush) {
             fullReply += finalFlush;
-            controller.enqueue(encoder.encode(finalFlush));
+            if (!bufferAuraForClosingEnforcement) {
+              controller.enqueue(encoder.encode(finalFlush));
+            }
           }
 
           // Post-processing after stream completes
           fullReply = stripCtaToken(fullReply);
 
           const showBookingCta = rawAccumulated.includes("__SHOW_BOOKING_CTA__");
+
+          if (
+            bufferAuraForClosingEnforcement &&
+            !showBookingCta &&
+            fullReply.trim() !== ""
+          ) {
+            fullReply = enforceApprovedClosing(
+              fullReply,
+              AURA_APPROVED_CLOSINGS,
+              AURA_FORBIDDEN_CLOSING_PHRASES,
+            );
+          }
+
+          if (bufferAuraForClosingEnforcement) {
+            controller.enqueue(encoder.encode(fullReply));
+          }
 
           // Supabase logging
           try {
