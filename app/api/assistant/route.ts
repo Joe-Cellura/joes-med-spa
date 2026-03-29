@@ -15,6 +15,28 @@ type MessageHistory = { role: "user" | "assistant"; content: string }[];
 
 const CTA_TOKEN = "__SHOW_BOOKING_CTA__";
 
+// ─── CORS ──────────────────────────────────────────────────────────────────
+// Add any additional allowed origins here as Palm's domains expand.
+const ALLOWED_ORIGINS = [
+  "https://g3f16h-87.myshopify.com",       // Palm Shopify store (current)
+  "https://www.palmconciergeagency.net",    // Palm custom domain (DNS pending)
+  "http://www.palmconciergeagency.net",     // http fallback during DNS transition
+  "https://palmconciergeagency.net",        // non-www variant
+];
+
+function getCorsHeaders(request: Request): Record<string, string> {
+  const origin = request.headers.get("origin") ?? "";
+  const allowedOrigin = ALLOWED_ORIGINS.includes(origin)
+    ? origin
+    : ALLOWED_ORIGINS[0];
+  return {
+    "Access-Control-Allow-Origin": allowedOrigin,
+    "Access-Control-Allow-Methods": "POST, OPTIONS",
+    "Access-Control-Allow-Headers": "Content-Type",
+  };
+}
+// ───────────────────────────────────────────────────────────────────────────
+
 function stripCtaToken(text: string) {
   return text.replace(/__SHOW_BOOKING_CTA__/g, "").trim();
 }
@@ -32,15 +54,26 @@ function takeStreamablePrefix(buffer: string): { emit: string; hold: string } {
   return { emit: cleaned, hold: "" };
 }
 
+// ─── OPTIONS (CORS preflight) ───────────────────────────────────────────────
+export async function OPTIONS(request: Request) {
+  return new Response(null, {
+    status: 204,
+    headers: getCorsHeaders(request),
+  });
+}
+// ───────────────────────────────────────────────────────────────────────────
+
 export async function POST(request: Request) {
   console.log("[assistant] POST /api/assistant received");
+
+  const corsHeaders = getCorsHeaders(request);
 
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey || apiKey.trim() === "") {
     console.error("[assistant] OPENAI_API_KEY is missing");
     return NextResponse.json(
       { error: "Server configuration error: OPENAI_API_KEY is not set." },
-      { status: 500 },
+      { status: 500, headers: corsHeaders },
     );
   }
 
@@ -51,7 +84,7 @@ export async function POST(request: Request) {
     console.warn("[assistant] Invalid JSON body");
     return NextResponse.json(
       { error: "Invalid request: body must be valid JSON." },
-      { status: 400 },
+      { status: 400, headers: corsHeaders },
     );
   }
 
@@ -60,7 +93,7 @@ export async function POST(request: Request) {
     console.warn("[assistant] Missing or empty message");
     return NextResponse.json(
       { error: "Missing required field: message (non-empty string)." },
-      { status: 400 },
+      { status: 400, headers: corsHeaders },
     );
   }
 
@@ -184,6 +217,7 @@ export async function POST(request: Request) {
       headers: {
         "Content-Type": "text/plain; charset=utf-8",
         "X-Content-Type-Options": "nosniff",
+        ...corsHeaders,
       },
     });
   } catch (err) {
@@ -192,7 +226,7 @@ export async function POST(request: Request) {
       err instanceof Error ? err.message : "Unknown error calling OpenAI.";
     return NextResponse.json(
       { error: `Assistant unavailable: ${errMsg}` },
-      { status: 502 },
+      { status: 502, headers: corsHeaders },
     );
   }
 }
