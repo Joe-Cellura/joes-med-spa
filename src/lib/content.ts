@@ -56,12 +56,22 @@ import medspa501Chat from "../data/clients/medspa-501/chat.json";
 import medspa501Team from "../data/clients/medspa-501/team.json";
 import { blogPosts as medspa501BlogPosts } from "../data/clients/medspa-501/blogPosts";
 
+import palmBrand from "../data/clients/palm/brand.json";
+import palmHomepage from "../data/clients/palm/homepage.json";
+import palmTreatments from "../data/clients/palm/treatments.json";
+import palmFaq from "../data/clients/palm/faq.json";
+import palmTestimonials from "../data/clients/palm/testimonials.json";
+import palmChat from "../data/clients/palm/chat.json";
+import palmTeam from "../data/clients/palm/team.json";
+import { blogPosts as palmBlogPosts } from "../data/clients/palm/blogPosts";
+
 const CLIENT_IDS = [
   "lumina",
   "aura-skin-laser",
   "bright-smile-dental",
   "glo-de-vie",
   "medspa-501",
+  "palm",
 ] as const;
 type ClientId = (typeof CLIENT_IDS)[number];
 
@@ -124,6 +134,16 @@ const bundles = {
     chat: medspa501Chat,
     team: medspa501Team,
     blogPosts: medspa501BlogPosts,
+  },
+  palm: {
+    brand: palmBrand,
+    homepage: palmHomepage,
+    treatments: palmTreatments,
+    faq: palmFaq,
+    testimonials: palmTestimonials,
+    chat: palmChat,
+    team: palmTeam,
+    blogPosts: palmBlogPosts,
   },
 } as const;
 
